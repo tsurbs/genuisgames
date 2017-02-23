@@ -1,32 +1,29 @@
+
 <html>
 <head>  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
-	<img id="wit" src="https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no"></img>
-	<img id="bck"  src="https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no"></img>
-	<img id="qua" src="http://vignette3.wikia.nocookie.net/es.harrypotter/images/1/14/Quaffle.gif/revision/latest?cb=20101009202059"></img>
-	<img id='blu1' src="https://goo.gl/N9nZTz"></img>
-	<img id="blu2" src="https://goo.gl/N9nZTz"></img>
-	<img id="snit" src="http://i.imgur.com/6LUvgQv.gif"></img>
-	<div id="p1score"></div>
-	<div id="p2score"></div>
-	<div id="griff"></div>
-	<div id="huff"></div>
-	<div id="raven"></div>
-	<div id="sly"></div>
-	<div id='pitch'></div>
-	<img class="hoopb" id="bh1" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
-	<img class="hoopb" id="bh2" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
-	<img class="hoopb" id="bh3" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
-	<img class="hoop" id="wh1" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
-	<img class="hoop" id="wh2" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
-	<img class="hoop" id="wh3" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
-	<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body><style>body{background-color: grey}
+    <img id="wit" src="https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no"></img>
+    <img id="bck"  src="https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no"></img>
+    <img id="qua" src="http://vignette3.wikia.nocookie.net/es.harrypotter/images/1/14/Quaffle.gif/revision/latest?cb=20101009202059"></img>
+    <img id='blu1' src="https://goo.gl/N9nZTz"></img>
+    <img id="blu2" src="https://goo.gl/N9nZTz"></img>
+    <img id="snit" src="http://i.imgur.com/6LUvgQv.gif"></img>
+    <div id="p1score"></div>
+    <div id="p2score"></div>
+    <div id="griff"></div>
+    <div id="huff"></div>
+    <div id="raven"></div>
+    <div id="sly"></div>
+    <div id='pitch'></div>
+    <img class="hoopb" id="bh1" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+    <img class="hoopb" id="bh2" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+    <img class="hoopb" id="bh3" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+    <img class="hoop" id="wh1" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+    <img class="hoop" id="wh2" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+    <img class="hoop" id="wh3" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+    <style>body{background-color: grey}
 
     #griff{
         height:50%;
@@ -147,10 +144,10 @@
     }
 
     </style>
-	<SCRIPT TYPE="text/javascript">var p1score=0
-	var pos="stop"
-	var pos1="stop"
-	function getCookie(cname) {
+    <SCRIPT TYPE="text/javascript">var p1score=0
+    var pos="stop"
+    var pos1="stop"
+    function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
     for(var i = 0; i < ca.length; i++) {
@@ -165,22 +162,22 @@
     return "";
 }
 var p2score=0
-	function write(){
-	//console.log("p1 has"+p1score+"points")
-	document.getElementById("p1score").innerHTML=p1+" has"+p1score+"points"
-	requestAnimationFrame(write)
+    function write(){
+    //console.log("p1 has"+p1score+"points")
+    document.getElementById("p1score").innerHTML=p1+" has"+p1score+"points"
+    requestAnimationFrame(write)
 }requestAnimationFrame(write)
-	function write2(){
-	//console.log("p2 has"+p2score+"points")
-	document.getElementById("p2score").innerHTML=p2+" has"+p2score+"points"
-	requestAnimationFrame(write2)
+    function write2(){
+    //console.log("p2 has"+p2score+"points")
+    document.getElementById("p2score").innerHTML=p2+" has"+p2score+"points"
+    requestAnimationFrame(write2)
 }requestAnimationFrame(write2)
-var p1 =  ap2
-var p2 =  ap1
-var p11 =  ap11
-var p21 =  ap21
-var p12 =  ap12
-var p22 =  ap22
+var p1 = getCookie("ap2");
+var p2 = getCookie("ap1");
+var p11 = getCookie("ap11");
+var p21 = getCookie("ap21");
+var p12 = getCookie("ap12");
+var p22 = getCookie("ap22");
 var onet=0
 var oneb=0
 var onel=0
@@ -230,13 +227,13 @@ var twelveb=0
 var twelvel=0
 var twelver=0
 function detect (d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12){//obj d1 must be the moving object
-	onet = Math.floor($("#"+d1).offset().top);
+    onet = Math.floor($("#"+d1).offset().top);
     oneb = Math.floor($("#"+d1).offset().top+document.getElementById(d1).height);
     onel = Math.floor($("#"+d1).offset().left);
     oner = Math.floor($("#"+d1).offset().left+document.getElementById(d1).width);
     twot = Math.floor($("#"+d2).offset().top);
-	twob = Math.floor($("#"+d2).offset().top+document.getElementById(d2).height);
-	twol = Math.floor($("#"+d2).offset().left);
+    twob = Math.floor($("#"+d2).offset().top+document.getElementById(d2).height);
+    twol = Math.floor($("#"+d2).offset().left);
     twor = Math.floor($("#"+d2).offset().left+document.getElementById(d2).width);
     threet = Math.floor($("#"+d3).offset().top);
     threeb = Math.floor($("#"+d3).offset().top+document.getElementById(d3).height);
@@ -259,8 +256,8 @@ function detect (d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12){//obj d1 must be the mo
     sevenl = Math.floor($("#"+d7).offset().left);
     sevenr = Math.floor($("#"+d7).offset().left+document.getElementById(d7).width);
     eightt = Math.floor($("#"+d8).offset().top);
-	eightb = Math.floor($("#"+d8).offset().top+document.getElementById(d8).height);
-	eightl = Math.floor($("#"+d8).offset().left);
+    eightb = Math.floor($("#"+d8).offset().top+document.getElementById(d8).height);
+    eightl = Math.floor($("#"+d8).offset().left);
     eightr = Math.floor($("#"+d8).offset().left+document.getElementById(d8).width);
     ninet = Math.floor($("#"+d9).offset().top);
     nineb = Math.floor($("#"+d9).offset().top+document.getElementById(d9).height);
@@ -281,269 +278,269 @@ function detect (d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12){//obj d1 must be the mo
 
 }
 $("#wit").css(
-	"background" , "linear-gradient(to right, "+String(p11)+","+ String(p12)+")"
+    "background" , "linear-gradient(to right, "+String(p11)+","+ String(p12)+")"
 )
 $("#bck").css(
-	"background" , "linear-gradient(to right, "+String(p21)+","+ String(p22)+")"
+    "background" , "linear-gradient(to right, "+String(p21)+","+ String(p22)+")"
 )
-function dte () {	
-	detect("wit", "bck", "qua", "blu1", "blu2", "snit","bh1","bh2", "bh3", "wh1", "wh2", "wh3" )
-	//console.log(String(sevenr)+","+String(sevenl)+","+String(sevenb)+","+String(sevent))
-	requestAnimationFrame(dte);
+function dte () {   
+    detect("wit", "bck", "qua", "blu1", "blu2", "snit","bh1","bh2", "bh3", "wh1", "wh2", "wh3" )
+    //console.log(String(sevenr)+","+String(sevenl)+","+String(sevenb)+","+String(sevent))
+    requestAnimationFrame(dte);
 };
 requestAnimationFrame(dte);
 function colis () {
 if(twot<=threet&&twob>=threeb&&twol<=threer&&twor>=threel){
-	document.getElementById('qua').style.top=twot+26
-	document.getElementById('qua').style.left=twol+26
+    document.getElementById('qua').style.top=twot+26
+    document.getElementById('qua').style.left=twol+26
 }requestAnimationFrame(colis);
 }requestAnimationFrame(colis);
 function coli () {
 if(onet<=threet&&oneb>=threeb&&onel<=threer&&oner>=threel){
-	document.getElementById('qua').style.top=onet+26
-	document.getElementById('qua').style.left=onel+26
+    document.getElementById('qua').style.top=onet+26
+    document.getElementById('qua').style.left=onel+26
 }requestAnimationFrame(coli);
 }requestAnimationFrame(coli);
 function blucol () {
-	if(onet<=fourt&&oneb>=fourb&&onel<=fourr&&oner>=fourl){
-	if(onet<=threet&&oneb>=threeb&&onel<=threer&&oner>=threel){
-		document.getElementById('qua').style.top=onet-27
-	document.getElementById('qua').style.left=onel-27
-	}
+    if(onet<=fourt&&oneb>=fourb&&onel<=fourr&&oner>=fourl){
+    if(onet<=threet&&oneb>=threeb&&onel<=threer&&oner>=threel){
+        document.getElementById('qua').style.top=onet-27
+    document.getElementById('qua').style.left=onel-27
+    }
 }requestAnimationFrame(blucol)
 }requestAnimationFrame(blucol)
 function blucol1 () {
-	if(twot<=fivet&&twob>=fiveb&&twol<=fiver&&twor>=fivel){
-	if(twot<=threet&&twob>=threeb&&twol<=threer&&twor>=threel){
-		document.getElementById('qua').style.top=twot-27
-	document.getElementById('qua').style.left=twol-27
-	}
+    if(twot<=fivet&&twob>=fiveb&&twol<=fiver&&twor>=fivel){
+    if(twot<=threet&&twob>=threeb&&twol<=threer&&twor>=threel){
+        document.getElementById('qua').style.top=twot-27
+    document.getElementById('qua').style.left=twol-27
+    }
 }requestAnimationFrame(blucol1)
 }requestAnimationFrame(blucol1)
 function chase1 () {var ya = (onel-fourl) / 50;
-	var ya2 = (onet-fourt) / 50;
-	$("#blu1").animate({left:"+="+String(ya)+"px"}, 0, "linear")
-	$("#blu1").animate({top:"+="+String(ya2)+"px"}, 0, "linear")
+    var ya2 = (onet-fourt) / 50;
+    $("#blu1").animate({left:"+="+String(ya)+"px"}, 0, "linear")
+    $("#blu1").animate({top:"+="+String(ya2)+"px"}, 0, "linear")
 requestAnimationFrame(chase1)
 }requestAnimationFrame(chase1)
 function chase2 () {var ya1 = (twol-fivel) / 50;
-	var ya3 = (twot-fivet) / 50;
-	$("#blu2").animate({left:"+="+String(ya1)+"px"}, 0, "linear")
-	$("#blu2").animate({top:"+="+String(ya3)+"px"}, 0, "linear")
+    var ya3 = (twot-fivet) / 50;
+    $("#blu2").animate({left:"+="+String(ya1)+"px"}, 0, "linear")
+    $("#blu2").animate({top:"+="+String(ya3)+"px"}, 0, "linear")
 requestAnimationFrame(chase2)
 }requestAnimationFrame(chase2)
 function score1 () {
 if(sevent<=threet&&sevenb>=threeb&&sevenl<=threer&&sevenr>=threel){
-	p1score+=10;
-	document.getElementById('qua').style.top=300
-	document.getElementById('qua').style.left=500
+    p1score+=10;
+    document.getElementById('qua').style.top=300
+    document.getElementById('qua').style.left=500
 }requestAnimationFrame(score1);
 }requestAnimationFrame(score1);
 function score2 () {
 if(eightt<=threet&&eightb>=threeb&&eightl<=threer&&eightr>=threel){
-	p1score+=10;
-	document.getElementById('qua').style.top=300
-	document.getElementById('qua').style.left=500
+    p1score+=10;
+    document.getElementById('qua').style.top=300
+    document.getElementById('qua').style.left=500
 }requestAnimationFrame(score2);
 }requestAnimationFrame(score2);
 function score3 (){
 if(ninet<=threet&&nineb>=threeb&&ninel<=threer&&niner>=threel){
-	p1score+=10;
-	document.getElementById('qua').style.top=300
-	document.getElementById('qua').style.left=500
+    p1score+=10;
+    document.getElementById('qua').style.top=300
+    document.getElementById('qua').style.left=500
 }requestAnimationFrame(score3);
 }requestAnimationFrame(score3);
 function score4 () {
 if(tent<=threet&&tenb>=threeb&&tenl<=threer&&tenr>=threel){
-	p2score+=10;
-	document.getElementById('qua').style.top=300
-	document.getElementById('qua').style.left=500
+    p2score+=10;
+    document.getElementById('qua').style.top=300
+    document.getElementById('qua').style.left=500
 }requestAnimationFrame(score4);
 }requestAnimationFrame(score4);
 function score5 () {
 if(elevent<=threet&&elevenb>=threeb&&elevenl<=threer&&elevenr>=threel){
-	p2score+=10;
-	document.getElementById('qua').style.top=300
-	document.getElementById('qua').style.left=500
+    p2score+=10;
+    document.getElementById('qua').style.top=300
+    document.getElementById('qua').style.left=500
 }requestAnimationFrame(score5);
 }requestAnimationFrame(score5);
 function score6 (){
 if(twelvet<=threet&&twelveb>=threeb&&twelvel<=threer&&twelver>=threel){
-	p2score+=10;
-	document.getElementById('qua').style.top=300
-	document.getElementById('qua').style.left=500
+    p2score+=10;
+    document.getElementById('qua').style.top=300
+    document.getElementById('qua').style.left=500
 }requestAnimationFrame(score6);
 }requestAnimationFrame(score6);
 function score7 (){
 if(onet<=sixt&&oneb>=sixb&&onel<=sixr&&oner>=sixl){
-	p1score+=150;
-	document.getElementById('qua').style.top=300
-	document.getElementById('qua').style.left=500
-	if(p2score>p1score){
-		document.write(p1+" won")
-	}
-	else if(p1score>p2score){
-		document.write(p2+" won")
-	}
-	else if(p1score==p2score)
-		document.write("draw");
+    p1score+=150;
+    document.getElementById('qua').style.top=300
+    document.getElementById('qua').style.left=500
+    if(p2score>p1score){
+        document.write(p1+" won")
+    }
+    else if(p1score>p2score){
+        document.write(p2+" won")
+    }
+    else if(p1score==p2score)
+        document.write("draw");
 }requestAnimationFrame(score7);
 }requestAnimationFrame(score7);
 function score8 () {
 if(twot<=sixt&&twob>=sixb&&twol<=sixr&&twor>=sixl){
-	p2score+=150;
-		if(p2score>p1score){
-		document.write(p1+" won")
-	}
-	else if(p1score>p2score){
-		document.write(p2+" won")
-	}
-	else if (p1score==p2score)
-		document.write("draw");
-	document.getElementById('qua').style.top=300
-	document.getElementById('qua').style.left=500
+    p2score+=150;
+        if(p2score>p1score){
+        document.write(p1+" won")
+    }
+    else if(p1score>p2score){
+        document.write(p2+" won")
+    }
+    else if (p1score==p2score)
+        document.write("draw");
+    document.getElementById('qua').style.top=300
+    document.getElementById('qua').style.left=500
 }requestAnimationFrame(score8);
 }requestAnimationFrame(score8);
 function p1move () {
-	if(pos==="left"){
-			var ya=(0-onel)/85
-			$("#wit").animate({left:"+="+String(ya)+"px"}, 0.0, "linear")
-	}
-	else if(pos==="right"){
-			var ya1=(screen.width-onel)/85
-			$("#wit").animate({left:"+="+String(ya1)+"px"}, 0.0, "linear")
-	}
-	else if(pos==="up"){
-			var ya2=(0-onet)/85
-			$("#wit").animate({top:"+="+String(ya2)+"px"}, 0.0, "linear")
-	}
-	else if(pos==="down"){
-			var ya3=(screen.height-onet)/85
-			$("#wit").animate({top:"+="+String(ya3)+"px"}, 0.0, "linear")
-	}requestAnimationFrame(p1move)
+    if(pos==="left"){
+            var ya=(0-onel)/85
+            $("#wit").animate({left:"+="+String(ya)+"px"}, 0.0, "linear")
+    }
+    else if(pos==="right"){
+            var ya1=(screen.width-onel)/85
+            $("#wit").animate({left:"+="+String(ya1)+"px"}, 0.0, "linear")
+    }
+    else if(pos==="up"){
+            var ya2=(0-onet)/85
+            $("#wit").animate({top:"+="+String(ya2)+"px"}, 0.0, "linear")
+    }
+    else if(pos==="down"){
+            var ya3=(screen.height-onet)/85
+            $("#wit").animate({top:"+="+String(ya3)+"px"}, 0.0, "linear")
+    }requestAnimationFrame(p1move)
 }requestAnimationFrame(p1move)
 function p2move () {
-	if(pos1==="left"){
-			var yas=(0-twol)/85
-			$("#bck").animate({left:"+="+String(yas)+"px"}, 0.0, "linear")
-	}
-	else if(pos1==="right"){
-			var yas1=(screen.width-twol)/85
-			$("#bck").animate({left:"+="+String(yas1)+"px"}, 0.0, "linear")
-	}
-	else if(pos1==="up"){
-			var yas2=(0-twot)/85
-			$("#bck").animate({top:"+="+String(yas2)+"px"}, 0.0, "linear")
-	}
-	else if(pos1==="down"){
-			var yas3=(screen.height-twot)/85
-			$("#bck").animate({top:"+="+String(yas3)+"px"}, 0.0, "linear")
-	}requestAnimationFrame(p2move)
+    if(pos1==="left"){
+            var yas=(0-twol)/85
+            $("#bck").animate({left:"+="+String(yas)+"px"}, 0.0, "linear")
+    }
+    else if(pos1==="right"){
+            var yas1=(screen.width-twol)/85
+            $("#bck").animate({left:"+="+String(yas1)+"px"}, 0.0, "linear")
+    }
+    else if(pos1==="up"){
+            var yas2=(0-twot)/85
+            $("#bck").animate({top:"+="+String(yas2)+"px"}, 0.0, "linear")
+    }
+    else if(pos1==="down"){
+            var yas3=(screen.height-twot)/85
+            $("#bck").animate({top:"+="+String(yas3)+"px"}, 0.0, "linear")
+    }requestAnimationFrame(p2move)
 }requestAnimationFrame(p2move)
 function loop () {
 if(onel<0){
-	document.getElementById("wit").style.left=1366
+    document.getElementById("wit").style.left=1366
 };
 if (twol<0) {
-	document.getElementById("bck").style.left=1366
+    document.getElementById("bck").style.left=1366
 };
 if(threel<0){
-	document.getElementById("qua").style.left=1366
+    document.getElementById("qua").style.left=1366
 };
 if(onel>1366){
-	document.getElementById("wit").style.left=0
+    document.getElementById("wit").style.left=0
 };
 if (twol>1366) {
-	document.getElementById("bck").style.left=0
+    document.getElementById("bck").style.left=0
 };
 if(threel>1366){
-	document.getElementById("qua").style.left=0
+    document.getElementById("qua").style.left=0
 };
 if(onet<-10){
-	document.getElementById("wit").style.top=750
+    document.getElementById("wit").style.top=750
 };
 if (twot<-10) {
-	document.getElementById("bck").style.top=750
+    document.getElementById("bck").style.top=750
 };
 if(threet<-10){
-	document.getElementById("qua").style.top=750
+    document.getElementById("qua").style.top=750
 };
 if(onet>750){
-	document.getElementById("wit").style.top=0
+    document.getElementById("wit").style.top=0
 };
 if (twot>750) {
-	document.getElementById("bck").style.top=0
+    document.getElementById("bck").style.top=0
 };
 if(threet>750){
-	document.getElementById("qua").style.top=0
+    document.getElementById("qua").style.top=0
 };
-	requestAnimationFrame(loop)
+    requestAnimationFrame(loop)
 }requestAnimationFrame(loop)
-	var x= Math.floor(Math.random()*950)
-	var y=Math.floor(Math.random()*500)
+    var x= Math.floor(Math.random()*950)
+    var y=Math.floor(Math.random()*500)
 
 function snitch () {
-	if(sixt==y&&sixl==x){
-		x= Math.floor(Math.random()*1366)
+    if(sixt==y&&sixl==x){
+        x= Math.floor(Math.random()*1366)
 y=Math.floor(Math.random()*750)
-	}
-	console.log(x+','+y)
-	var ye=(x-sixl)/20
-	var yes=(y-sixt)/20
-	console.log("x: " + String(sixl) + ",y: " + String(sixt))
-	console.log(String(ye) + "," + String(yes))
-		if (ye < 0)
-			$("#snit").animate({left:"-="+String(-ye)+"px"}, 0.0, "linear")
-		else 
-			$("#snit").animate({left:"+="+String(ye)+"px"}, 0.0, "linear")
-		if (yes < 0)
-			$("#snit").animate({top:"-="+String(-yes)+"px"}, 0.0, "linear")
-		else
-			$("#snit").animate({top:"+="+String(yes)+"px"}, 0, "linear")
+    }
+    console.log(x+','+y)
+    var ye=(x-sixl)/20
+    var yes=(y-sixt)/20
+    console.log("x: " + String(sixl) + ",y: " + String(sixt))
+    console.log(String(ye) + "," + String(yes))
+        if (ye < 0)
+            $("#snit").animate({left:"-="+String(-ye)+"px"}, 0.0, "linear")
+        else 
+            $("#snit").animate({left:"+="+String(ye)+"px"}, 0.0, "linear")
+        if (yes < 0)
+            $("#snit").animate({top:"-="+String(-yes)+"px"}, 0.0, "linear")
+        else
+            $("#snit").animate({top:"+="+String(yes)+"px"}, 0, "linear")
 
-	requestAnimationFrame(snitch)
+    requestAnimationFrame(snitch)
 }requestAnimationFrame(snitch)
 
 
-	$(document).keydown(function(key) {
-			switch(parseInt(key.which,10)) {
-				case 37: pos="left"
+    $(document).keydown(function(key) {
+            switch(parseInt(key.which,10)) {
+                case 37: pos="left"
 
-					document.getElementById("wit").src = "https://lh3.googleusercontent.com/2zBFvcFYjt7zWkyCmrf3arPrdkRL5UJv2W9ZaPMsngfElImmTvHU0AMFbF-PeTMB3_QyDkQIeA=w1366-h768-rw-no";
-					break;
-				case 39:pos="right"
-					document.getElementById("wit").src = "https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no";
-					break;
-				case 38:pos="up"
+                    document.getElementById("wit").src = "https://lh3.googleusercontent.com/2zBFvcFYjt7zWkyCmrf3arPrdkRL5UJv2W9ZaPMsngfElImmTvHU0AMFbF-PeTMB3_QyDkQIeA=w1366-h768-rw-no";
+                    break;
+                case 39:pos="right"
+                    document.getElementById("wit").src = "https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no";
+                    break;
+                case 38:pos="up"
 
-					break;
-				case 40:pos="down"
-					break;
-				case 32:
-					break;
-				default:
-					break;
-				}
-				});
-		$(document).keydown(function(key) {
-			switch(parseInt(key.which,10)) {
-				case 65:pos1="left"
-					document.getElementById("bck").src = "https://lh3.googleusercontent.com/2zBFvcFYjt7zWkyCmrf3arPrdkRL5UJv2W9ZaPMsngfElImmTvHU0AMFbF-PeTMB3_QyDkQIeA=w1366-h768-rw-no";
-					break;
-				case 68:pos1="right"
-					document.getElementById("bck").src = "https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no";
-					break;
-				case 87:pos1="up"
-					break;
-				case 83:pos1="down"
-					break;
-				case 32:
-					break;
-				default:
-					break;
-				}
-				});
-		document.getElementById('qson').autoplay=true
-		document.getElementById('qson').loop=true
-		document.getElementById('qson').controls=false
-	</SCRIPT>
+                    break;
+                case 40:pos="down"
+                    break;
+                case 32:
+                    break;
+                default:
+                    break;
+                }
+                });
+        $(document).keydown(function(key) {
+            switch(parseInt(key.which,10)) {
+                case 65:pos1="left"
+                    document.getElementById("bck").src = "https://lh3.googleusercontent.com/2zBFvcFYjt7zWkyCmrf3arPrdkRL5UJv2W9ZaPMsngfElImmTvHU0AMFbF-PeTMB3_QyDkQIeA=w1366-h768-rw-no";
+                    break;
+                case 68:pos1="right"
+                    document.getElementById("bck").src = "https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no";
+                    break;
+                case 87:pos1="up"
+                    break;
+                case 83:pos1="down"
+                    break;
+                case 32:
+                    break;
+                default:
+                    break;
+                }
+                });
+        document.getElementById('qson').autoplay=true
+        document.getElementById('qson').loop=true
+        document.getElementById('qson').controls=false
+    </SCRIPT>
