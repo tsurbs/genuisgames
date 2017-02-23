@@ -1,0 +1,794 @@
+<html>
+<head>  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+	<img id="wit" src="https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no"></img>
+	<img id="bck"  src="https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no"></img>
+	<img id="qua" src="http://vignette3.wikia.nocookie.net/es.harrypotter/images/1/14/Quaffle.gif/revision/latest?cb=20101009202059"></img>
+	<img id='blu1' src="https://goo.gl/N9nZTz"></img>
+	<img id="blu2" src="https://goo.gl/N9nZTz"></img>
+	<img id="snit" src="http://i.imgur.com/6LUvgQv.gif"></img>
+	<div id="p1score"></div>
+	<div id="p2score"></div>
+	<div id="griff"></div>
+	<div id="huff"></div>
+	<div id="raven"></div>
+	<div id="sly"></div>
+	<div id='pitch'></div>
+	<img class="hoopb" id="bh1" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+	<img class="hoopb" id="bh2" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+	<img class="hoopb" id="bh3" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+	<img class="hoop" id="wh1" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+	<img class="hoop" id="wh2" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+	<img class="hoop" id="wh3" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
+	<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body><hhh id="bbbbb">
+    <style>
+    body{
+    	z-index: -100;
+    }
+    #bbbbb{
+    	z-index: 1000000000000
+    }
+body {
+    background-color: red;
+    position: relative;
+    -webkit-animation: mymove 20s infinite;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 20s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 20s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color:#740001;}
+    5%  {background-color:#ae0001;}
+    10%  {background-color:#eeba30; }
+    15%  {background-color:#d3a625;}
+    20% {background-color:#000000;}
+    25% {background-color:#eee117;}
+    30% {background-color:#e1b723;}
+    35% {background-color:#906200;}
+    40% {background-color:#1e1301;}
+    45% {background-color:#000000;}
+    50% {background-color:#0e1a40;}
+    55% {background-color:#222f5b;}
+    60% {background-color:#5d5d5d;}
+    65% {background-color:#946b2d;}
+    70% {background-color:#000000;}
+    75% {background-color:#1a427a;}
+    80% {background-color:#2a623d;}
+    85% {background-color:#5d5d5d;}
+    90% {background-color:#aaaaaa;}
+    95% {background-color:#000000;}
+    100%{background-color:#000000;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:#740001;}
+    5%  {background-color:#ae0001;}
+    10%  {background-color:#eeba30; }
+    15%  {background-color:#d3a625;}
+    20% {background-color:#000000;}
+    25% {background-color:#eee117;}
+    30% {background-color:#e1b723;}
+    35% {background-color:#906200;}
+    40% {background-color:#1e1301;}
+    45% {background-color:#000000;}
+    50% {background-color:#0e1a40;}
+    55% {background-color:#222f5b;}
+    60% {background-color:#5d5d5d;}
+    65% {background-color:#946b2d;}
+    70% {background-color:#000000;}
+    75% {background-color:#1a427a;}
+    80% {background-color:#2a623d;}
+    85% {background-color:#5d5d5d;}
+    90% {background-color:#aaaaaa;}
+    95% {background-color:#000000;}
+    100%{background-color:#000000;}
+}
+#hp{height:100%;
+    width:25%;
+
+    position:fixed;
+}
+#parch{
+    left:25%;
+    width:75%;
+    height:100%;
+    position: fixed
+}
+#house{
+    font-family: Old English Text MT; 
+    height:50pt;
+    width:50%;
+    font-size:50pt;
+    z-index:1;
+    position:fixed;
+    left:35.8%;
+}
+#house2{
+    font-family: Old English Text MT;
+    font-size:50pt;
+    height:50pt;
+    width:50%;
+    z-index:1;
+    position:fixed;
+    left:35.8%;
+    top:50%;
+}body{
+    font-family: Old English Text MT;
+    font-size: 30pt;
+}
+input{z-index:5;
+    position:absolute;
+    background:transparent;
+    outline:none;
+    border:none;
+    font-size: 30pt;
+    font-family: Old English Text MT;
+}
+#color11{
+    position:fixed;
+    left:36%;
+    top:25%;
+}
+#p11{
+    position:fixed;
+    left:44%;
+    top:24.5%;
+}
+#color12{
+    position:fixed;
+    left:36%;
+    top:31.5%;
+}
+#p12{
+    position:fixed;
+    left:44%;
+    top:31.5%;
+}
+#color21{
+    position:fixed;
+    left:36%;
+    top:66.5%;
+}
+#p21{
+    position:fixed;
+    left:44%;
+    top:66.5%;
+}
+#color22{
+    position:fixed;
+    left:36%;
+    top:71.5%;
+}
+#p22{
+    position:fixed;
+    left:44%;
+    top:71.5%;
+}
+#p1{
+    z-index:4;
+    top:121.5px ;
+    left:44%;
+    font-family: Old English Text MT;
+    }
+#p2{
+    z-index:4;
+    top:390px ;
+    left:44%;
+    font-family: Old English Text MT;
+    }
+
+#name{
+    top:60.5%;
+    position:fixed;
+    left:36%;
+    z-index:3;
+    font-size: 30pt
+}
+#name1{
+    top:20%;
+    position:fixed;
+    left:36%;
+    z-index:3;
+    font-size: 30pt
+}
+</style><button type="button" onclick="retrieveval()">save prefrences</button>
+<img id="parch" src="http://cliparts.co/cliparts/kTM/b85/kTMb85Mbc.png"></img>
+<div id="name">Name: </div><input id="p1"type:"text"></input>
+<div id="name1">Name: </div><input id="p2"type:"text"></input>
+<div id="color11">color1</div><input id="p11"type:"text"></input>
+<div id="color12">color2</div><input id="p12"type:"text"></input>
+<div id="color21">color1</div><input id="p21"type:"text"></input>
+<div id="color22">color2</div><input id="p22"type:"text"></input>
+<div id= 'house'></div>
+<div id= 'house2'></div>
+<script type="text/javascript">
+function retrieveval () {
+    document.cookie="x=document.getElementById("p1").value"
+    document.cookie="y=document.getElementById("p2").value"
+    document.cookie="ap1="ap1="+String(x)"
+    document.cookie="ap2="ap2="+String(y)"
+    document.cookie="a=document.getElementById("p11").value"
+    document.cookie="b=document.getElementById("p12").value"
+    document.cookie="ap11="ap11="+String(a)"
+    document.cookie="ap12="ap12="+String(b)"
+    document.cookie="c=document.getElementById("p21").value"
+    document.cookie="d=document.getElementById("p22").value"
+   document.cookie="ap22 ="ap22="+String(c)"
+   document.cookie="ap21="ap21="+String(d)"
+   document.cookie="ap1h ="ap1h="+String(hou)"
+   document.cookie="ap2h="ap2h="+String(hou2)"
+   document.getElementById('bbbbb').zIndex = "-10000000"
+}
+var tem=["Appleby Arrows",
+"Chudley Cannons",
+"Falmouth Falcons",
+"Puddlemore United",
+"Tutshil Tornados",
+"Wimbourne Wasps",
+"Ballycastle Bats",
+"Kenmare Kestrels",
+"Montrose Magpies",
+"Wigtown Wanderers",
+"Caerphilly Catapults",
+"Holyhead Harpies",
+"Thundelarra Thunderers",
+"Woolongong Warriors",
+"Vratsa Vultures",
+"Haileybury Hammers",
+"Moose Jaw Meteorites",
+"Stonewall Stormers",
+"Gimbi Giant-Slayers",
+"Heidelberg Harriers",
+"Toyohashi Tengu",
+"Gorodok Gargoyles",
+"Bigonville Bombers",
+"Moutohora Macaws",
+"Karasjok Kites",
+"Tarapoto Tree-Skimmers",
+"Grodzisk Goblins",
+"Braga Broomfleet",
+"Sumbawanga Sunrays",
+"Tchamba Charmers",
+"Patonga Proudsticks",
+"Fitchburg Finches",
+"Sweetwater All-Stars"]
+var indexyo = Math.floor(Math.random() * tem.length);
+var hou =document.getElementById('house').innerHTML=tem[indexyo]
+var indexyo2 = Math.floor(Math.random() * tem.length);
+
+var hou2 =document.getElementById('house2').innerHTML=tem[indexyo2]
+console.log(hou2)</script>
+</body>
+</hhh>
+</html>
+	<style>body{background-color: grey}
+
+	#griff{
+		height:50%;
+		width:50%;
+		background: linear-gradient(to right, #740001, #ae0001, #eebA30, #d3a625, #000000);
+	}
+	#huff{top:8;
+		left:50%;
+		height:50%;
+		width:50%;
+		background: linear-gradient(to left,#eee117, #e1b723, #906200, #1e1301, #000000);
+		position:fixed;
+	}
+	#raven{
+		height:50%;
+		width:50%;
+		background: linear-gradient(to right, #0e1a40, #222f5b, #5d5d5d, #946b2d, #000000);
+		}
+	#sly{
+		left:50%;
+		bottom:8;
+		height:50%;
+		width:50%;
+		background: linear-gradient(to left, #1a472a,#2a623d, #5d5d5d, #aaaaaa ,#000000);
+		position:fixed;
+	}
+	iframe{
+	position: fixed;
+	left:0;
+	top:0;
+	background:transparent;
+    outline:none;
+    border:none;}
+	.hoop,.hoopb{
+		font-family: Lucida Sans Unicode;
+		height:180;
+		width:180;
+}	#pitch{top:8;
+		z-index:1000;
+		width:100%;
+		height:100%;
+		border-radius:50%/50%;
+		background-color: green;
+		position:fixed;
+	}
+	#bh1{
+		left:17%;
+		top:38%;
+		z-index:1001;
+		position:fixed;
+	}
+	#bh2{
+		left:10%;
+		top:16%;
+		z-index:1001;
+		position:fixed;
+	}	
+	#bh3{
+		left:10%;
+		top:60%;
+		z-index:1001;
+		position:fixed;
+	}
+	#wh1{
+		left:70.5%;
+		top:38%;
+		z-index:1001;
+		position:fixed;
+	}
+	#wh2{
+		left:77.5%;
+		top:16%;
+		z-index:1001;
+		position:fixed;
+	}	
+	#wh3{
+		left:77.5%;
+		top:60%;
+		z-index:1001;
+		position:fixed;
+	}
+	img{position:absolute;
+		top:50%;
+		left:50%;
+		height: 75px;
+		width:75px;
+		z-index:100456;}
+		#blu1,#blu2{
+		height:24.99999999999999px;
+		width:24.99999999999999px;
+		top:50%;
+		left:1;
+	}
+	#snit{
+		left:50%;
+		top:25%;
+	}
+	#qua{top:25%;
+		height:25px;
+		width:25px;
+	}
+	#snit{
+		height:15px;
+		width:15px;
+		position:fixed;
+	}
+	#p1score{
+		z-index:100000000000;
+		position: fixed;
+		top:0;
+		left:0;
+}
+	#p2score{
+		z-index:10000000000000;
+		position: fixed;
+		top:0;
+		left:50%;
+	}
+
+	</style>
+	<SCRIPT TYPE="text/javascript">var p1score=0
+	var pos="stop"
+	var pos1="stop"
+	function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+var p2score=0
+	function write(){
+	//console.log("p1 has"+p1score+"points")
+	document.getElementById("p1score").innerHTML=p1+" has"+p1score+"points"
+	requestAnimationFrame(write)
+}requestAnimationFrame(write)
+	function write2(){
+	//console.log("p2 has"+p2score+"points")
+	document.getElementById("p2score").innerHTML=p2+" has"+p2score+"points"
+	requestAnimationFrame(write2)
+}requestAnimationFrame(write2)
+var p1 =  ap2
+var p2 =  ap1
+var p11 =  ap11
+var p21 =  ap21
+var p12 =  ap12
+var p22 =  ap22
+var onet=0
+var oneb=0
+var onel=0
+var oner=0
+var twot=0
+var twob=0
+var twol=0
+var twor=0
+var threet=0
+var threeb=0
+var threel=0
+var threer=0
+var fourt=0
+var fourb=0
+var fourl=0
+var fourr=0
+var fivet=0
+var fiveb=0
+var fivel=0
+var fiver=0
+var sixt=0
+var sixb=0
+var sixl=0
+var sixr=0
+var sevent=0
+var sevenb=0
+var sevenl=0
+var sevenr=0
+var eightt=0
+var eightb=0
+var eightl=0
+var eightr=0
+var ninet=0
+var nineb=0
+var ninel=0
+var niner=0
+var tent=0
+var tenb=0
+var tenl=0
+var tenr=0
+var elevent=0
+var elevenb=0
+var elevenl=0
+var elevenr=0
+var twelvet=0
+var twelveb=0
+var twelvel=0
+var twelver=0
+function detect (d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12){//obj d1 must be the moving object
+	onet = Math.floor($("#"+d1).offset().top);
+    oneb = Math.floor($("#"+d1).offset().top+document.getElementById(d1).height);
+    onel = Math.floor($("#"+d1).offset().left);
+    oner = Math.floor($("#"+d1).offset().left+document.getElementById(d1).width);
+    twot = Math.floor($("#"+d2).offset().top);
+	twob = Math.floor($("#"+d2).offset().top+document.getElementById(d2).height);
+	twol = Math.floor($("#"+d2).offset().left);
+    twor = Math.floor($("#"+d2).offset().left+document.getElementById(d2).width);
+    threet = Math.floor($("#"+d3).offset().top);
+    threeb = Math.floor($("#"+d3).offset().top+document.getElementById(d3).height);
+    threel = Math.floor($("#"+d3).offset().left);
+    threer = Math.floor($("#"+d3).offset().left+document.getElementById(d3).width);
+    fourt = Math.floor($("#"+d4).offset().top);
+    fourb = Math.floor($("#"+d4).offset().top+document.getElementById(d4).height);
+    fourl = Math.floor($("#"+d4).offset().left);
+    fourr = Math.floor($("#"+d4).offset().left+document.getElementById(d4).width); 
+    fivet = Math.floor($("#"+d5).offset().top);
+    fiveb = Math.floor($("#"+d5).offset().top+document.getElementById(d5).height);
+    fivel = Math.floor($("#"+d5).offset().left);
+    fiver = Math.floor($("#"+d5).offset().left+document.getElementById(d5).width);
+    sixt = Math.floor($("#"+d6).offset().top);
+    sixb = Math.floor($("#"+d6).offset().top+document.getElementById(d6).height);
+    sixl = Math.floor($("#"+d6).offset().left);
+    sixr = Math.floor($("#"+d6).offset().left+document.getElementById(d6).width);
+    sevent = Math.floor($("#"+d7).offset().top);
+    sevenb = Math.floor($("#"+d7).offset().top+document.getElementById(d7).height);
+    sevenl = Math.floor($("#"+d7).offset().left);
+    sevenr = Math.floor($("#"+d7).offset().left+document.getElementById(d7).width);
+    eightt = Math.floor($("#"+d8).offset().top);
+	eightb = Math.floor($("#"+d8).offset().top+document.getElementById(d8).height);
+	eightl = Math.floor($("#"+d8).offset().left);
+    eightr = Math.floor($("#"+d8).offset().left+document.getElementById(d8).width);
+    ninet = Math.floor($("#"+d9).offset().top);
+    nineb = Math.floor($("#"+d9).offset().top+document.getElementById(d9).height);
+    ninel = Math.floor($("#"+d9).offset().left);
+    niner = Math.floor($("#"+d9).offset().left+document.getElementById(d9).width);
+    tent = Math.floor($("#"+d10).offset().top);
+    tenb = Math.floor($("#"+d10).offset().top+document.getElementById(d10).height);
+    tenl = Math.floor($("#"+d10).offset().left);
+    tenr = Math.floor($("#"+d10).offset().left+document.getElementById(d10).width); 
+    elevent = Math.floor($("#"+d11).offset().top);
+    elevenb = Math.floor($("#"+d11).offset().top+document.getElementById(d11).height);
+    elevenl = Math.floor($("#"+d11).offset().left);
+    elevenr = Math.floor($("#"+d11).offset().left+document.getElementById(d11).width);
+    twelvet = Math.floor($("#"+d12).offset().top);
+    twelveb = Math.floor($("#"+d12).offset().top+document.getElementById(d12).height);
+    twelvel = Math.floor($("#"+d12).offset().left);
+    twelver = Math.floor($("#"+d12).offset().left+document.getElementById(d12).width);
+
+}
+$("#wit").css(
+	"background" , "linear-gradient(to right, "+String(p11)+","+ String(p12)+")"
+)
+$("#bck").css(
+	"background" , "linear-gradient(to right, "+String(p21)+","+ String(p22)+")"
+)
+function dte () {	
+	detect("wit", "bck", "qua", "blu1", "blu2", "snit","bh1","bh2", "bh3", "wh1", "wh2", "wh3" )
+	//console.log(String(sevenr)+","+String(sevenl)+","+String(sevenb)+","+String(sevent))
+	requestAnimationFrame(dte);
+};
+requestAnimationFrame(dte);
+function colis () {
+if(twot<=threet&&twob>=threeb&&twol<=threer&&twor>=threel){
+	document.getElementById('qua').style.top=twot+26
+	document.getElementById('qua').style.left=twol+26
+}requestAnimationFrame(colis);
+}requestAnimationFrame(colis);
+function coli () {
+if(onet<=threet&&oneb>=threeb&&onel<=threer&&oner>=threel){
+	document.getElementById('qua').style.top=onet+26
+	document.getElementById('qua').style.left=onel+26
+}requestAnimationFrame(coli);
+}requestAnimationFrame(coli);
+function blucol () {
+	if(onet<=fourt&&oneb>=fourb&&onel<=fourr&&oner>=fourl){
+	if(onet<=threet&&oneb>=threeb&&onel<=threer&&oner>=threel){
+		document.getElementById('qua').style.top=onet-27
+	document.getElementById('qua').style.left=onel-27
+	}
+}requestAnimationFrame(blucol)
+}requestAnimationFrame(blucol)
+function blucol1 () {
+	if(twot<=fivet&&twob>=fiveb&&twol<=fiver&&twor>=fivel){
+	if(twot<=threet&&twob>=threeb&&twol<=threer&&twor>=threel){
+		document.getElementById('qua').style.top=twot-27
+	document.getElementById('qua').style.left=twol-27
+	}
+}requestAnimationFrame(blucol1)
+}requestAnimationFrame(blucol1)
+function chase1 () {var ya = (onel-fourl) / 50;
+	var ya2 = (onet-fourt) / 50;
+	$("#blu1").animate({left:"+="+String(ya)+"px"}, 0, "linear")
+	$("#blu1").animate({top:"+="+String(ya2)+"px"}, 0, "linear")
+requestAnimationFrame(chase1)
+}requestAnimationFrame(chase1)
+function chase2 () {var ya1 = (twol-fivel) / 50;
+	var ya3 = (twot-fivet) / 50;
+	$("#blu2").animate({left:"+="+String(ya1)+"px"}, 0, "linear")
+	$("#blu2").animate({top:"+="+String(ya3)+"px"}, 0, "linear")
+requestAnimationFrame(chase2)
+}requestAnimationFrame(chase2)
+function score1 () {
+if(sevent<=threet&&sevenb>=threeb&&sevenl<=threer&&sevenr>=threel){
+	p1score+=10;
+	document.getElementById('qua').style.top=300
+	document.getElementById('qua').style.left=500
+}requestAnimationFrame(score1);
+}requestAnimationFrame(score1);
+function score2 () {
+if(eightt<=threet&&eightb>=threeb&&eightl<=threer&&eightr>=threel){
+	p1score+=10;
+	document.getElementById('qua').style.top=300
+	document.getElementById('qua').style.left=500
+}requestAnimationFrame(score2);
+}requestAnimationFrame(score2);
+function score3 (){
+if(ninet<=threet&&nineb>=threeb&&ninel<=threer&&niner>=threel){
+	p1score+=10;
+	document.getElementById('qua').style.top=300
+	document.getElementById('qua').style.left=500
+}requestAnimationFrame(score3);
+}requestAnimationFrame(score3);
+function score4 () {
+if(tent<=threet&&tenb>=threeb&&tenl<=threer&&tenr>=threel){
+	p2score+=10;
+	document.getElementById('qua').style.top=300
+	document.getElementById('qua').style.left=500
+}requestAnimationFrame(score4);
+}requestAnimationFrame(score4);
+function score5 () {
+if(elevent<=threet&&elevenb>=threeb&&elevenl<=threer&&elevenr>=threel){
+	p2score+=10;
+	document.getElementById('qua').style.top=300
+	document.getElementById('qua').style.left=500
+}requestAnimationFrame(score5);
+}requestAnimationFrame(score5);
+function score6 (){
+if(twelvet<=threet&&twelveb>=threeb&&twelvel<=threer&&twelver>=threel){
+	p2score+=10;
+	document.getElementById('qua').style.top=300
+	document.getElementById('qua').style.left=500
+}requestAnimationFrame(score6);
+}requestAnimationFrame(score6);
+function score7 (){
+if(onet<=sixt&&oneb>=sixb&&onel<=sixr&&oner>=sixl){
+	p1score+=150;
+	document.getElementById('qua').style.top=300
+	document.getElementById('qua').style.left=500
+	if(p2score>p1score){
+		document.write(p1+" won")
+	}
+	else if(p1score>p2score){
+		document.write(p2+" won")
+	}
+	else if(p1score==p2score)
+		document.write("draw");
+}requestAnimationFrame(score7);
+}requestAnimationFrame(score7);
+function score8 () {
+if(twot<=sixt&&twob>=sixb&&twol<=sixr&&twor>=sixl){
+	p2score+=150;
+		if(p2score>p1score){
+		document.write(p1+" won")
+	}
+	else if(p1score>p2score){
+		document.write(p2+" won")
+	}
+	else if (p1score==p2score)
+		document.write("draw");
+	document.getElementById('qua').style.top=300
+	document.getElementById('qua').style.left=500
+}requestAnimationFrame(score8);
+}requestAnimationFrame(score8);
+function p1move () {
+	if(pos==="left"){
+			var ya=(0-onel)/85
+			$("#wit").animate({left:"+="+String(ya)+"px"}, 0.0, "linear")
+	}
+	else if(pos==="right"){
+			var ya1=(screen.width-onel)/85
+			$("#wit").animate({left:"+="+String(ya1)+"px"}, 0.0, "linear")
+	}
+	else if(pos==="up"){
+			var ya2=(0-onet)/85
+			$("#wit").animate({top:"+="+String(ya2)+"px"}, 0.0, "linear")
+	}
+	else if(pos==="down"){
+			var ya3=(screen.height-onet)/85
+			$("#wit").animate({top:"+="+String(ya3)+"px"}, 0.0, "linear")
+	}requestAnimationFrame(p1move)
+}requestAnimationFrame(p1move)
+function p2move () {
+	if(pos1==="left"){
+			var yas=(0-twol)/85
+			$("#bck").animate({left:"+="+String(yas)+"px"}, 0.0, "linear")
+	}
+	else if(pos1==="right"){
+			var yas1=(screen.width-twol)/85
+			$("#bck").animate({left:"+="+String(yas1)+"px"}, 0.0, "linear")
+	}
+	else if(pos1==="up"){
+			var yas2=(0-twot)/85
+			$("#bck").animate({top:"+="+String(yas2)+"px"}, 0.0, "linear")
+	}
+	else if(pos1==="down"){
+			var yas3=(screen.height-twot)/85
+			$("#bck").animate({top:"+="+String(yas3)+"px"}, 0.0, "linear")
+	}requestAnimationFrame(p2move)
+}requestAnimationFrame(p2move)
+function loop () {
+if(onel<0){
+	document.getElementById("wit").style.left=1366
+};
+if (twol<0) {
+	document.getElementById("bck").style.left=1366
+};
+if(threel<0){
+	document.getElementById("qua").style.left=1366
+};
+if(onel>1366){
+	document.getElementById("wit").style.left=0
+};
+if (twol>1366) {
+	document.getElementById("bck").style.left=0
+};
+if(threel>1366){
+	document.getElementById("qua").style.left=0
+};
+if(onet<-10){
+	document.getElementById("wit").style.top=750
+};
+if (twot<-10) {
+	document.getElementById("bck").style.top=750
+};
+if(threet<-10){
+	document.getElementById("qua").style.top=750
+};
+if(onet>750){
+	document.getElementById("wit").style.top=0
+};
+if (twot>750) {
+	document.getElementById("bck").style.top=0
+};
+if(threet>750){
+	document.getElementById("qua").style.top=0
+};
+	requestAnimationFrame(loop)
+}requestAnimationFrame(loop)
+	var x= Math.floor(Math.random()*950)
+	var y=Math.floor(Math.random()*500)
+
+function snitch () {
+	if(sixt==y&&sixl==x){
+		x= Math.floor(Math.random()*1366)
+y=Math.floor(Math.random()*750)
+	}
+	console.log(x+','+y)
+	var ye=(x-sixl)/20
+	var yes=(y-sixt)/20
+	console.log("x: " + String(sixl) + ",y: " + String(sixt))
+	console.log(String(ye) + "," + String(yes))
+		if (ye < 0)
+			$("#snit").animate({left:"-="+String(-ye)+"px"}, 0.0, "linear")
+		else 
+			$("#snit").animate({left:"+="+String(ye)+"px"}, 0.0, "linear")
+		if (yes < 0)
+			$("#snit").animate({top:"-="+String(-yes)+"px"}, 0.0, "linear")
+		else
+			$("#snit").animate({top:"+="+String(yes)+"px"}, 0, "linear")
+
+	requestAnimationFrame(snitch)
+}requestAnimationFrame(snitch)
+
+
+	$(document).keydown(function(key) {
+			switch(parseInt(key.which,10)) {
+				case 37: pos="left"
+
+					document.getElementById("wit").src = "https://lh3.googleusercontent.com/2zBFvcFYjt7zWkyCmrf3arPrdkRL5UJv2W9ZaPMsngfElImmTvHU0AMFbF-PeTMB3_QyDkQIeA=w1366-h768-rw-no";
+					break;
+				case 39:pos="right"
+					document.getElementById("wit").src = "https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no";
+					break;
+				case 38:pos="up"
+
+					break;
+				case 40:pos="down"
+					break;
+				case 32:
+					break;
+				default:
+					break;
+				}
+				});
+		$(document).keydown(function(key) {
+			switch(parseInt(key.which,10)) {
+				case 65:pos1="left"
+					document.getElementById("bck").src = "https://lh3.googleusercontent.com/2zBFvcFYjt7zWkyCmrf3arPrdkRL5UJv2W9ZaPMsngfElImmTvHU0AMFbF-PeTMB3_QyDkQIeA=w1366-h768-rw-no";
+					break;
+				case 68:pos1="right"
+					document.getElementById("bck").src = "https://lh3.googleusercontent.com/_Hzwmw6hBBhuW3IKymA8aV9sIyA6vMRC-NxGQyeZzFBtNnxbZtHR69TlpTXQSZeNH0l3hNOxOg=w1366-h768-rw-no";
+					break;
+				case 87:pos1="up"
+					break;
+				case 83:pos1="down"
+					break;
+				case 32:
+					break;
+				default:
+					break;
+				}
+				});
+		document.getElementById('qson').autoplay=true
+		document.getElementById('qson').loop=true
+		document.getElementById('qson').controls=false
+	</SCRIPT>
