@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <style>
+body {
+    background-color: red;
+    position: relative;
+    -webkit-animation: mymove 20s infinite;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 20s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 20s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color:#740001;}
+    5%  {background-color:#ae0001;}
+    10%  {background-color:#eeba30; }
+    15%  {background-color:#d3a625;}
+    20% {background-color:#000000;}
+    25% {background-color:#eee117;}
+    30% {background-color:#e1b723;}
+    35% {background-color:#906200;}
+    40% {background-color:#1e1301;}
+    45% {background-color:#000000;}
+    50% {background-color:#0e1a40;}
+    55% {background-color:#222f5b;}
+    60% {background-color:#5d5d5d;}
+    65% {background-color:#946b2d;}
+    70% {background-color:#000000;}
+    75% {background-color:#1a427a;}
+    80% {background-color:#2a623d;}
+    85% {background-color:#5d5d5d;}
+    90% {background-color:#aaaaaa;}
+    95% {background-color:#000000;}
+    100%{background-color:#000000;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:#740001;}
+    5%  {background-color:#ae0001;}
+    10%  {background-color:#eeba30; }
+    15%  {background-color:#d3a625;}
+    20% {background-color:#000000;}
+    25% {background-color:#eee117;}
+    30% {background-color:#e1b723;}
+    35% {background-color:#906200;}
+    40% {background-color:#1e1301;}
+    45% {background-color:#000000;}
+    50% {background-color:#0e1a40;}
+    55% {background-color:#222f5b;}
+    60% {background-color:#5d5d5d;}
+    65% {background-color:#946b2d;}
+    70% {background-color:#000000;}
+    75% {background-color:#1a427a;}
+    80% {background-color:#2a623d;}
+    85% {background-color:#5d5d5d;}
+    90% {background-color:#aaaaaa;}
+    95% {background-color:#000000;}
+    100%{background-color:#000000;}
+}
+#hp{height:100%;
+    width:25%;
+
+    position:fixed;
+}
+#parch{
+    left:25%;
+    width:75%;
+    height:100%;
+    position: fixed
+}
+#house{
+    font-family: Old English Text MT; 
+    height:50pt;
+    width:50%;
+    font-size:50pt;
+    z-index:1;
+    position:fixed;
+    left:35.8%;
+}
+#house2{
+    font-family: Old English Text MT;
+    font-size:50pt;
+    height:50pt;
+    width:50%;
+    z-index:1;
+    position:fixed;
+    left:35.8%;
+    top:50%;
+}body{
+    font-family: Old English Text MT;
+    font-size: 30pt;
+}
+input{z-index:5;
+    position:absolute;
+    background:transparent;
+    outline:none;
+    border:none;
+    font-size: 30pt;
+    font-family: Old English Text MT;
+}
+#color11{
+    position:fixed;
+    left:36%;
+    top:25%;
+}
+#p11{
+    position:fixed;
+    left:44%;
+    top:24.5%;
+}
+#color12{
+    position:fixed;
+    left:36%;
+    top:31.5%;
+}
+#p12{
+    position:fixed;
+    left:44%;
+    top:31.5%;
+}
+#color21{
+    position:fixed;
+    left:36%;
+    top:66.5%;
+}
+#p21{
+    position:fixed;
+    left:44%;
+    top:66.5%;
+}
+#color22{
+    position:fixed;
+    left:36%;
+    top:71.5%;
+}
+#p22{
+    position:fixed;
+    left:44%;
+    top:71.5%;
+}
+#p1{
+    z-index:4;
+    top:121.5px ;
+    left:44%;
+    font-family: Old English Text MT;
+    }
+#p2{
+    z-index:4;
+    top:390px ;
+    left:44%;
+    font-family: Old English Text MT;
+    }
+
+#name{
+    top:60.5%;
+    position:fixed;
+    left:36%;
+    z-index:3;
+    font-size: 30pt
+}
+#name1{
+    top:20%;
+    position:fixed;
+    left:36%;
+    z-index:3;
+    font-size: 30pt
+}
+</style><button type="button" onclick="retrieveval()">save prefrences</button>
+<img id="parch" src="http://cliparts.co/cliparts/kTM/b85/kTMb85Mbc.png"></img>
+<div id="name">Name: </div><input id="p1"type:"text"></input>
+<div id="name1">Name: </div><input id="p2"type:"text"></input>
+<div id="color11">color1</div><input id="p11"type:"text"></input>
+<div id="color12">color2</div><input id="p12"type:"text"></input>
+<div id="color21">color1</div><input id="p21"type:"text"></input>
+<div id="color22">color2</div><input id="p22"type:"text"></input>
+<div id= 'house'></div>
+<div id= 'house2'></div>
+<script type="text/javascript">
+function retrieveval () {
+    var x=document.getElementById("p1").value
+    var y=document.getElementById("p2").value
+    document.cookie="ap1="+String(x)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+    document.cookie="ap2="+String(y)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+    var a=document.getElementById("p11").value
+    var b=document.getElementById("p12").value
+    document.cookie="ap11="+String(a)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+    document.cookie="ap12="+String(b)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+    var c=document.getElementById("p21").value
+    var d=document.getElementById("p22").value
+    document.cookie="ap22="+String(c)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+    document.cookie="ap21="+String(d)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+    document.cookie="ap1h="+String(hou)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+    document.cookie="ap2h="+String(hou2)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+    window.open("http://localhost:10005/soccer.html")
+}
+var tem=["Appleby Arrows",
+"Chudley Cannons",
+"Falmouth Falcons",
+"Puddlemore United",
+"Tutshil Tornados",
+"Wimbourne Wasps",
+"Ballycastle Bats",
+"Kenmare Kestrels",
+"Montrose Magpies",
+"Wigtown Wanderers",
+"Caerphilly Catapults",
+"Holyhead Harpies",
+"Thundelarra Thunderers",
+"Woolongong Warriors",
+"Vratsa Vultures",
+"Haileybury Hammers",
+"Moose Jaw Meteorites",
+"Stonewall Stormers",
+"Gimbi Giant-Slayers",
+"Heidelberg Harriers",
+"Toyohashi Tengu",
+"Gorodok Gargoyles",
+"Bigonville Bombers",
+"Moutohora Macaws",
+"Karasjok Kites",
+"Tarapoto Tree-Skimmers",
+"Grodzisk Goblins",
+"Braga Broomfleet",
+"Sumbawanga Sunrays",
+"Tchamba Charmers",
+"Patonga Proudsticks",
+"Fitchburg Finches",
+"Sweetwater All-Stars"]
+var indexyo = Math.floor(Math.random() * tem.length);
+var hou =document.getElementById('house').innerHTML=tem[indexyo]
+var indexyo2 = Math.floor(Math.random() * tem.length);
+
+var hou2 =document.getElementById('house2').innerHTML=tem[indexyo2]
+console.log(hou2)</script>
+</body>
+</html>
