@@ -1,4 +1,3 @@
-<script type="text/javascript">
 var array=[]
 var key;
 function go(a,b,c,d) {
@@ -27,5 +26,3 @@ if(x==16){carray.pop()
 requestAnimationFrame(hi)}
 requestAnimationFrame(hi)
 document.onkeydown = checkKey;
-
-</script>
