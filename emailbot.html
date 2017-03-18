@@ -1,0 +1,17 @@
+<textarea value="your email here" id="email"></textarea>
+<textarea id="myText">
+    body of email
+</textarea>
+<a href="mailto:theo.s.urban@gmail.com">email me here!</a>
+<button onclick="sendMail(); return false">Send</button>
+<script type="text/javascript">
+	function sendMail() {
+    var link = "mailto:"+document.getElementById('email').value
+             + "?cc=theo.s.urban@gmail.com"
+             + "&subject=" + escape("This is my subject")
+             + "&body=" + escape(document.getElementById('myText').value)
+    ;
+
+    window.location.href = link;
+}
+</script>
