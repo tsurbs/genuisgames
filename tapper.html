@@ -109,5 +109,28 @@
 		left:0;
 	}
 </style>
+<script type="text/javascript">var i=0
+function go(argument) {
+	var div = document.createElement("div");
+					div.id="A"+String(i)
+					div.style.width = "50px"; 
+					div.style.height = "50px";
+					div.style.borderRadius = "25px"
+					div.style.position = "fixed";
+					div.style.left = "550px"
+					div.style.top = "650px"
+					div.style.background = "red";
+					div.style.color = "white";
+					div.style.zIndex = "10"
+					document.body.appendChild(div);
+					$('#A'+String(i)).animate({top:"-=1000px",left:"-30px"},400);
+					i++
+					function yes(){
+					if(parseInt(document.getElementById(div.id).style.top.replace("px", "0"))/10<=30) {
+						document.getElementById(div.id).style.opacity="0"
+					}requestAnimationFrame(yes)
+				}requestAnimationFrame(yes)
+}
+</script>
 </body>
 </html>
