@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head> <meta name="apple-mobile-web-app-capable" content="yes">
+<head>
 	<title>TAPP3R</title>
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
-<div onclick="go()" id="tap1">1</div>
-<div id="tap2">2</div>
+<div onclick="go1()" id="tap1">1</div>
+<div onclick="go2()" id="tap2">2</div>
 <div id="lower"></div>
 <div id="can1"></div>
 <div id="can2"></div>
@@ -56,9 +56,8 @@
 		width:16%;
 		position:fixed;
 		top:50%;
-		left:13%;
+		left:20%;
    z-index: -2;
-    -webkit-transform:rotate(30deg);
 	}
 	#can2{
 		background-color: red;
@@ -112,7 +111,8 @@
 	}
 </style>
 <script type="text/javascript">var i=0
-function go(argument) {
+document.getElementById("tap2").style.opacity="0.2"
+function go1(argument) {
 	var div = document.createElement("div");
 					div.id="A"+String(i)
 					div.style.width = "50px"; 
@@ -127,11 +127,44 @@ function go(argument) {
 					document.body.appendChild(div);
 					$('#A'+String(i)).animate({top:"-=1000px",left:"-30px"},400);
 					i++
+					document.getElementById("tap2").style.opacity=String(parseInt((document.getElementById("tap2").style.opacity).replace(".","0"))/10+0.02);
 					function yes(){
 					if(parseInt(document.getElementById(div.id).style.top.replace("px", "0"))/10<=30) {
 						document.getElementById(div.id).style.opacity="0"
 					}requestAnimationFrame(yes)
 				}requestAnimationFrame(yes)
+}z=0
+function go2(argument) {if(document.getElementById("tap2").style.opacity==="1"){
+	var div = document.createElement("div");
+					div.id="B"+String(z)
+					div.style.width = "50px"; 
+					div.style.height = "50px";
+					div.style.borderRadius = "25px"
+					div.style.position = "fixed";
+					div.style.left = "200px"
+					div.style.top = "650px"
+					div.style.background = "green";
+					div.style.color = "white";
+					div.style.zIndex = "10"
+					document.body.appendChild(div);
+					$('#B'+String(z)).animate({top:"-=320px"},400);
+					$('#B'+String(z)).animate({left:"+=150px"},400);
+					
+					$('#B'+String(z)).animate({
+						height:"+=400px", 
+						width:"+=400px",
+						borderRadius: "+=200px",
+						left:"-=200",
+						top:"-=200"
+						},150)
+				$('#B'+String(z)).animate({
+						height:"-=450px", 
+						width:"-=450px",
+						borderRadius: "-=200px",
+						left:"+=200",
+						top:"+=200"
+						},50);
+				z++}
 }
 </script>
 </body>
