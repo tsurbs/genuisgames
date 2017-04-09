@@ -15,6 +15,8 @@
 <div id="tubeII"></div>
 <div id="enemy"></div>
 <div id="top"></div>
+<div id="yhel"></div>
+<div id="ehel"></div>
 <style type="text/css">
 	#tap1{
 		background-color:blue;
@@ -109,9 +111,28 @@
 		top:0;
 		left:0;
 	}
+	#yhel{
+		position: fixed;
+		top:2.5%;
+		left:10%;
+		width: 150px;
+		height: 2.5%;
+		background-color: red
+	}
+	#ehel{
+		position: fixed;
+		top:2.5%;
+		left:70%;
+		width: 150px;
+		height: 2.5%;
+		background-color: blue
+	}
 </style>
-<script type="text/javascript">var i=0
-document.getElementById("tap2").style.opacity="0.2"
+<script type="text/javascript">
+var level=prompt("what level?")
+document.cookie="level="+String(level)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+var i=0
+document.getElementById("tap2").style.opacity="0.1"
 function go1(argument) {
 	var div = document.createElement("div");
 					div.id="A"+String(i)
@@ -127,14 +148,32 @@ function go1(argument) {
 					document.body.appendChild(div);
 					$('#A'+String(i)).animate({top:"-=1000px",left:"-30px"},400);
 					i++
-					document.getElementById("tap2").style.opacity=String(parseInt((document.getElementById("tap2").style.opacity).replace(".","0"))/10+0.02);
+					document.getElementById("tap2").style.opacity=String((parseFloat((document.getElementById("tap2").style.opacity)))+0.02)
+					if (document.getElementById("tap2").style.opacity==="1.1") {document.getElementById("tap2").style.opacity="0.1"}
+						$('#enemy').animate({
+						height:"-="+String(100/(10*level))+"px",
+						width:"-="+String(100/(10*level))+"px",
+						borderRadius: "-="+String(50/(10*level))+"px",
+						left:"-=10",
+						top:"-=10"
+						},50);
+					$("#enemy").animate({
+						left:"+="+String(10+(50/(10*level)))+"px",
+						top:"+="+String(10+(50/(10*level)))+"px"
+					},30)
+					$('#ehel').animate({
+						width:"-="+String(0.375*(100/(10*level)))+"px"
+					},10)
 					function yes(){
 					if(parseInt(document.getElementById(div.id).style.top.replace("px", "0"))/10<=30) {
 						document.getElementById(div.id).style.opacity="0"
 					}requestAnimationFrame(yes)
 				}requestAnimationFrame(yes)
+				$("#yhel").animate({
+						width:"-="+String((0.375*(100/(10*level)))/2)+"px"
+					},0)
 }z=0
-function go2(argument) {if(document.getElementById("tap2").style.opacity==="1"){
+function go2(argument) {if(parseFloat(document.getElementById("tap2").style.opacity)>=1){
 	var div = document.createElement("div");
 					div.id="B"+String(z)
 					div.style.width = "50px"; 
@@ -149,7 +188,6 @@ function go2(argument) {if(document.getElementById("tap2").style.opacity==="1"){
 					document.body.appendChild(div);
 					$('#B'+String(z)).animate({top:"-=320px"},400);
 					$('#B'+String(z)).animate({left:"+=150px"},400);
-					
 					$('#B'+String(z)).animate({
 						height:"+=400px", 
 						width:"+=400px",
@@ -164,8 +202,28 @@ function go2(argument) {if(document.getElementById("tap2").style.opacity==="1"){
 						left:"+=200",
 						top:"+=200"
 						},50);
-				z++}
-}
+				z++
+				$('#enemy').animate({
+						height:"-="+String(100/(level))+"px",
+						width:"-="+String(100/(level))+"px",
+						borderRadius: "-="+String(50/(level))+"px",
+						left:"-=10",
+						top:"-=10"
+						},50);
+					$("#enemy").animate({
+						left:"+="+String(10+(50/(level)))+"px",
+						top:"+="+String(10+(50/(level)))+"px"
+					},30)
+					$("#enemy").animate({
+						width:"+="+String(0.375*(100/(level)))+"px"
+					},30)
+				document.getElementById("tap2").style.opacity="0.2"}document.getElementById("tap2").style.opacity=String((parseFloat((document.getElementById("tap2").style.opacity)))-0.1)
+
+}function die(argument) {
+	$("#yhel").animate({
+						width:"-="+String(level)+"px"
+					},100)
+}setInterval(die, 100*((100-level)/2))
 </script>
 </body>
 </html>
