@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TAPP3R</title><meta name="apple-mobile-web-app-capable" content="yes">
+	<title>TAPP3R</title>
+	<meta
+    name="viewport;
+    apple-mobile-web-app-capable"
+    content="yes;
+    initial-scale=1.0;
+    maximum-scale=1.0;
+    user-scalable=no;
+    width=device-width"
+>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://gist.github.com/johan/2047491.js"></script>
 </head>
 <body>
 <div onclick="go1()" id="tap1">1</div>
@@ -129,24 +139,7 @@
 	}
 </style>
 <script type="text/javascript">
-(function($) {
-  var IS_IOS = /iphone|ipad/i.test(navigator.userAgent);
-  $.fn.nodoubletapzoom = function() {
-    if (IS_IOS)
-      $(this).bind('touchstart', function preventZoom(e) {
-        var t2 = e.timeStamp
-          , t1 = $(this).data('lastTouch') || t2
-          , dt = t2 - t1
-          , fingers = e.originalEvent.touches.length;
-        $(this).data('lastTouch', t2);
-        if (!dt || dt > 500 || fingers > 1) return; // not double-tap
 
-        e.preventDefault(); // double tap - prevent the zoom
-        // also synthesize click events we just swallowed up
-        $(this).trigger('click').trigger('click');
-      });
-  };
-})(jQuery);
 var level=prompt("what level?")
 document.cookie="level="+String(level)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
 var i=0
