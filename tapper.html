@@ -2,8 +2,10 @@
 <html>
 <head>
 	<title>TAPP3R</title>  <meta name="viewport" content="width=device-width" />
-  <meta name="apple-mobile-web-app-capable" content="width=device-width, initial-scale=1.0, yes" />
-	
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable"
+    content="yes"
+>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script></head>
 <body>
@@ -133,6 +135,7 @@
 
 var level=prompt("what level?")
 document.cookie="level="+String(level)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+document.cookie="played=true;expires=Wed, 18 Dec 2023 12:00:00 GMT"
 var i=0
 document.getElementById("tap2").style.opacity="0.1"
 function go1(argument) {
@@ -217,15 +220,17 @@ function go2(argument) {if(parseFloat(document.getElementById("tap2").style.opac
 						top:"+="+String(10+(50/(level)))+"px"
 					},30)
 					$("#ehel").animate({
-						width:"+="+String(0.375*(100/(level)))+"px"
+						width:"-="+String(0.375*(100/(level)))+"px"
 					},30)
 				document.getElementById("tap2").style.opacity="0.2"}document.getElementById("tap2").style.opacity=String((parseFloat((document.getElementById("tap2").style.opacity)))-0.1)
 
-}function die(argument) {
+}window.onclick = function() {
+	function die(argument) {
 	$("#yhel").animate({
 						width:"-="+String(level)+"px"
 					},100)
 }setInterval(die, 100*((100-level)/2))
+}
 </script>
 </body>
 </html>
