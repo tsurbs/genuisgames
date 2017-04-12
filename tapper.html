@@ -7,7 +7,8 @@
     content="yes"
 >
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script></head>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
 <body>
 <div onclick="go1()" id="tap1">1</div>
 <div onclick="go2()" id="tap2">2</div>
@@ -70,9 +71,9 @@
 		width:16%;
 		position:fixed;
 		top:50%;
-		left:68%;
+		left:64%;
    z-index: -2;
-    -webkit-transform:rotate(-30deg);
+    -webkit-transform:rotate(-33deg);
 	}#tubeI{
 		background-color: transparent;
 		position:fixed;
@@ -132,10 +133,23 @@
 	}
 </style>
 <script type="text/javascript">
-
 var level=prompt("what level?")
 document.cookie="level="+String(level)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
 document.cookie="played=true;expires=Wed, 18 Dec 2023 12:00:00 GMT"
+function winend(argument) {
+	if(document.getElementById("ehel").style.width==="0px" && document.getElementById("yhel").style.width!=="0px"){
+		confirm("you won")
+		document.cookie="won=yes;expires=Wed, 18 Dec 2023 12:00:00 GMT"
+		window.open("endgame.html")
+	}requestAnimationFrame(winend)
+}requestAnimationFrame(winend)
+function loseend(argument) {console.log(document.getElementById("yhel").style.width+","+document.getElementById("ehel").style.width)
+	if(document.getElementById("yhel").style.width==="0px" && document.getElementById("ehel").style.width!=="0px"){
+		confirm("you lost")
+		document.cookie="won=no;expires=Wed, 18 Dec 2023 12:00:00 GMT"
+		window.open("endgame.html")
+	}requestAnimationFrame(loseend)
+}requestAnimationFrame(loseend)
 var i=0
 document.getElementById("tap2").style.opacity="0.1"
 function go1(argument) {
@@ -178,6 +192,7 @@ function go1(argument) {
 						width:"-="+String((0.375*(100/(10*level)))/2)+"px"
 					},0)
 }z=0
+var yes=1
 function go2(argument) {if(parseFloat(document.getElementById("tap2").style.opacity)>=1){
 	var div = document.createElement("div");
 					div.id="B"+String(z)
@@ -225,11 +240,14 @@ function go2(argument) {if(parseFloat(document.getElementById("tap2").style.opac
 				document.getElementById("tap2").style.opacity="0.2"}document.getElementById("tap2").style.opacity=String((parseFloat((document.getElementById("tap2").style.opacity)))-0.1)
 
 }window.onclick = function() {
-	function die(argument) {
+	function die(argument) {console.log(typeof(window.orientation))
 	$("#yhel").animate({
 						width:"-="+String(level)+"px"
 					},100)
-}setInterval(die, 100*((100-level)/2))
+}if(yes==1){
+	setInterval(die, 100*((100-level)/2))
+	yes=2
+}
 }
 </script>
 </body>
