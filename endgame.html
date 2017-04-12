@@ -14,7 +14,7 @@
   <option value="4">Tin(7.31)</option>
   <option value="2">Aluminium(2.70)</option>
 </select>
-<button id="go"></button>
+<button onclick="hgh()" id="go"></button>
 <style type="text/css">
 	body{
 		background-color:blue;
@@ -44,6 +44,8 @@ if(getCookie("won")==="yes"){
 	document.getElementById("go").innerHTML = "<h1 style=\'background-color:blue; color:red;font-size: 10em; font-family:arial, helvetica, sans-serif; height:400px; width:1000\'> YOU WON</h1>"
 };if(getCookie("won")==="no"){
 	document.getElementById("des").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 10em; font-family:arial, helvetica, sans-serif; height:30px; length:100\'> Try Again</h1>"
+}function hgh(argument) {
+	document.cookie="level="+String(document.getElementById("sel").value)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
 }
 </script>
 </html>
