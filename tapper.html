@@ -1,137 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TAPP3R</title>  <meta name="viewport" content="width=device-width" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="apple-mobile-web-app-capable"
-    content="yes"
->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<title>Asteroid Destroyer</title>
 </head>
 <body>
-<div onclick="go1()" id="tap1">1</div>
-<div onclick="go2()" id="tap2">2</div>
-<div id="lower"></div>
-<div id="can1"></div>
-<div id="can2"></div>
-<div id="tubeI"></div>
-<div id="tubeII"></div>
-<div id="enemy"></div>
-<div id="top"></div>
-<div id="yhel"></div>
-<div id="ehel"></div>
+<div id="des">In this simulation, you must destroy the asteroid before it hits the earth. <br> This may happen in the future, so we need to prepare asteroidnauts like you NOW.<br> In the simulator, there are two bars at the top.  <br>  The first one is red and represents the asteroid's proximity to earth. <br>  The greater the density of the metal, the faster it travels to earth.<br> The blue one represents how close you are to destroying the asteroid.<br> There are also two cannons. <br>  The first one is orange with an number 2 on it.  <br>  It is extremely powerful, but can only be used after being charged.  <br>  You charge it by tapping the blue cannon labled 1.<br>Good luck, future asteroidnaut.
+</div>
+<select id="sel">
+  <option value="no">Pick the asteroid type you want to destroy</option>
+  <option value="10">Lead(11.3g/ml)</option>
+  <option value="8">Copper(8.96g/ml)</option>
+  <option value="6">Iron(7.87g/ml)</option>
+  <option value="4">Tin(7.31)</option>
+  <option value="2">Aluminium(2.70)</option>
+</select>
+<button onclick="hgh()" id="go"></button>
 <style type="text/css">
-	#tap1{
+	body{
 		background-color:blue;
-		height: 300px;
-		width:300px;
-		border-radius: 150px;
-		text-align:center;
-		font-size: 50pt;
-		color:red;
-		position: fixed;
-		left:55%;
-		top:70%;
-	}#tap2{
-		background-color:orange;
-		height: 300px;
-		width:300px;
-		border-radius: 150px;
-		text-align:center;
-		font-size: 50pt;
-		color:green;
-		position: fixed;
-		left:5%;
-		top:70%;
-		opacity: 0.2;
-	}#lower{
-		background-color: yellow;
-		height: 32.5%;
-		width:100%;
-		position: fixed;
-		top:67.5%;
-		left:0px;
-		z-index:-1;
-	}body{
-		background-color: purple;
-		z-index: -3;
-	}#can1{
-		background-color: green;
-		height:30%;
-		width:16%;
-		position:fixed;
-		top:50%;
-		left:20%;
-   z-index: -2;
 	}
-	#can2{
-		background-color: red;
-		height:30%;
-		width:16%;
-		position:fixed;
-		top:50%;
-		left:64%;
-   z-index: -2;
-    -webkit-transform:rotate(-33deg);
-	}#tubeI{
-		background-color: transparent;
-		position:fixed;
-		border-style: groove;
-    	border-width: 25px;
-    	border-color:green;
-    	height: 200px;
-    	width: 100px;
-    	left:90%;
-    	top:30%;
-    	border-radius: 10px;
-	}#tubeII{
-		background-color: transparent;
-		position:fixed;
-		border-style: groove;
-    	border-width: 25px;
-    	border-color:red;
-    	height: 200px;
-    	width: 100px;
-    	left:-10%;
-    	top:35%;
-    	border-radius: 10px;
-	}
-	#enemy{
-		height: 400px;
-		width: 400px;
-		border-radius: 200px;
-		background-color: blue;
+	#sel{
 		position: fixed;
-		top:10%;
-		left:18%;
-		z-index: 5;
-	}
-	#top{
-		background-color: indigo;
-		width: 100%;
-		height:8%;
-		position: fixed;
-		top:0;
-		left:0;
-	}
-	#yhel{
-		position: fixed;
-		top:2.5%;
-		left:10%;
-		width: 150px;
-		height: 2.5%;
-		background-color: red
-	}
-	#ehel{
-		position: fixed;
-		top:2.5%;
-		left:70%;
-		width: 150px;
-		height: 2.5%;
-		background-color: blue
-	}
+	}#go{position: fixed;}
 </style>
+</body>
 <script type="text/javascript">
 	function getCookie(cname) {
     var name = cname + "=";
@@ -146,126 +38,14 @@
         }
     }
     return "";
-}var level=parseFloat(getCookie(level))
-document.cookie="played=true;expires=Wed, 18 Dec 2023 12:00:00 GMT"
-function winend(argument) {
-	if(document.getElementById("ehel").style.width==="0px" && document.getElementById("yhel").style.width!=="0px"){
-		confirm("you won")
-		document.cookie="won=yes;expires=Wed, 18 Dec 2023 12:00:00 GMT"
-		window.open("endgame.html")
-	}requestAnimationFrame(winend)
-}requestAnimationFrame(winend)
-function loseend(argument) {console.log(document.getElementById("yhel").style.width+","+document.getElementById("ehel").style.width)
-	if(document.getElementById("yhel").style.width==="0px" && document.getElementById("ehel").style.width!=="0px"){
-		confirm("you lost")
-		document.cookie="won=no;expires=Wed, 18 Dec 2023 12:00:00 GMT"
-		window.open("endgame.html")
-	}requestAnimationFrame(loseend)
-}requestAnimationFrame(loseend)
-var i=0
-document.getElementById("tap2").style.opacity="0.1"
-function go1(argument) {
-	var div = document.createElement("div");
-					div.id="A"+String(i)
-					div.style.width = "50px"; 
-					div.style.height = "50px";
-					div.style.borderRadius = "25px"
-					div.style.position = "fixed";
-					div.style.left = "550px"
-					div.style.top = "650px"
-					div.style.background = "red";
-					div.style.color = "white";
-					div.style.zIndex = "10"
-					document.body.appendChild(div);
-					$('#A'+String(i)).animate({top:"-=1000px",left:"-30px"},400);
-					i++
-					document.getElementById("tap2").style.opacity=String((parseFloat((document.getElementById("tap2").style.opacity)))+0.02)
-					if (document.getElementById("tap2").style.opacity==="1.1") {document.getElementById("tap2").style.opacity="0.1"}
-						$('#enemy').animate({
-						height:"-="+String(100/(10*level))+"px",
-						width:"-="+String(100/(10*level))+"px",
-						borderRadius: "-="+String(50/(10*level))+"px",
-						left:"-=10",
-						top:"-=10"
-						},50);
-					$("#enemy").animate({
-						left:"+="+String(10+(50/(10*level)))+"px",
-						top:"+="+String(10+(50/(10*level)))+"px"
-					},30)
-					$('#ehel').animate({
-						width:"-="+String(0.375*(100/(10*level)))+"px"
-					},10)
-					function yes(){
-					if(parseInt(document.getElementById(div.id).style.top.replace("px", "0"))/10<=30) {
-						document.getElementById(div.id).style.opacity="0"
-					}requestAnimationFrame(yes)
-				}requestAnimationFrame(yes)
-				$("#yhel").animate({
-						width:"-="+String((0.375*(100/(10*level)))/2)+"px"
-					},0)
-}z=0
-var yes=1
-function go2(argument) {if(parseFloat(document.getElementById("tap2").style.opacity)>=1){
-	var div = document.createElement("div");
-					div.id="B"+String(z)
-					div.style.width = "50px"; 
-					div.style.height = "50px";
-					div.style.borderRadius = "25px"
-					div.style.position = "fixed";
-					div.style.left = "200px"
-					div.style.top = "650px"
-					div.style.background = "green";
-					div.style.color = "white";
-					div.style.zIndex = "10"
-					document.body.appendChild(div);
-					$('#B'+String(z)).animate({top:"-=320px"},400);
-					$('#B'+String(z)).animate({left:"+=150px"},400);
-					$('#B'+String(z)).animate({
-						height:"+=400px", 
-						width:"+=400px",
-						borderRadius: "+=200px",
-						left:"-=200",
-						top:"-=200"
-						},150)
-				$('#B'+String(z)).animate({
-						height:"-=450px", 
-						width:"-=450px",
-						borderRadius: "-=200px",
-						left:"+=200",
-						top:"+=200"
-						},50);
-				z++
-				$('#enemy').animate({
-						height:"-="+String(100/(level))+"px",
-						width:"-="+String(100/(level))+"px",
-						borderRadius: "-="+String(50/(level))+"px",
-						left:"-=10",
-						top:"-=10"
-						},50);
-					$("#enemy").animate({
-						left:"+="+String(10+(50/(level)))+"px",
-						top:"+="+String(10+(50/(level)))+"px"
-					},30)
-					$("#ehel").animate({
-						width:"-="+String(0.375*(100/(level)))+"px"
-					},30)
-				document.getElementById("tap2").style.opacity="0.2"}document.getElementById("tap2").style.opacity=String((parseFloat((document.getElementById("tap2").style.opacity)))-0.1)
-
-}window.onclick = function() {
-	function die(argument) {console.log(typeof(window.orientation))
-	$("#yhel").animate({
-						width:"-="+String(level)+"px"
-					},100)
-}if(yes==1){
-	setInterval(die, 100*((100-level)/2))
-	yes=2
 }
+if(getCookie("won")==="yes"){
+	document.getElementById("des").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 10em; font-family:arial, helvetica, sans-serif; height:400px; length:1000\'> YOU WON</h1>"
+	document.getElementById("go").innerHTML = "<h1 style=\'background-color:blue; color:red;font-size: 10em; font-family:arial, helvetica, sans-serif; height:30px; width:100\'> Go</h1>"
+};if(getCookie("won")==="no"){
+	document.getElementById("des").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 10em; font-family:arial, helvetica, sans-serif; height:400px; length:1000\'> You Lost</h1>"
+}function hgh(argument) {
+	document.cookie="level="+String(document.getElementById("sel").value)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
 }
 </script>
-</body>
 </html>
-
-
-
-
-+-
