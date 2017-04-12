@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Asteroid Destroyer</title>
+</head>
+<body>
+<div id="des">In this simulation, you must destroy the asteroid before it hits the earth. <br> This may happen in the future, so we need to prepare asteroidnauts like you NOW.<br> In the simulator, there are two bars at the top.  <br>  The first one is red and represents the asteroid's proximity to earth. <br>  The greater the density of the metal, the faster it travels to earth.<br> The blue one represents how close you are to destroying the asteroid.<br> There are also two cannons. <br>  The first one is orange with an number 2 on it.  <br>  It is extremely powerful, but can only be used after being charged.  <br>  You charge it by tapping the blue cannon labled 1.<br>Good luck, future asteroidnaut.</div>
+<select>
+  <option value="no">Pick the asteroid type you want to destroy</option>
+  <option value="10">Lead(11.3g/ml)</option>
+  <option value="8">Copper(8.96g/ml)</option>
+  <option value="6">Iron(7.87g/ml)</option>
+  <option value="4">Tin(7.31)</option>
+  <option value="2">Aluminium(2.70)</option>
+</select>
+<button id="go"></button>
+<style type="text/css">
+	body{
+		background-color:blue;
+	}
+</style>
+</body>
+<script type="text/javascript">
+	function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+if(getCookie("won")==="yes"){
+	document.getElementById("write").innerHTML = "<h1 style=\"background-color:blue; color:green;font-size: 10em; font-family:arial, helvetica, sans-serif; height:1000px; length:1000\">"
+}
+</script>
+</html>
