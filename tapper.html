@@ -133,8 +133,20 @@
 	}
 </style>
 <script type="text/javascript">
-var level=prompt("what level?")
-document.cookie="level="+String(level)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+	function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}var level=parseFloat(getCookie(level))
 document.cookie="played=true;expires=Wed, 18 Dec 2023 12:00:00 GMT"
 function winend(argument) {
 	if(document.getElementById("ehel").style.width==="0px" && document.getElementById("yhel").style.width!=="0px"){
