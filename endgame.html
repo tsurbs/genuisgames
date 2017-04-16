@@ -14,14 +14,27 @@
   <option value="4">Tin(7.31)</option>
   <option value="2">Aluminium(2.70)</option>
 </select>
-<button onclick="hgh()" id="go"></button>
+<button onclick="hgh()" id="go">Start</button>
 <style type="text/css">
 	body{
 		background-color:blue;
+	}#des{
+		font-size: 20pt;
 	}
 	#sel{
 		position: fixed;
-	}#go{position: fixed;}
+		top:40%;
+		left:5%;
+		font-size: 25pt;
+		background-color: green;
+	}#go{position: fixed;
+		top:50%;
+		font-size: 25pt;
+		left:5%;
+		background-color: orange;
+	}option{
+		font-size:10pt;
+	}
 </style>
 </body>
 <script type="text/javascript">
@@ -41,11 +54,13 @@
 }
 if(getCookie("won")==="yes"){
 	document.getElementById("des").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 10em; font-family:arial, helvetica, sans-serif; height:400px; length:1000\'> YOU WON</h1>"
-	document.getElementById("go").innerHTML = "<h1 style=\'background-color:blue; color:red;font-size: 10em; font-family:arial, helvetica, sans-serif; height:30px; width:100\'> Go</h1>"
+	document.getElementById("go").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 2em; font-family:arial, helvetica, sans-serif; height:30px; width:100\'> Go</h1>"
 };if(getCookie("won")==="no"){
-	document.getElementById("des").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 10em; font-family:arial, helvetica, sans-serif; height:400px; length:1000\'> You Lost</h1>"
+	document.getElementById("des").innerHTML = "<h1 style=\'background-color:blue; color:red;font-size: 10em; font-family:arial, helvetica, sans-serif; height:400px; length:1000\'> You Lost</h1>"
+	document.getElementById("go").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 2em; font-family:arial, helvetica, sans-serif; height:30px; width:100\'> Try Again</h1>"
 }function hgh(argument) {
 	document.cookie="level="+String(document.getElementById("sel").value)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+	window.open("https://goldprogrammer.github.io/genuisgames/tapper.html")
 }
 </script>
 </html>
