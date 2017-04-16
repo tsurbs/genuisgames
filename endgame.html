@@ -53,10 +53,10 @@
     return "";
 }
 if(getCookie("won")==="yes"){
-	document.getElementById("des").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 10em; font-family:arial, helvetica, sans-serif; height:400px; length:1000\'> YOU WON</h1>"
+	document.getElementById("des").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 5em; font-family:arial, helvetica, sans-serif; height:400px; length:1000\'> YOU WON</h1>"
 	document.getElementById("go").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 2em; font-family:arial, helvetica, sans-serif; height:30px; width:100\'> Go</h1>"
 };if(getCookie("won")==="no"){
-	document.getElementById("des").innerHTML = "<h1 style=\'background-color:blue; color:red;font-size: 10em; font-family:arial, helvetica, sans-serif; height:400px; length:1000\'> You Lost</h1>"
+	document.getElementById("des").innerHTML = "<h1 style=\'background-color:blue; color:red;font-size: 5em; font-family:arial, helvetica, sans-serif; height:400px; length:1000\'> You Lost</h1>"
 	document.getElementById("go").innerHTML = "<h1 style=\'background-color:blue; color:green;font-size: 2em; font-family:arial, helvetica, sans-serif; height:30px; width:100\'> Try Again</h1>"
 }function hgh(argument) {
 	document.cookie="level="+String(document.getElementById("sel").value)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
