@@ -258,20 +258,22 @@ function go2(argument) {if(parseFloat(document.getElementById("tap2").style.opac
 					},30)
 				document.getElementById("tap2").style.opacity="0.2"}document.getElementById("tap2").style.opacity=String((parseFloat((document.getElementById("tap2").style.opacity)))-0.1)
 
-}function pause(){
-	yes=1
+}var yesa=0
+	function pause(){
+	yesa=1
 	confirm("hi")
 }
 	window.onclick = function() {
-	function die(argument) {if(yes==1){console.log(typeof(window.orientation))
+	function die(argument) {if(yesa=0){
+		console.log(typeof(window.orientation))
 	$("#yhel").animate({
 						width:"-="+String(level)+"px"
-					},100)
-					  }
-}
+					},100)}
+					  
+}if(yes==1){
 	setInterval(die, 100*((100-level)/2))
 	yes=2
-}
+}}
 </script>
 </body>
 </html>
