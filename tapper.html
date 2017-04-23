@@ -21,6 +21,7 @@
 <div id="top"></div>
 <div id="yhel"></div>
 <div id="ehel"></div>
+<img onckick="pause()" src="http://www.pngmart.com/files/3/Pause-Button-PNG-Transparent-Image.png">
 <style type="text/css">
 	#tap1{
 		background-color:blue;
@@ -130,6 +131,12 @@
 		width: 150px;
 		height: 2.5%;
 		background-color: blue
+	}
+	img{	position:fixed;
+		top:70%;
+		left:95%;
+		height:75px;
+		width:75px;
 	}
 </style>
 <script type="text/javascript">
@@ -251,7 +258,10 @@ function go2(argument) {if(parseFloat(document.getElementById("tap2").style.opac
 					},30)
 				document.getElementById("tap2").style.opacity="0.2"}document.getElementById("tap2").style.opacity=String((parseFloat((document.getElementById("tap2").style.opacity)))-0.1)
 
-}window.onclick = function() {
+}function pause(){
+	yes=1
+}
+	window.onclick = function() {
 	function die(argument) {console.log(typeof(window.orientation))
 	$("#yhel").animate({
 						width:"-="+String(level)+"px"
