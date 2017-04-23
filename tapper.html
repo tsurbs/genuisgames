@@ -263,14 +263,14 @@ function go2(argument) {if(parseFloat(document.getElementById("tap2").style.opac
 	confirm("hi")
 }
 	window.onclick = function() {
-	function die(argument) {console.log(typeof(window.orientation))
+	function die(argument) {if(yes==1){console.log(typeof(window.orientation))
 	$("#yhel").animate({
 						width:"-="+String(level)+"px"
 					},100)
-}if(yes==1){
+					  }
+}
 	setInterval(die, 100*((100-level)/2))
 	yes=2
-}
 }
 </script>
 </body>
