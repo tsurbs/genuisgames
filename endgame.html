@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><!--create words in tab-->
 	<title>Asteroid Destroyer</title>
 </head>
-<body>
+<body><!--write game instruction-->
 <div id="des">In this simulation, you must destroy the asteroid before it hits the earth. <br> This may happen in the future, so we need to prepare asteroidnauts like you NOW.<br> In the simulator, there are two bars at the top.  <br>  The first one is red and represents the asteroid's proximity to earth. <br>  The greater the density of the metal, the faster it travels to earth.<br> The blue one represents how close you are to destroying the asteroid.<br> There are also two cannons. <br>  The first one is orange with an number 2 on it.  <br>  It is extremely powerful, but can only be used after being charged.  <br>  You charge it by tapping the blue cannon labled 1.<br>Good luck, future asteroidnaut.
-</div>
-<select id="sel">
+</div><!--creates option chooser-->
+<select id="sel"><!--creates options-->
   <option value="no">Pick the asteroid type you want to destroy</option>
   <option value="10">Lead(11.3g/ml)</option>
   <option value="8">Copper(8.96g/ml)</option>
   <option value="6">Iron(7.87g/ml)</option>
   <option value="4">Tin(7.31)</option>
   <option value="2">Aluminium(2.70)</option>
-</select>
+</select><!--creates button to start-->
 <button onclick="hgh()" id="go">Start</button>
 <style type="text/css">
-	body{
+	body{/*colors bgrnd*/
 		background-color:blue;
-	}#des{
+	}#des{/*Sets font size*/
 		font-size: 20pt;
 	}
-	#sel{
+	#sel{/*styles chooser*/
 		position: fixed;
 		top:40%;
 		left:5%;
 		font-size: 25pt;
 		background-color: green;
-	}#go{position: fixed;
+	}#go{/*styles start button*/
+		position: fixed;
 		top:50%;
 		font-size: 25pt;
 		left:5%;
 		background-color: orange;
-	}option{
+	}option{/*sets font size of options*/
 		font-size:10pt;
 	}
 </style>
