@@ -4,9 +4,9 @@
 	<title></title>
 </head>
 <body>
-<div onclick="go()" id="obj1"></div>
+<div id="obj1"></div>
 <div id="obj2"></div>
-<div id="touch"></div>
+<div  onclick="go()" id="touch"></div>
 <div></div>
 <style type="text/css">
 	#obj1,#obj2{position:fixed;
@@ -31,12 +31,22 @@
 	}
 </style>
 <script type="text/javascript">
+var n;
 	function go(argument) {
 		var colors = ["red", "orange", "green", "blue", "indigo", "violet", "red"];
 		var choice = colors[Math.floor(Math.random()*6)];
 		document.getElementById('obj1').style.backgroundColor = choice;
 		document.getElementById('obj2').style.backgroundColor = choice
-	}
+	}function hi(argument) {
+		window.addEventListener("deviceorientation", function () {
+        n=event.beta;
+    }, true);requestAnimationFrame(hi)
+	}requestAnimationFrame(hi)
+	function hgh(argument) {
+		if (n/10==Math.floor(n/10)) {
+			go()
+		}requestAnimationFrame(hgh)
+	}requestAnimationFrame(hgh)
 </script>
 </body>
 </html>
