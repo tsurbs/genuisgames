@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div onclick="go()" id="obj1"></div>
+<div id="obj2"></div>
+<div id="touch"></div>
+<div></div>
+<style type="text/css">
+	#obj1,#obj2{position:fixed;
+		height:100px;
+		width:100px;
+		border-radius:50px;
+	}#obj1{
+		left:25%;
+		top:50%;
+		background-color: blue;
+	}#obj2{
+		left:75%;
+		top:50%;
+		background-color: blue;
+	}#touch{
+		position:fixed;
+		height:200px;
+		width:100px;
+		top:0%;
+		left:47.5%;
+		background:transparent;
+	}
+</style>
+<script type="text/javascript">
+	function go(argument) {
+		var colors = ["red", "orange", "green", "blue", "indigo", "violet", "red"];
+		var choice = colors[Math.floor(Math.random()*6)];
+		document.getElementById('obj1').style.backgroundColor = choice;
+		document.getElementById('obj2').style.backgroundColor = choice
+	}
+</script>
+</body>
+</html>
