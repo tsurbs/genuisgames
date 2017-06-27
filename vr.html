@@ -37,6 +37,7 @@ var n;
 		var choice = colors[Math.floor(Math.random()*6)];
 		document.getElementById('obj1').style.backgroundColor = choice;
 		document.getElementById('obj2').style.backgroundColor = choice
+		confirm("hi")
 	}function hi(argument) {
 		window.addEventListener("deviceorientation", function () {
         n=event.beta;
@@ -45,6 +46,7 @@ var n;
 	function hgh(argument) {
 		if (n/10==Math.floor(n/10)) {
 			go()
+
 		}requestAnimationFrame(hgh)
 	}requestAnimationFrame(hgh)
 </script>
