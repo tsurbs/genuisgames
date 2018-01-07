@@ -48,7 +48,7 @@ function moveSetYTime(id, far, time) {
 			}
 		}
 	var ok = window.setInterval(go, 20)
-}
+}//must have code (var jj;) in main
 function moveDiag(thing, angle, speed, end){
 	var thing = thing;
 	var angle = angle;
@@ -60,3 +60,22 @@ function moveDiag(thing, angle, speed, end){
 	end
 } jj = setInterval(go, 20)
 }
+function turn(id, degrees, time){
+	var id = id;
+	var far = degrees;
+	var time = time
+	var i=0
+	var hgh;
+	var use;
+	hgh = (far)/time;
+	use = 20*hgh;
+	var xo;
+		function go(){
+			i++
+			
+			if(i==(time/20)){
+				window.clearInterval(ok)
+			}
+		}
+	var ok = window.setInterval(go, 20)
+}//must have code (var jj;) in main

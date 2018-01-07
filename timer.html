@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src='../movefunc.js'></script>
+<script type="text/javascript" src='../posfunc.js'></script>
+<link href="https://fonts.googleapis.com/css?family=Courgette|Sanchez" rel="stylesheet">
+<head>
+	<title>H2O Counts</title>
+<body>
+<div id="header"></div>
+<div id="altHeader">H<sub>2</sub>O Counts</div>
+<a href="open.html" class="tabs" id="whyTab">Why?</div>
+<a href="calibration.html" class="tabs" id="calibrateTab">Step 1</div>
+<a href="timer.html" class="tabs" id="timerTab">Timer</div>
+<a href="about.html" class="tabs" id="aboutUsTab">About Us</div>
+<style type="text/css">
+	#whyTab,#calibrateTab,#timerTab,#aboutUsTab{
+		position:fixed;
+		color:white;
+		font-size:20pt;
+		z-index:2;
+		text-decoration:none;
+	}#header{
+		position: fixed;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:11%;
+		background-color:#48acee;
+		opacity: .75
+	}
+	#altHeader{
+		position: fixed;
+		top:0px;
+		left:2%;
+		width:100%;
+		font-size: 400%;
+		color:white;
+		font-family: 'Courgette', cursive;
+
+	}body{position: fixed;
+		background-color:#48d7ee;
+		font-family: 'Sanchez', serif;
+		color:white;
+		background-image: url("bkg3.jpg") ;background-repeat: no-repeat ;background-position: undefined undefined ;background-size: 100% ;background-size: cover;
+	}
+
+	#whyTab:hover,#calibrateTab:hover,#timerTab:hover,#aboutUsTab:hover{
+		border-style: solid;
+		border-color:white;
+		opacity: .7
+	}#whyTab{left:50%;
+		top:2.9%;
+	}#calibrateTab{left:60%;
+		top:2.9%;
+	}#timerTab{left:69%;
+		top:2.9%;
+	}#aboutUsTab{left:77%;
+		top:2.9%;
+	}
+
+</style>
+<script>var x = Screen.height
+		var y = Screen.width
+</script>
+</body>
+</html>

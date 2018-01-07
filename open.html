@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src='../movefunc.js'></script>
+<script type="text/javascript" src='../posfunc.js'></script>
+<link href="https://fonts.googleapis.com/css?family=Courgette|Sanchez" rel="stylesheet">
+<head>
+	<title>H2O Counts</title>
+<body>
+<div id="header"></div>
+<div id="altHeader">H<sub>2</sub>O Counts</div>
+<a href="open.html" class="tabs" id="whyTab">Why?</a>
+<a href="calibration.html" class="tabs" id="calibrateTab">Step 1</a>
+<a href="timer.html" class="tabs" id="timerTab">Timer</a>
+<a href="about.html" class="tabs" id="aboutUsTab">About Us</a>
+<div id="body2"></div>
+<div id="floatingbubble"></div>
+<img id="gc" src="gc.png">
+</body>
+<div id="startText">
+At <strong>h<sub>2</sub>ocounts.com</strong>, we believe that water conservation is essential.  We make it easy to realize the amount of water you waste in something you do in your every-day life; taking a bath.
+</div>
+<div id="whysec"><strong>Why is this important?</strong><br>This is important not just because your water bill goes up, but also because it is very bad for the environment. Water waste affects polar life among other things, such as the fact that only 1% of the earth’s water is drinkable and we need to use it wisely.
+</div>
+<body>
+<style type="text/css"> 
+#floatingbubble{position:absolute;
+	background-color: #5555ff;
+	z-index:9;
+
+}
+#body2{position:absolute;
+		background:linear-gradient(#f3f3f3,grey);
+		left:-8px;
+	}
+	#whysec{
+		position:absolute;
+		top:38%;
+		left:70%;
+		color:white;
+		font-family:sans-serif;
+		font-size:16pt;
+		width:28%;
+
+	}
+	#startText{
+		position: absolute;
+		left:4%;
+		top:18%;
+		color:white;
+		font-family:sans-serif;
+		font-size:18pt;
+		width:28%;
+
+	}#gc{
+		position:relative;
+		left:65%;
+		height:20%;
+		width:20%;
+	}
+	#whyTab,#calibrateTab,#timerTab,#aboutUsTab{
+		position:fixed;
+		color:white;
+		font-size:20pt;
+		z-index:11;
+		text-decoration:none;
+	}#header{
+		position: fixed;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:11%;
+		background-color:#48acee;
+		opacity: .75;
+		z-index:10;
+	}
+	#altHeader{
+		position: fixed;
+		top:0px;
+		left:2%;
+		width:100%;
+		font-size: 400%;
+		color:white;
+		font-family: 'Courgette', cursive;
+		z-index: 10
+
+	}body{position: relative;
+		background-color:#48d7ee;
+		font-family: 'Sanchez', serif;
+		color:white;
+		background-image: url("bkg2.jpg") ;background-repeat: no-repeat ;background-position: undefined undefined ;background-size: 100% ;background-size: cover;
+	}
+
+	#whyTab:hover,#calibrateTab:hover,#timerTab:hover,#aboutUsTab:hover{
+		border-style: solid;
+		border-color:white;
+		opacity: .7
+	}#whyTab{left:50%;
+		top:2.9%;
+	}#calibrateTab{left:60%;
+		top:2.9%;
+	}#timerTab{left:69%;
+		top:2.9%;
+	}#aboutUsTab{left:77%;
+		top:2.9%;
+	}
+
+</style>
+<script>var x = screen.height
+		var y = screen.width
+	document.getElementById("startText").style.top = String(.18*x)+"px";
+	document.getElementById("whysec").style.top = String(.38*x)+"px";
+	document.getElementById("body2").style.height = String(x)+"px";
+	document.getElementById("body2").style.width = String(y)+"px";
+	document.getElementById("body2").style.top = String(x)+"px";
+	document.getElementById("gc").style.top = String(x+(.4*x))+"px";
+	document.getElementById("floatingbubble").style.height = String(.05*x)+"px";
+	document.getElementById("floatingbubble").style.width = String(.05*x)+"px";
+	document.getElementById("floatingbubble").style.borderRadius = String(.025*x)+"px";
+	document.getElementById("floatingbubble").style.left = String(.725*y)+"px";
+	document.getElementById("floatingbubble").style.top = String(x+(.38*x))+"px";
+	function bubbleAnimation(){
+		moveSetYTime(document.getElementById("floatingbubble"), -.2*x, 2000)
+		document.getElementById("floatingbubble").style.top = String(x+(.38*x))+"px";
+	}
+	setInterval(bubbleAnimation, 2001)
+</script>
+</body>
+</html>
