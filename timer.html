@@ -149,7 +149,7 @@ var ntime;function runclock(){if(u/2==Math.floor(u/2)){
     return "";
 }
 	function submit(argument) {
-		usage = String((1/parseFloat(getCookie("Time")))*parseFloat(time));
+		usage = String(parseFloat(parseInt((1/parseFloat(getCookie("Time")))*parseFloat(time)*100)/100));
 	}function reset(argument) {
 		location.reload()
 	}
