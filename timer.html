@@ -1,66 +1,157 @@
-<!DOCTYPE html>
+		<!DOCTYPE html>
 <html>
 <script type="text/javascript" src='../movefunc.js'></script>
 <script type="text/javascript" src='../posfunc.js'></script>
 <link href="https://fonts.googleapis.com/css?family=Courgette|Sanchez" rel="stylesheet">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>H2O Counts</title>
+</head>
 <body>
+	<img onclick = 'run()' id="pauseplay" src="pauseplay.png" style="height: 242.88px; width: 242.88px; top: 458.62px; left: 220.1875px;">
 <div id="header"></div>
 <div id="altHeader">H<sub>2</sub>O Counts</div>
-<a href="open.html" class="tabs" id="whyTab">Why?</div>
-<a href="calibration.html" class="tabs" id="calibrateTab">Step 1</div>
-<a href="timer.html" class="tabs" id="timerTab">Timer</div>
-<a href="about.html" class="tabs" id="aboutUsTab">About Us</div>
-<style type="text/css">
-	#whyTab,#calibrateTab,#timerTab,#aboutUsTab{
+<a href="open.html" class="tabs" id="whyTab">Why?</a>
+<a href="calibration.html" class="tabs" id="calibrateTab">Step 1</a>
+<a href="timer.html" class="tabs" id="timerTab">Timer</a>
+<a href="about.html" class="tabs" id="aboutUsTab">About Us</a>
+<button id="reset">Reset</button>
+<button id="submit" style="height: 25.88px; width: 100.88px; top: 458.62px; left: 50.1875px;" type="button" onclick="submit()">Submit</button>
+<button id="submit" style="height: 25.88px; width: 100.88px; top: 458.62px; left: 350.1875px;" type="button" onclick="reset()">Reset</button>
+</body><img src="bkg.jpg" style="height: 375.1875px; width: 736px; top: 0px; left: -10px;">
+<div id="body2" style="height: 375.1875px; width: 736px; top: 375.1875px; left: -10px;"></div>
+	<div id="showtimer" style="height: 242.88px; width: 242.88px; top: 370.62px; left: 210.1875px;"></div>
+<div id="startText" style="left: 230.1875px; top:150px">In order to make use of this website, you have to first calibrate it.  
+	To do this, there are a few simple steps.  
+	<br><ul><li> First, get a gallon bag</li>
+		<li>Next, Turn on your shower</li>
+		<li>Then, start the timer below</li>
+		<li>When the bag is full hit stop on the timer</li>
+		</ul> </div>
+<body>
+<style type="text/css"> 
+#pauseplay{
+	position:absolute;
+	z-index:100;
+}
+#showtimer{
+	position:absolute;
+	z-index:101;
+	font-size:64pt;
+}
+/*#body2{position:absolute;
+		background:linear-gradient(#f3f3f3,grey) background-repeat: no-repeat ;background-position: undefined undefined ;background-size: 100% ;background-size: cover;
+	}*/
+	#body2{position:absolute;
+		background-image:url("altbg.png"); background-repeat: no-repeat ;background-position: undefined undefined ;background-size: 100% ;background-size: cover;
+	}
+	img{position:absolute;
+		background-image:url("altbg.png"); background-repeat: no-repeat ;background-position: undefined undefined ;background-size: 100% ;background-size: cover;
+	}
+	#startText{
+		position: relative;
+		left:35%;
+		top:70%;
+		color:white;
+		font-size: 	90%;
+		font-family:sans-serif;
+				width:28%;
+
+	}#whyTab,#calibrateTab,#timerTab,#aboutUsTab{
 		position:fixed;
 		color:white;
-		font-size:20pt;
-		z-index:2;
+		font-size:12pt;
+		z-index:11;
 		text-decoration:none;
 	}#header{
 		position: fixed;
 		top:0px;
 		left:0px;
-		width:100%;
+		width:736px;
 		height:11%;
 		background-color:#48acee;
-		opacity: .75
+		opacity: .75;
+		z-index:10;
 	}
 	#altHeader{
 		position: fixed;
 		top:0px;
 		left:2%;
-		width:100%;
-		font-size: 400%;
+		width:736px;
+		font-size: 200%;
 		color:white;
 		font-family: 'Courgette', cursive;
+		z-index: 10
 
-	}body{position: fixed;
+	}body{position: absolute;
 		background-color:#48d7ee;
 		font-family: 'Sanchez', serif;
 		color:white;
-		background-image: url("bkg3.jpg") ;background-repeat: no-repeat ;background-position: undefined undefined ;background-size: 100% ;background-size: cover;
+		background:background-repeat: no-repeat ;background-position: undefined undefined ;background-size: 100% ;background-size: cover;
 	}
 
 	#whyTab:hover,#calibrateTab:hover,#timerTab:hover,#aboutUsTab:hover{
 		border-style: solid;
 		border-color:white;
 		opacity: .7
-	}#whyTab{left:50%;
+	}#whyTab{left:333px;
 		top:2.9%;
-	}#calibrateTab{left:60%;
+	}#calibrateTab{left:402px;
 		top:2.9%;
-	}#timerTab{left:69%;
+	}#timerTab{left:460px;
 		top:2.9%;
-	}#aboutUsTab{left:77%;
+	}#aboutUsTab{left:513px;
 		top:2.9%;
+	}
+	#submit{
+		z-index:10000;
+		position:relative;
 	}
 
 </style>
-<script>var x = Screen.height
-		var y = Screen.width
+<script>
+	var tensec=0;
+	var sec=0;
+var min=0;
+var z=2;
+var time="";
+var y;
+var name;
+var u = 1;
+var ntime;function runclock(){if(u/2==Math.floor(u/2)){
+		if(z!==1){
+			tensec++
+		}
+			if(tensec>60){tensec=00
+				sec++
+			}time = String(sec)+"."+String(tensec)
+			document.getElementById('showtimer').innerHTML = time
+		}else(clearInterval(y))
+		z++
+		};
+	function run() {
+	 y=setInterval(runclock, (16+(2/3)))	
+	 u++
+	};
+	    function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+	function submit(argument) {
+		var usage = (1/parseFloat(getCookie("Time")))*parsefloat(time);
+	}function reset(argument) {
+		location.reload()
+	}
 </script>
 </body>
 </html>
