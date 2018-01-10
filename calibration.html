@@ -118,6 +118,7 @@ var time="";
 var y;
 var name;
 var u = 1;
+var usage;
 var ntime;function runclock(){if(u/2==Math.floor(u/2)){
 		if(z!==1){
 			tensec++
@@ -133,8 +134,23 @@ var ntime;function runclock(){if(u/2==Math.floor(u/2)){
 	 y=setInterval(runclock, (16+(2/3)))	
 	 u++
 	};
+	    function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 	function submit(argument) {
-		document.cookie='Time='+time+';expires=Wed, 18 Dec 2023 12:00:00 GMT'
+		usage = String(parseFloat(parseInt((1/parseFloat(getCookie("Time")))*parseFloat(time)*100)/100));
+		document.getElementById('showtimer').innerHTML="You used "+usage+" gallons of water"
 	}function reset(argument) {
 		location.reload()
 	}
