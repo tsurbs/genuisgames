@@ -16,7 +16,7 @@
 <a href="timer.html" class="tabs" id="timerTab">Timer</a>
 <a href="about.html" class="tabs" id="aboutUsTab">About Us</a>
 <button id="reset">Reset</button>
-<button id="submit">Submit</button>
+<button id="submit" style="height: 25.88px; width: 100.88px; top: 458.62px; left: 50.1875px;" type="button" onclick="document.cookie='time='+time+';expires=Wed, 18 Dec 2023 12:00:00 GMT'">Submit</button>
 </body><img src="bkg.jpg" style="height: 375.1875px; width: 736px; top: 0px; left: -10px;">
 <div id="body2" style="height: 375.1875px; width: 736px; top: 375.1875px; left: -10px;"></div>
 	<div id="showtimer" style="height: 242.88px; width: 242.88px; top: 370.62px; left: 210.1875px;"></div>
@@ -52,14 +52,14 @@
 		left:35%;
 		top:70%;
 		color:white;
-		font-size: 	100%;
+		font-size: 	90%;
 		font-family:sans-serif;
 				width:28%;
 
 	}#whyTab,#calibrateTab,#timerTab,#aboutUsTab{
 		position:fixed;
 		color:white;
-		font-size:15pt;
+		font-size:12pt;
 		z-index:11;
 		text-decoration:none;
 	}#header{
@@ -93,14 +93,18 @@
 		border-style: solid;
 		border-color:white;
 		opacity: .7
-	}#whyTab{left:50%;
+	}#whyTab{left:333px;
 		top:2.9%;
-	}#calibrateTab{left:60%;
+	}#calibrateTab{left:402px;
 		top:2.9%;
-	}#timerTab{left:69%;
+	}#timerTab{left:460px;
 		top:2.9%;
-	}#aboutUsTab{left:77%;
+	}#aboutUsTab{left:513px;
 		top:2.9%;
+	}
+	#submit{
+		z-index:10000;
+		position:relative;
 	}
 
 </style>
