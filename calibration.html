@@ -150,7 +150,8 @@ var ntime;function runclock(){if(u/2==Math.floor(u/2)){
 }
 	function submit(argument) {
 		usage = String(parseFloat(parseInt((1/parseFloat(getCookie("Time")))*parseFloat(time)*100)/100));
-		document.getElementById('showtimer').innerHTML="You used "+usage+" gallons of water"
+		document.getElementById('showtimer').innerHTML="You used "+usage+" gallons of water";
+		document.getElementById('showtimer').style.fontSize = "18pt"
 	}function reset(argument) {
 		location.reload()
 	}
