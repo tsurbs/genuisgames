@@ -21,13 +21,7 @@
 </body><img src="bkg.jpg" style="height: 375.1875px; width: 736px; top: 0px; left: -10px;">
 <div id="body2" style="height: 375.1875px; width: 736px; top: 375.1875px; left: -10px;"></div>
 	<div id="showtimer" style="height: 242.88px; width: 242.88px; top: 370.62px; left: 210.1875px;"></div>
-<div id="startText" style="left: 230.1875px; top:150px">In order to make use of this website, you have to first calibrate it.  
-	To do this, there are a few simple steps.  
-	<br><ul><li> First, get a gallon bag</li>
-		<li>Next, Turn on your shower</li>
-		<li>Then, start the timer below</li>
-		<li>When the bag is full hit stop on the timer</li>
-		</ul> </div>
+<div id="startText" style="left: 230.1875px; top:150px"> Welcome to the timer page.  This is where you time your shower.  Start the timer when you get in the shower, and stop it when you get out.</div>
 <body>
 <style type="text/css"> 
 #pauseplay{
@@ -150,7 +144,8 @@ var ntime;function runclock(){if(u/2==Math.floor(u/2)){
 }
 	function submit(argument) {
 		usage = String(parseFloat(parseInt((1/parseFloat(getCookie("Time")))*parseFloat(time)*100)/100));
-		document.getElementById('showtimer').innerHTML="Congrats, you used "+usage+" amount of water"
+		document.getElementById('showtimer').innerHTML="You used "+usage+" gallons of water";
+		document.getElementById('showtimer').style.fontSize = "18pt"
 	}function reset(argument) {
 		location.reload()
 	}
