@@ -118,6 +118,7 @@ var time="";
 var y;
 var name;
 var u = 1;
+var usage;
 var ntime;function runclock(){if(u/2==Math.floor(u/2)){
 		if(z!==1){
 			tensec++
@@ -148,7 +149,7 @@ var ntime;function runclock(){if(u/2==Math.floor(u/2)){
     return "";
 }
 	function submit(argument) {
-		var usage = (1/parseFloat(getCookie("Time")))*parseFloat(time);
+		usage = string((1/parseFloat(getCookie("Time")))*parseFloat(time));
 	}function reset(argument) {
 		location.reload()
 	}
