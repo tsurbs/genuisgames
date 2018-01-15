@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button onclick="setInterval(formula,10)"> StartSound</button>
+<script>
+var ins;
+var val;
+var i=0;
+var rd = 0;
+var audio = new Audio('blip.mp3');
+	function formula(x, λ) {
+		rd = Math.floor(Math.random()*100)
+		if(rd == 1){i++
+			audio.play();
+		}
+	}
+</script>
+</body>
+</html>
