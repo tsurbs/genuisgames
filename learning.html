@@ -65,7 +65,7 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
     }else{
     return "none";
-	}
+	}}
 }if(parseInt(getCookie("avg"))>50){
 	var qs=parseInt(getCookie("Max")-2.5)
 	var q=parseInt(getCookie("Dr")+.1)
@@ -108,7 +108,7 @@ function runclock(){
 		clearInterval(y);
 		clearInterval(w);
 		clearInterval(s);
-		document.cookie='Dr='+q+';expires=Wed, 18 Dec 2023 12:00:00 GMT'
+		document.cookie='Dr='+q+';expires=Wed, 18 Dec 2023 12:00:00 GMT';
 		document.cookie='Max='+qs+';expires=Wed, 18 Dec 2023 12:00:00 GMT'
 	}
 </script>
