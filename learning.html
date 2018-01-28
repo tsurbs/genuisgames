@@ -103,7 +103,7 @@ function runclock(){
 		x = Math.abs(document.getElementById("slider").value);
 		rd = Math.ceil(Math.random()*(qs-(120*(Math.pow(q, Math.abs(a-x))))))
 		if(rd == 1){i++
-			console.log(average())
+			//console.log(average())
 			blip.play();
 		}
 	}function record(){
@@ -121,7 +121,7 @@ function runclock(){
 		document.cookie='dr='+String(q)+';expires=Wed, 18 Dec 2023 12:00:00 GMT';
 		document.cookie='max='+String(qs)+';expires=Wed, 18 Dec 2023 12:00:00 GMT';
 		document.cookie='avg='+String(average())+';expires=Wed, 18 Dec 2023 12:00:00 GMT';
-		if(parseInt(average())>50){
+		if(average()>50){
 	alert("better luck next time")
 }else if(average()<=50){
 	alert("success")
