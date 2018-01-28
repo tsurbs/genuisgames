@@ -81,7 +81,7 @@ if(parseInt(getCookie("avg"))>50){
 	var q=parseFloat(getCookie("dr"))+0.01
 }else if(parseInt(getCookie("avg"))<=50){
 	var qs=parseInt(getCookie("max"))+2.5
-	var q=parseFloat(getCookie("dr"))-0.01
+	var q=parseFLoat(getCookie("dr"))-0.01
 }else{
 	var q = .97;
 	var qs = 100;
@@ -121,6 +121,11 @@ function runclock(){
 		document.cookie='dr='+String(q)+';expires=Wed, 18 Dec 2023 12:00:00 GMT';
 		document.cookie='max='+String(qs)+';expires=Wed, 18 Dec 2023 12:00:00 GMT';
 		document.cookie='avg='+String(average())+';expires=Wed, 18 Dec 2023 12:00:00 GMT';
+		if(parseInt(average())>50){
+	alert("better luck next time")
+}else if(parseInt(average())<=50){
+	alert("success")
+}
 		alert("Nice Job!  This page will redirect you to the next step.")
 		location.reload()
 	}
