@@ -76,10 +76,10 @@ function getCookie(cname) {
     }
     return "";
 }
-if(parseInt(getCookie("avg"))>50){
-	var qs=parseInt(getCookie("max"))-2.5
+if(getCookie("avg"))>50{
+	var qs=parseInt(getCookie("max")-2.5)
 	var q=parseFloat(getCookie("dr"))+0.005
-}else if(parseInt(getCookie("avg"))<=50){
+}else if(getCookie("avg")<=50){
 	var qs=parseInt(getCookie("max"))+2.5
 	var q=parseFloat(getCookie("dr"))-0.01
 }else{
@@ -123,7 +123,7 @@ function runclock(){
 		document.cookie='avg='+String(average())+';expires=Wed, 18 Dec 2023 12:00:00 GMT';
 		if(parseInt(average())>50){
 	alert("better luck next time")
-}else if(parseInt(average())<=50){
+}else if(average()<=50){
 	alert("success")
 }
 		alert("This page will redirect you to the next step.")
