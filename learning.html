@@ -63,15 +63,15 @@ function getCookie(cname) {
         }
         if (c.indexOf(name) == 0) {
             return c.substring(name.length, c.length);
-	}else{
+    }else{
     return "none";
 	}
-}if(parseInt(getCookie(avg))>50){
-	qs-=5
-	q+=.1
-}else if(parseInt(getCookie(avg))<=50){
-	qs+=5
-	q-=.1
+}if(parseInt(getCookie("avg"))>50){
+	var qs=parseInt(getCookie("Max")-2.5)
+	var q=parseInt(getCookie("Dr")+.1)
+}else if(parseInt(getCookie("avg"))<=50){
+	var qs=parseInt(getCookie("Max")+2.5)
+	var q=parseInt(getCookie("Dr")-.1)
 }else{
 	var q = .97;
 	var qs = 100;
