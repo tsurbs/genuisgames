@@ -79,7 +79,7 @@ function getCookie(cname) {
 if(getCookie("avg")>50){
 	if(getCookie("max")!=="100"){
 	var qs=parseInt(getCookie("max"))-2.5
-};
+}else{var qs=100}
 	if(getCookie("dr")!==".98"){
 	var q=parseFloat(getCookie("dr"))+0.005
 };
