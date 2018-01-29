@@ -77,7 +77,9 @@ function getCookie(cname) {
     return "";
 }
 if(getCookie("avg")>50){
-	var qs=parseInt(getCookie("max")-2.5)
+	if(getCookie("max")!=="100"){
+	var qs=parseInt(getCookie("max")-2.5)};
+	if(getCookie("dr")!==".98"){
 	var q=parseFloat(getCookie("dr"))+0.005
 }else if(getCookie("avg")<=50){
 	var qs=parseInt(getCookie("max"))+2.5
@@ -101,7 +103,7 @@ function runclock(){
 	};
 	function formula(λ) {
 		x = Math.abs(document.getElementById("slider").value);
-		rd = Math.ceil(Math.random()*(qs-(120*(Math.pow(q, Math.abs(a-x))))))
+		rd = Math.ceil(Math.random()*(qs-(100*(Math.pow(q, Math.abs(a-x))))))
 		if(rd == 1){i++
 			//console.log(average())
 			blip.play();
