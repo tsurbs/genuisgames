@@ -42,7 +42,7 @@
 <button id = "done" onclick="stop()"> Done!</button>
 <script>
 
-	var a = Math.floor(Math.random()*400)
+	var a = Math.floor(Math.random()*200)
 	var w;
 	var ins;
 var val;
@@ -74,11 +74,12 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
         }
     }
-    return "";
+    return "theo is kool";
 }
 if(getCookie("avg")>50){
 	if(getCookie("max")!=="100"){
-	var qs=parseInt(getCookie("max")-2.5)};
+	var qs=parseInt(getCookie("max"))-2.5
+};
 	if(getCookie("dr")!==".98"){
 	var q=parseFloat(getCookie("dr"))+0.005
 };
