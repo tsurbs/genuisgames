@@ -9,7 +9,7 @@ function moveSetY(id, far) {
 	var yo = topFunNum(id);
 	id.style.top = rtnToStd(yo+=far)
 }
-function moveSetXTime(id, far, time) {
+function moveSetXTime(id, far, time, end) {
 	var id = id
 	var far = far
 	var time = time
@@ -25,6 +25,7 @@ function moveSetXTime(id, far, time) {
 	id.style.left = rtnToStd(xo+use)
 			if(i==(time/20)){
 				window.clearInterval(ok)
+				end()
 			}
 		}
 	var ok = window.setInterval(go, 20)
@@ -45,20 +46,27 @@ function moveSetYTime(id, far, time) {
 	id.style.top = rtnToStd(yo+use)
 			if(i==(time/20)){
 				window.clearInterval(ok)
+				//end
 			}
 		}
 	var ok = window.setInterval(go, 20)
 }//must have code (var jj;) in main
-function moveDiag(thing, angle, speed, end){
+function moveDiag(thing, angle1, speed, end, time){
 	var thing = thing;
-	var angle = angle;
+	var angle1 = angle1;
 	var speed = speed;
 	var end = end;
+	var time =parseFloat(time);
+	var i=0;
 	function go(){
-	moveSetX(thing, (speed * Math.cos(angle * Math.PI / 180)));
-	moveSetY(thing, (speed * Math.sin(angle * Math.PI / 180)));
+	moveSetX(thing, (speed * Math.cos(angle1 * Math.PI / 180)));
+	moveSetY(thing, (speed * Math.sin(angle1 * Math.PI / 180)));
 	end
-} jj = setInterval(go, 20)
+i++
+			if(i>(time/20)){
+				window.clearInterval(jj)
+			}
+		}jj = setInterval(go, 20)
 }
 function turn(id, degrees, time){
 	var id = id;

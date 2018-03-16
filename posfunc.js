@@ -87,7 +87,7 @@ function combo(a,b,c) {
 		requestAnimationFrame(get)
 	}requestAnimationFrame(get)
 	function check(){
-		if (atop<=btop&&abot>=bbot&&aleft<=bleft&&aright>=bright) {
+		if (atop<=bbot&&abot<=btop&&aleft<=bright&&aright>=bleft) {
 			c();
 		}
 	requestAnimationFrame(check)
