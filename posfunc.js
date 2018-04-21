@@ -75,14 +75,14 @@ function combo(a,b,c) {
 	var bright;
 	var bbot;
 	function get(){
-		atop = topFunNum(a);
+		/*atop = topFunNum(a);
 		aleft = leftFunNum(a);
 		aright = rightFunNum(a);
 		abot = bottomFunNum(a);
 		btop = topFunNum(b);
 		bleft = leftFunNum(b);
 		bright = rightFunNum(b);
-		bbot = bottomFunNum(b);
+		bbot = bottomFunNum(b);*/
 		console.log("hi3")
 		requestAnimationFrame(get)
 	}requestAnimationFrame(get)
