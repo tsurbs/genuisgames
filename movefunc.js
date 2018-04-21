@@ -56,7 +56,7 @@ function moveSetYTime(id, far, time, end) {
 		}
 	var ok = window.setInterval(go, 20)
 }//must have code (var jj;) in main
-function moveDiag(thing, angle1, speed, end, time){
+function moveDiag(thing, angle1, speed, time, end){
 	var thing = thing;
 	var angle1 = angle1;
 	var speed = speed;
@@ -66,7 +66,7 @@ function moveDiag(thing, angle1, speed, end, time){
 	function go(){
 	moveSetX(thing, (speed * Math.cos(angle1 * Math.PI / 180)));
 	moveSetY(thing, (speed * Math.sin(angle1 * Math.PI / 180)));
-	end
+	//end()
 i++
 			if(i>(time/20)){
 				window.clearInterval(jj)
