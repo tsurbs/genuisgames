@@ -102,8 +102,8 @@ var width = screen.width;
 var d = Math.floor(Math.random()*45);
 var dninja = function () {
 	dninjacount+=1
-	aaa.style.opacity=0
-	bbb.style.opacity=0;
+	document.getElementById(String(a)).style.opacity=0
+	document.getElementById(String(b)).style.opacity=0;
 	if(dninjacount>=level){
 		alert("You won! Reload for the next level")
 	}
