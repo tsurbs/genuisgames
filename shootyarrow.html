@@ -75,11 +75,8 @@ function getCookie(cname) {
         }
     }
     return "";
-}var level=parseFloat(getCookie("level"))
-if(getCookie("level")==level){
-	var level = parseFloat(getCookie('level'))
-	document.cookie="level = "+String(level+1)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
-}else{
+}if(parseFloat(getCookie(level))>0){var level=parseFloat(getCookie("level"))}
+else{
 	var level = 1;
 	document.cookie="level = "+String(level+1)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
 }
@@ -105,6 +102,10 @@ var dninja = function () {
 	document.getElementById(String(a)).style.opacity=0
 	document.getElementById(String(b)).style.opacity=0;
 	if(dninjacount>=level){
+		if(getCookie("level")==level){
+	var level = parseFloat(getCookie('level'))
+	document.cookie="level = "+String(level+1)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+}
 		alert("You won! Reload for the next level")
 	}
 }
