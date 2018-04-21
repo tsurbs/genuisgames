@@ -82,5 +82,6 @@ function combo(a,b,c) {
 		if (aright>=bleft&&aright<=bright&&atop>=btop&&atop<=bbot) {
 			ccc();
 		}
-	requestAnimationFrame(check)
+	requestAnimationFrame(check);
 	}requestAnimationFrame(check)
+}
