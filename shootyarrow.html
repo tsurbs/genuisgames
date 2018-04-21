@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable"
+    content="yes">
+<script type="text/javascript" src='posfunc.js'></script>
+<script type="text/javascript" src='movefunc.js'></script>
+	<title>Shooty Arrow</title>
+</head>
+<body>
+	<p id="countdown"></p>
+	<div id="hero"></div>
+	<div id="aleft"></div>
+	<div id="fire"><div onclick="fire()" id="text">Fire</div></div>
+  <input type="range" min="0" max="180" value="90" class="slider" id="slider">
+<style type="text/css">
+	#slider{
+		position:fixed;
+		-webkit-appearance: none;
+		width:50%;
+		height:50px;
+		background-color: blue;
+		left:25%;
+		top:93%;
+	}
+	#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius:25px;
+    width: 50px;
+    height: 50px;
+    background: grey;
+}body{z-index:0;
+	background-image:url("ground.png");
+}#hero{z-index:2;
+	position:fixed;
+	top:70%;
+	left:42.5%;
+	height:160px;
+	width:12.5%;
+	background-image:url("hero.png");
+}#fire{position:fixed;
+	height:160px;
+	width:160px;
+	top:33%;
+	left:5%;
+	background-color:green;
+	color:grey;
+	border-radius:80px;
+}#text{
+	position:fixed;
+	top:40%;
+	left:10%;
+	font-size:28pt;
+}#countdown{position:fixed;
+	font-size: 40pt;
+}#aleft{position: fixed;
+	left:95%;
+	font-size: 40pt;
+
+}
+</style>
+<script type="text/javascript">var jj;
+var level = 1;
+var f = 0;
+var c = -1;
+var m = -1;
+var dninjacount = 0;
+var n_left = level*2;
+var width = screen.width;
+var d = Math.floor(Math.random()*45);
+var dninja = function (argument) {
+	dninjacount++
+	alert('yaaaaaas')
+}
+function createninjias(){
+	c--
+	v = Math.floor(Math.random()*(1024-50))
+	var img= document.createElement("img")
+	img.src="ninja.png"
+	img.id = String(c)
+	img.style.position = "fixed";
+	img.style.left =  String(v)+"px";
+	img.style.top = "50px"
+	img.style.height ="50px"
+	img.style.width = "50px"
+	img.style.zIndex = "6"
+	document.body.appendChild(img)
+	if(v >= 512){
+		document.getElementById(String(c)).style.transform = "rotate("+String(parseFloat(d))+"deg)";
+		moveDiag(document.getElementById(String(c)),parseFloat(d)+90 , level*.5, console.log('hi2'), (parseFloat(String(s)+"."+String(hs)+String(ms)))*1000)
+	}else if(v < 512){
+		document.getElementById(String(c)).style.transform = "rotate("+String(parseFloat(d))+"deg)";
+		moveDiag(document.getElementById(String(c)),90-parseFloat(d) , level*.5, console.log('hi2'), (parseFloat(String(s)+"."+String(hs)+String(ms)))*1000)
+	}
+}
+	function slidecount(argument) {
+		document.getElementById("hero").style.transform = "rotate("+String(document.getElementById("slider").value)+"deg)";
+		requestAnimationFrame(slidecount)
+	}requestAnimationFrame(slidecount)
+	var a = 0;
+	var e = 1;
+	function fire(argument) {if(f==0){for (var i = 0; i < level; i++) {
+		createninjias();
+	}
+		countDown(); 
+		f++
+		return;
+	}
+		if (n_left <= 0) {
+		alert("you are done")
+		clearInterval(p)
+		e--
+	}
+		if(e==1){a++
+		n_left--
+		var img= document.createElement("img")
+	img.src="arrow.png"
+	img.id = String(a)
+	img.style.position = "fixed";
+	img.style.left = "485.2px"
+	img.style.top = "577.6px"
+	img.style.height ="75px"
+	img.style.width = "25px"
+	img.style.zIndex = "5"
+	document.body.appendChild(img)
+	document.getElementById(String(a)).style.transform = "rotate("+String(parseFloat(document.getElementById("slider").value)+270)+"deg)";
+	moveDiag(document.getElementById(String(a)),parseFloat(document.getElementById("slider").value) , -4, console.log('hi'), (parseFloat(String(s)+"."+String(hs)+String(ms)))*1000)
+	for (var i = 0; i < level; i++) {
+		m--
+		rectCollide(document.getElementById(String(a)),document.getElementById(String(m)), dninja)
+	}m= -1
+}
+	}var s = 10+(4*level);
+var ts = 0;
+var hs=0;
+var ms = 0;
+var k=0;
+var p;
+	function countDown(argument) {
+	function tick(argument) {
+		if(k==0){
+		document.getElementById('countdown').innerHTML = String(s)+"."+String(hs)+String(ms);
+		document.getElementById('aleft').innerHTML = n_left;
+
+	}
+		if(s<0){
+		alert('you are done. you killed ');
+		clearInterval(p)
+		e--
+	}
+		if(ms<0){
+			ms=9
+			hs-=1
+		};if(hs<0){
+			hs=9
+			s-=1
+		};
+			ms-=1
+	} p = setInterval(tick, 1)
+	}
+</script>
+</body>
+</html>

@@ -13,24 +13,29 @@ function moveSetXTime(id, far, time, end) {
 	var id = id
 	var far = far
 	var time = time
-	var i=0
+	var i=0;
 	var hgh;
 	var use;
+	var tgt = (far+leftFunNum(id))
 	hgh = (far)/time;
 	use = 20*hgh;
 	var xo;
 		function go(){
 			i++
 			xo = leftFunNum(id);
-	id.style.left = rtnToStd(xo+use)
-			if(i==(time/20)){
+	id.style.left = rtnToStd(Math.floor(xo+use))
+			if(Math.ceil(i*20)>=Math.ceil(time)){
+				window.clearInterval(ok)
+				end()
+			};
+			if(leftFunNum(id) == tgt){
 				window.clearInterval(ok)
 				end()
 			}
 		}
 	var ok = window.setInterval(go, 20)
 }
-function moveSetYTime(id, far, time) {
+function moveSetYTime(id, far, time, end) {
 	var id = id
 	var far = far
 	var time = time
@@ -46,7 +51,7 @@ function moveSetYTime(id, far, time) {
 	id.style.top = rtnToStd(yo+use)
 			if(i==(time/20)){
 				window.clearInterval(ok)
-				//end
+				end()
 			}
 		}
 	var ok = window.setInterval(go, 20)

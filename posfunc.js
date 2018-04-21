@@ -1,9 +1,8 @@
-
 //use this.  it gets the values from the css and the in-tag css, not just the in-tag css.
 //    style = window.getComputedStyle(a),
 //    top = style.getPropertyValue('top');
-
-function parseToNum(b){if(parseInt(b)==parseFloat(b.replace("px","0"))/10){
+function parseToNum(b){
+	if(parseInt(b)==parseFloat(b.replace("px","0"))/10){
 	return parseFloat(b.replace("px","0"))/10
 }else{
 	return parseFloat(b.replace("px","0"))
@@ -84,10 +83,11 @@ function combo(a,b,c) {
 		bleft = leftFunNum(b);
 		bright = rightFunNum(b);
 		bbot = bottomFunNum(b);
+		console.log("hi3")
 		requestAnimationFrame(get)
 	}requestAnimationFrame(get)
 	function check(){
-		if (atop<=bbot&&abot<=btop&&aleft<=bright&&aright>=bleft) {
+		if (aright>=bleft&&aright<=bright&&atop<=btop&&atop>=bbot) {
 			c();
 		}
 	requestAnimationFrame(check)
