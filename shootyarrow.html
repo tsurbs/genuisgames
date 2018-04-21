@@ -61,7 +61,30 @@
 
 }
 </style>
-<script type="text/javascript">var jj;
+<script type="text/javascript">
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}var level=parseFloat(getCookie("level"))
+if(getCookie("level")==level){
+	var level = parseFloat(getCookie('level'))
+	document.cookie="level = "+String(level+1)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+}else{
+	var level = 1;
+	document.cookie="level = "+String(level+1)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
+}
+
+var jj;
 var atop;
 	var aleft;
 	var aright;
@@ -70,7 +93,6 @@ var atop;
 	var bleft;
 	var bright;
 	var bbot;
-var level = 1;
 var f = 0;
 var c = -1;
 var m = -1;
@@ -80,6 +102,8 @@ var width = screen.width;
 var d = Math.floor(Math.random()*45);
 var dninja = function () {
 	dninjacount+=1
+	aaa.style.opacity=0
+	bbb.style.opacity=0;
 	if(dninjacount>=level){
 		alert("You won! Reload for the next level")
 	}
