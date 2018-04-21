@@ -62,6 +62,14 @@
 }
 </style>
 <script type="text/javascript">var jj;
+var atop;
+	var aleft;
+	var aright;
+	var abot;
+	var btop;
+	var bleft;
+	var bright;
+	var bbot;
 var level = 1;
 var f = 0;
 var c = -1;
@@ -70,9 +78,11 @@ var dninjacount = 0;
 var n_left = level*2;
 var width = screen.width;
 var d = Math.floor(Math.random()*45);
-var dninja = function (argument) {
+var dninja = function () {
 	dninjacount++
-	alert('yaaaaaas')
+	if(dninjacount>=level){
+		Alert("You won! Reload for the next level")
+	}
 }
 function createninjias(){
 	c--
@@ -89,19 +99,19 @@ function createninjias(){
 	document.body.appendChild(img)
 	if(v >= 512){
 		document.getElementById(String(c)).style.transform = "rotate("+String(parseFloat(d))+"deg)";
-		moveDiag(document.getElementById(String(c)),parseFloat(d)+90 , level*.5, console.log('hi2'), (parseFloat(String(s)+"."+String(hs)+String(ms)))*1000)
+		moveDiag(document.getElementById(String(c)),parseFloat(d)+90 , level*.5,(parseFloat(String(s)+"."+String(hs)+String(ms)))*1000)
 	}else if(v < 512){
 		document.getElementById(String(c)).style.transform = "rotate("+String(parseFloat(d))+"deg)";
-		moveDiag(document.getElementById(String(c)),90-parseFloat(d) , level*.5, console.log('hi2'), (parseFloat(String(s)+"."+String(hs)+String(ms)))*1000)
+		moveDiag(document.getElementById(String(c)),90-parseFloat(d) , level*.5,(parseFloat(String(s)+"."+String(hs)+String(ms)))*1000)
 	}
 }
-	function slidecount(argument) {
+	function slidecount() {
 		document.getElementById("hero").style.transform = "rotate("+String(document.getElementById("slider").value)+"deg)";
 		requestAnimationFrame(slidecount)
 	}requestAnimationFrame(slidecount)
 	var a = 0;
 	var e = 1;
-	function fire(argument) {if(f==0){for (var i = 0; i < level; i++) {
+	function fire() {if(f==0){for (var i = 0; i < level; i++) {
 		createninjias();
 	}
 		countDown(); 
@@ -126,7 +136,7 @@ function createninjias(){
 	img.style.zIndex = "5"
 	document.body.appendChild(img)
 	document.getElementById(String(a)).style.transform = "rotate("+String(parseFloat(document.getElementById("slider").value)+270)+"deg)";
-	moveDiag(document.getElementById(String(a)),parseFloat(document.getElementById("slider").value) , -4, console.log('hi'), (parseFloat(String(s)+"."+String(hs)+String(ms)))*1000)
+	moveDiag(document.getElementById(String(a)),parseFloat(document.getElementById("slider").value) , -4, (parseFloat(String(s)+"."+String(hs)+String(ms)))*1000)
 	for (var i = 0; i < level; i++) {
 		m--
 		rectCollide(document.getElementById(String(a)),document.getElementById(String(m)), dninja)
@@ -138,8 +148,8 @@ var hs=0;
 var ms = 0;
 var k=0;
 var p;
-	function countDown(argument) {
-	function tick(argument) {
+	function countDown() {
+	function tick() {
 		if(k==0){
 		document.getElementById('countdown').innerHTML = String(s)+"."+String(hs)+String(ms);
 		document.getElementById('aleft').innerHTML = n_left;
