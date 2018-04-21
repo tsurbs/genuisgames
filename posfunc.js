@@ -2,7 +2,7 @@
 //    style = window.getComputedStyle(a),
 //    top = style.getPropertyValue('top');
 function parseToNum(b){
-	if(parseInt(b)==parseFloat(b.replace("px","0"))/10){
+	if(parseFloat(b)==parseFloat(b.replace("px","0"))/10){
 	return parseFloat(b.replace("px","0"))/10
 }else{
 	return parseFloat(b.replace("px","0"))
@@ -63,33 +63,24 @@ function combo(a,b,c) {
 	}
 	return d+","+e
 }function rectCollide(a,b,c) {
-	var a = a;
-	var b = b;
-	var c = c;
-	var atop;
-	var aleft;
-	var aright;
-	var abot;
-	var btop;
-	var bleft;
-	var bright;
-	var bbot;
-	function get(){
-		/*atop = topFunNum(a);
-		aleft = leftFunNum(a);
-		aright = rightFunNum(a);
-		abot = bottomFunNum(a);
-		btop = topFunNum(b);
-		bleft = leftFunNum(b);
-		bright = rightFunNum(b);
-		bbot = bottomFunNum(b);*/
-		console.log("hi3")
-		requestAnimationFrame(get)
-	}requestAnimationFrame(get)
+	var aaa = a;
+	var bbb = b;
+	var ccc = c;
+	function geta(){
+		atop = topFunNum(aaa);
+		aleft = leftFunNum(aaa);
+		aright = rightFunNum(aaa);
+		abot = bottomFunNum(aaa);
+		btop = topFunNum(bbb);
+		bleft = leftFunNum(bbb);
+		bright = rightFunNum(bbb);
+		bbot = bottomFunNum(bbb);
+		//console.log("hi3")
+		requestAnimationFrame(geta)
+	}requestAnimationFrame(geta)
 	function check(){
-		if (aright>=bleft&&aright<=bright&&atop<=btop&&atop>=bbot) {
-			c();
+		if (aright>=bleft&&aright<=bright&&atop>=btop&&atop<=bbot) {
+			ccc();
 		}
 	requestAnimationFrame(check)
 	}requestAnimationFrame(check)
-}
