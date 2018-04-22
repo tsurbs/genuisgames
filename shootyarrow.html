@@ -99,12 +99,13 @@ var width = screen.width;
 var d = Math.floor(Math.random()*45);
 var dninja = function () {
 	dninjacount+=1
-	document.getElementById(String(a)).style.opacity=0
+	alert(dninjacount)
+	document.getElementById(String(a)).style.opacity=0;
 	document.getElementById(String(c)).style.opacity=0;
 	document.getElementById(String(c)).style.top = "1000px";
 	if(dninjacount>=level){
 		if(getCookie("level")==level){
-	var level = parseFloat(getCookie('level'))
+	level = parseFloat(getCookie('level'))
 	document.cookie="level = "+String(level+1)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
 }
 		alert("You won! Reload for the next level")
