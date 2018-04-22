@@ -108,7 +108,8 @@ var dninja = function () {
 	level = parseFloat(getCookie('level'))
 	document.cookie="level = "+String(level+1)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
 }
-		alert("You won! Reload for the next level")
+		alert("You won! The next level will load.")
+		location.reload()
 	}
 }
 function createninjias(){
@@ -146,8 +147,7 @@ function createninjias(){
 		return;
 	}
 		if (n_left <= 0) {
-		alert("you are done")
-		clearInterval(p)
+		alert("You ran out of arrows")
 		e--
 	}
 		if(e==1){a++
@@ -183,7 +183,7 @@ var p;
 
 	}
 		if(s<0){
-		alert('you are done. you killed ');
+		alert('You are done. You ran out of time');
 		clearInterval(p)
 		e--
 	}
