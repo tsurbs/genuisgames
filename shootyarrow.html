@@ -75,7 +75,7 @@ function getCookie(cname) {
         }
     }
     return "";
-}if(parseFloat(getCookie(level))!==parseFloat("")){var level=parseFloat(getCookie("level"))}
+}if(String(getCookie(level))!==""){var level=parseFloat(getCookie("level"))}
 else{
 	var level = 1;
 	document.cookie="level = "+String(level+1)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
