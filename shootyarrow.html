@@ -74,8 +74,8 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
         }
     }
-    return "";
-}if(getCookie(level)===""){var level = 1;}
+    return "fail";
+}if(getCookie(level)==="fail"){var level = 1;}
 else{var level=parseFloat(getCookie("level"))
 	
 }
