@@ -103,7 +103,6 @@ var dninja = function () {
 	document.getElementById(String(c)).style.opacity=0;
 	document.getElementById(String(c)).style.top = "1000px";
 	if(dninjacount>=level){
-	level = parseFloat(getCookie('level'))
 	document.cookie="level = "+String(level+1)+";expires=Wed, 18 Dec 2023 12:00:00 GMT"
 		alert("You won! The next level will load.")
 		location.reload()
