@@ -74,7 +74,7 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
         }
     }
-}confirm(getCookie('level'))
+}
 	if(getCookie('level')){var level=parseFloat(getCookie("level"))}
 else{var level = 1;
 }
@@ -96,7 +96,6 @@ var width = screen.width;
 var d = Math.floor(Math.random()*45);
 var dninja = function () {
 	dninjacount+=1
-	alert(dninjacount)
 	//document.getElementById(String(a)).style.opacity=0;
 	document.getElementById(String(c)).style.opacity=0;
 	document.getElementById(String(c)).style.top = "1000px";
@@ -180,6 +179,7 @@ var p;
 		alert('You are done. You ran out of time');
 		clearInterval(p)
 		e--
+		location.reload()
 	}
 		if(ms<0){
 			ms=9
