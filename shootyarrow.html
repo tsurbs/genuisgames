@@ -75,9 +75,8 @@ function getCookie(cname) {
         }
     }
 }confirm(getCookie(level))
-	if(getCookie(level)==="fail"){var level = 1;}
-else{var level=parseFloat(getCookie("level"))
-	
+	if(getCookie(level)){var level=parseFloat(getCookie("level"))}
+else{var level = 1;
 }
 var jj;
 var atop;
