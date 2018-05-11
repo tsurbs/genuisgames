@@ -88,9 +88,9 @@ var atop;
 	var bleft;
 	var bright;
 	var bbot;
-	function leftwall(argument) {
+	function leftwall(b) {var f = f
 		if(leftFunNum(b)<=0){b.style.left = 1024}
-	}function rightwall(argument) {
+	}function rightwall(b) {var f = f
 		if(leftFunNum(b)>=1024){b.style.left = -50}
 	}
 var f = 0;
@@ -128,8 +128,8 @@ function createninjias(){
 	img.style.zIndex = "6"
 	document.body.appendChild(img)
 	function ninjamovement(){var b = img
-	if(g == 2){moveSetX(b,-s);setInterval(leftwall, 20)}
-	if(g == 1){moveSetX(b,s);setInterval(rightwall, 20)}
+	if(g == 2){moveSetX(b,-s);leftwall(b)}
+	if(g == 1){moveSetX(b,s);rightwall(b)}
 }setInterval(ninjamovement, 20)
 }
 	function slidecount() {
