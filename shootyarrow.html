@@ -89,9 +89,9 @@ var atop;
 	var bright;
 	var bbot;
 	function leftwall(argument) {
-		if(leftFunNum(img)<=0){img.style.left = 1024}
+		if(leftFunNum(b)<=0){b.style.left = 1024}
 	}function rightwall(argument) {
-		if(leftFunNum(img)>=1024){img.style.left = -50}
+		if(leftFunNum(b)>=1024){b.style.left = -50}
 	}
 var f = 0;
 var c = -1;
@@ -127,10 +127,10 @@ function createninjias(){
 	img.style.width = "50px"
 	img.style.zIndex = "6"
 	document.body.appendChild(img)
-	function ninjamovement(){}
-	if(g == 2){setInterval(moveSetX, 20, img, -s);setInterval(leftwall, 20)}
-	if(g == 1){setInterval(moveSetX, 20, img, s);setInterval(rightwall, 20)}
-
+	function ninjamovement(){var b = img
+	if(g == 2){moveSetX(b,-s);setInterval(leftwall, 20)}
+	if(g == 1){moveSetX(b,s);setInterval(rightwall, 20)}
+}setInterval(ninjamovement, 20)
 }
 	function slidecount() {
 		document.getElementById("hero").style.transform = "rotate("+String(document.getElementById("slider").value)+"deg)";
@@ -168,7 +168,7 @@ function createninjias(){
 		rectCollide(document.getElementById(String(a)),document.getElementById(String(m)), dninja)
 	}m= -1
 }
-	}var s = 10+(4*level);
+	}var s = (10+(4*level))/2;
 var ts = 0;
 var hs=0;
 var ms = 0;
