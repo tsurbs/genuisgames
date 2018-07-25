@@ -3,12 +3,12 @@
 <head>
 	<title>Checklist</title>
 </head>
-<body>
-<input type="CHECKBOX" value="set passwords"> Set passwords
+<body><div>
+<input type="CHECKBOX" value="set passwords"> Set passwords</div>
 <br>
 Make a secure password 
 	<ul>
-		<li>At least three of the following:
+		<li class="outer">At least three of the following:
 			<ul>
 				<li>numbers</li>
 				<li>capital letters</li>
@@ -16,22 +16,33 @@ Make a secure password
 				<li>symbols</li>
 				<li>symbols in the middle</li>
 			</ul>
-		<li>
+		<li class="outer">
 		To better remember your password, use a passphrase such as "where's the beef?"  This could become "Wh D@ b33f?"  this would let you remember the passphrase, but still have a secure password
 		</li>
-		<li>
+		<li class = "outer">
 		In addition, you can add extensions on the end of you password to make it more secure.  Some of examples of this include:
 			<ul>
 				<li>Gmail="gma"</li>
 				<li>Spotify="Spo"</li>
 			</ul>
 		</li>
-		<li>Your password should be at least ten characters, but for better security you should have 12-15 characters
+		<li class = "outer">Your password should be at least ten characters, but for better security you should have 12-15 characters</li>
 	</ul>
 	<br>
 	<br>
-	<input type="CHECKBOX" value="set passwords"> Set password requirements
+	<div>
+	<input type="CHECKBOX" value="set passwords"> Set password requirements </input></div>
 	<br>
-
+</div>
+<style type="text/css">
+	html{
+		background-color:#d8b91e;
+	}li {
+    	border: 2px dotted red;
+	}.outer{
+		border: 3px dashed blue;
+	}body{border: 5px dashed green}
+	div{border: 4px dotted purple}
+</style>
 </body>
 </html>
