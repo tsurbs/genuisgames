@@ -177,6 +177,11 @@
 		top:85%;
 		left:38.75%;
 		z-index:3;
+	}#puckcount{
+		position:absolute;
+		font-size:45pt;
+		top:90%;
+		left:5%;
 	}</style>
 	<script type="text/javascript">
 	var tt = 0;
@@ -188,7 +193,6 @@
 	var width=window.innerWidth;
 	var height=window.innerHeight;
 	var score=0;
-	document.getElementById('puckcount').innerHTML = String(10-B)
 	if(height>width){
 		var leftside = 3*width;
 		document.getElementById('gamespace').style.height = String(leftside/4)+"px";
@@ -214,7 +218,8 @@
 }var dd= document.getElementById('player')
 var hhhh=topFun(dd)
 var theoj = function () {
-document.getElementById(String(B)).style.zIndex = '-1000000'}
+document.getElementById(String(B)).style.zIndex = '-1000000'
+score+=1}
 var net = document.getElementById('net')
 var puck;
 var yn;
@@ -241,6 +246,7 @@ var movenet = function(){
 movenet()
 function fire(argument) {B++
 	if(B<10){
+	document.getElementById('puckcount').innerHTML = String(10-B)
 		var div= document.createElement("div")
 	div.id = String(B)
 	div.style.position = "absolute";
