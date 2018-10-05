@@ -178,6 +178,7 @@
 		z-index:3;
 	}</style>
 	<script type="text/javascript">
+	var tt = 0;
 	var key;
 	var x=1;
 	var B=0;
@@ -237,6 +238,7 @@ var movenet = function(){
 }
 movenet()
 function fire(argument) {B++
+	if(b<10){
 		var div= document.createElement("div")
 	div.id = String(B)
 	div.style.position = "absolute";
@@ -251,6 +253,7 @@ function fire(argument) {B++
 	document.getElementById('gamespace').appendChild(div);
 	puck = document.getElementById(String(B))
 	moveDiag(puck,(angle+90),-8, rectCollide(puck,net,theoj))
+	}
 	}
 	function checkKey(e) {
 		x=0
