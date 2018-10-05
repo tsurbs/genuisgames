@@ -188,12 +188,13 @@
 	var tt = 0;
 	var key;
 	var x=1;
-	var B=-1;
+	var B=0;
 	var angle = 0;
 	var desiredratio = 4/3;
 	var width=window.innerWidth;
 	var height=window.innerHeight;
 	var score=0;
+	document.getElementById('puckcount').innerHTML = String(10-B);
 	if(height>width){
 		var leftside = 3*width;
 		document.getElementById('gamespace').style.height = String(leftside/4)+"px";
@@ -245,9 +246,10 @@ var movenet = function(){
 	//if(yn==1){}
 }
 movenet()
-function fire(argument) {B++
-	if(B<10){
+function fire(argument) {
+	if(B<11){
 	document.getElementById('puckcount').innerHTML = String(10-B)
+		B++
 		var div= document.createElement("div")
 	div.id = String(B)
 	div.style.position = "absolute";
