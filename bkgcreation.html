@@ -247,9 +247,9 @@ var movenet = function(){
 }
 movenet()
 function fire(argument) {
-	if(B<11){
+	B++
+	if(B<10){
 	document.getElementById('puckcount').innerHTML = String(10-B)
-		B++
 		var div= document.createElement("div")
 	div.id = String(B)
 	div.style.position = "absolute";
