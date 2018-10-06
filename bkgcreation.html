@@ -265,7 +265,8 @@ function fire(argument) {
 	puck = document.getElementById(String(B))
 	moveDiag(puck,(angle+90),-8, rectCollide(puck,net,theoj))
 	}
-	}
+}
+if(topFunNum(puck)<0 && B>10){confirm("You got " + String(score) + " points.")}
 	function checkKey(e) {
 		x=0
     e = e || window.event;
