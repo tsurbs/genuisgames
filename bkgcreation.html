@@ -211,7 +211,7 @@
 			angle += 4;
 			document.getElementById('player').style.transform = "rotate("+String(angle)+"deg)";
 	}var go = setInterval(leftturn,2.5)
-}hjh()
+}
 	function outsideright(){
 		function rightturn(){
 			if (x=1) {window.clearInterval(goe)}
@@ -265,11 +265,11 @@ function fire(argument) {
 	document.getElementById('gamespace').appendChild(div);
 	puck = document.getElementById(String(B))
 	moveDiag(puck,(angle+90),-8, rectCollide(puck,net,theoj))
+	window.requestAnimationFrame(hjh
 	}
 }function hjh(){
 if(topFunNum(puck)<0 && B>10){confirm("You got " + String(score) + " points.")}
 window.requestAnimationFrame(hjh)};
-window.requestAnimationFrame(hjh)
 	function checkKey(e) {
 		x=0
     e = e || window.event;
