@@ -19,6 +19,7 @@
     <div id="raven"></div>
     <div id="sly"></div>
     <div id='pitch'></div>
+    <div id="tst"></div>
     <img class="hoopb" id="bh1" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
     <img class="hoopb" id="bh2" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
     <img class="hoopb" id="bh3" src="http://www.clipartbest.com/cliparts/dT8/aeB/dT8aeBKTe.png"></img>
@@ -166,6 +167,7 @@
     return "";
 }
 var p2score=0
+var tst = document.getElementById('tst')
     function write(){
     //console.log("p1 has"+p1score+"points")
     document.getElementById("p1score").innerHTML=p1+" has"+p1score+"points"
@@ -484,13 +486,16 @@ if(threet>750){
     var y=Math.floor(Math.random()*500)
 
 function snitch () {
-    if(sixt==y&&sixl==x){
+    if(sixt==y&&sixl==x){for(rectcollide(tst, p1)&&rectcollide(tst, p2){
         x= Math.floor(Math.random()*1366)
 y=Math.floor(Math.random()*750)
+        tst.style.left = String(x) + "px"
+        tst.style.top = String(y) + "px"
+    }
     }
     console.log(x+','+y)
-    var ye=(x-sixl)/20
-    var yes=(y-sixt)/20
+    var ye=(x-sixl)/40
+    var yes=(y-sixt)/40
     console.log("x: " + String(sixl) + ",y: " + String(sixt))
     console.log(String(ye) + "," + String(yes))
         if (ye < 0)
