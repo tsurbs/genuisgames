@@ -83,6 +83,7 @@ function combo(a,b,c) {
 			ccc();
 			return False;
 		}
+		return True;
 	requestAnimationFrame(check);
 	}requestAnimationFrame(check)
 }
