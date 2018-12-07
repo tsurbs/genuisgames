@@ -488,7 +488,7 @@ if(threet>750){
 
 function snitch () {
     if(sixt==y&&sixl==x){
-        if(rectCollide(tst, p1)&&rectCollide(tst, p2)){
+        if(rectCollide(tst, document.getElementById("bck"))&&rectCollide(tst, document.getElementById("wit"))){
         x= Math.floor(Math.random()*1366)
 y=Math.floor(Math.random()*750)
         tst.style.left = String(x) + "px"
