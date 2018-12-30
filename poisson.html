@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><input type="range" min="0" max="200" value="100" class="slider" id="slider">
+<style type="text/css">
+	#slider{
+		position:fixed;
+		-webkit-appearance: none;
+		width:50%;
+		height:100px;
+		background-color: blue;
+		left:25%;
+		top:87%;
+	}
+	#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius:50px;
+    width: 100px;
+    height: 100px;
+    background: grey;
+}button{
+	font-size: 28pt;
+	width:30%;
+	height:10%;
+}#done{position:fixed;
+	left:70%;
+}
+</style>
+<button onclick="w = setInterval(formula,1); run()"> StartSound</button>
+<button id = "done" onclick="stop()"> Done!</button>
+<script>
+	var q = prompt("Decay rate(the higher the harder between .8 and .999")
+	var qs = prompt("max val (higher = less frequent")
+	var a = Math.floor(Math.random()*200)
+	var w;
+	var ins;
+var val;
+var i=0;
+var rd = 0;
+var x = 0;
+var blip = new Audio('blip.mp3');
+	var tensec=0;
+	var sec=0;
+var min=0;
+var z=2;
+var time="";
+var y;
+var name;
+var r=[];
+var s;
+var u = 1
+var p=0;
+var ntime;function runclock(){
+		if(z!==1){
+			tensec++
+		}
+			if(tensec>60){tensec=00
+				sec++
+			}time = String(sec)+"."+String(tensec)
+			z++
+		};
+	function run() {
+	 y=setInterval(runclock, (16+(2/3)))
+	 s=setInterval(record, 500)
+	};
+	function formula(λ) {
+		x = Math.abs(document.getElementById("slider").value);
+		rd = Math.ceil(Math.random()*(qs-(100*(Math.pow(q, Math.abs(a-x))))))
+		if(rd == 1){i++
+			console.log(i)
+			blip.play();
+		}
+	}function record(){
+		r.push(String(Math.abs(a-x)))
+	}function average(){
+		for (var i = r.length - 1; i >= 0; i--) {
+			parseFloat(r[i])+p
+			p=parseFloat(r[i])+p
+		}return p/r.length;
+	}
+	function stop(){
+		clearInterval(y);
+		clearInterval(w);
+		clearInterval(s);
+		alert("You took "+time+" secconds to get within"+ String(Math.abs(a-x))+" of the target.");
+		alert("Your average distance away was "+String(parseInt(average()))+".");
+	}
+</script>
+</body>
+</html>
