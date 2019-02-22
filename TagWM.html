@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="shortcut icon" href="https://raw.githubusercontent.com/goldprogrammer/genuisgames/master/favicon.jpeg" type="image/x-icon">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script><head><script type="text/javascript" src='https://goldprogrammer.github.io/genuisgames/copyrighter.js'></script>
+	</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<title>Tag!</title>
+</head>
+<body>
+<div id="sec"></div>
+<div id="e"></div>
+<div id="p"></div>
+<input id="color" value="color"></input>
+<button onclick="go()" id="go">go</button>
+<style type="text/css">
+		#sec{
+	border-style: dotted;
+	border-width: .1em;
+	border-color:orange;
+	display:inline-block;
+	color:orange;
+	font-size:6em;
+	text-align:center;
+			position:fixed;
+			left:90%;
+			top:5%;
+			width:9%;
+		}
+		#e{
+		border-radius: 20px;
+    background: red; 
+    width: 30px;
+    height: 30px; 
+    position:absolute;  
+    top:50%;
+    left:90%;
+	}
+	#p{
+		border-radius: 20px;
+    background: #73AD21; 
+    width: 20px;
+    height: 20px; 
+    position:absolute;  
+    top:50%;
+    left:10%;
+	}
+	body{
+		background-image: url(http://emathlab.com/GraphPaper/images/L30x40.gif)
+	}
+</style>
+<script type="text/javascript">
+var pos;
+var sec=0
+
+function go(argument) {
+	function runclock(){
+			sec+=1
+			console.log(sec)
+			document.getElementById('sec').innerHTML = sec
+		};setInterval(runclock, 1000)	
+	document.getElementById('p').style.background=document.getElementById('color').value
+	function p1move () {
+	if(pos==="left"){
+			var ya=(0-onel)/85
+			$("#p").animate({left:"+="+String(ya)+"px"}, 0.0, "linear")
+	}
+	else if(pos==="right"){
+			var ya1=(screen.width-onel)/85
+			$("#p").animate({left:"+="+String(ya1)+"px"}, 0.0, "linear")
+	}
+	else if(pos==="up"){
+			var ya2=(0-onet)/85
+			$("#p").animate({top:"+="+String(ya2)+"px"}, 0.0, "linear")
+	}
+	else if(pos==="down"){
+			var ya3=(screen.height-onet)/85
+			$("#p").animate({top:"+="+String(ya3)+"px"}, 0.0, "linear")
+	}requestAnimationFrame(p1move)
+}requestAnimationFrame(p1move)
+	$(document).keydown(function(key) {
+			switch(parseInt(key.which,10)) {
+				case 37: pos="left"
+					break;
+				case 39:pos="right"
+					break;
+				case 38:pos="up"
+					break;
+				case 40:pos="down"
+					break;
+				case 32:
+					break;
+				default:
+					break;
+				}
+				});
+				var onet=0
+				var oneb=0
+				var onel=0
+				var oner=0
+				var twot=0
+				var twob=0
+				var twol=0
+				var twor=0
+function detect (d1,d2){//obj d1 must be the moving object
+	onet = Math.floor($("#"+d1).offset().top);
+    oneb = Math.floor($("#"+d1).offset().top+20);
+    onel = Math.floor($("#"+d1).offset().left);
+    oner = Math.floor($("#"+d1).offset().left+20);
+    twot = Math.floor($("#"+d2).offset().top);
+	twob = Math.floor($("#"+d2).offset().top+30);
+	twol = Math.floor($("#"+d2).offset().left);
+    twor = Math.floor($("#"+d2).offset().left+30);
+}    
+				function dte () {	
+	detect("p","e")
+	//console.log(String(sevenr)+","+String(sevenl)+","+String(sevenb)+","+String(sevent))
+	requestAnimationFrame(dte);
+};
+requestAnimationFrame(dte);
+function chase1 () {var ya = (onel-twol) / (50/(sec*0.25));
+	var ya2 = (onet-twot) / (50/(sec*0.25));
+	$("#e").animate({left:"+="+String(ya)+"px"}, 0, "linear")
+	$("#e").animate({top:"+="+String(ya2)+"px"}, 0, "linear")
+requestAnimationFrame(chase1)
+}requestAnimationFrame(chase1)
+
+function blucol1 () {
+	if(onet-10<=twot&&oneb+10>=twob&&onel-10<=twor&&oner+10>=twol){
+	document.write("<h1 style=\"background-color:"+color.value+"; color:green;font-size: 10em; font-family:arial, helvetica, sans-serif; height:1000px; length:1000\">You got "+sec +" points !<\/body>");
+	      setTimeout(function(){ location.reload() }, 3000);}console.log(oneb)
+requestAnimationFrame(blucol1)
+}requestAnimationFrame(blucol1)
+};
+</script>
+</body>
+</html>
