@@ -24,7 +24,7 @@ function rightFun(a) {
 function leftFun(a) {
 	var style = window.getComputedStyle(a);
     var left = style.getPropertyValue('left');
-    return left
+    return left;
 }
 function topFun(a) {
 	var style = window.getComputedStyle(a);
@@ -81,9 +81,7 @@ function combo(a,b,c) {
 	function check(){
 		if (aright>=bleft&&aright<=bright&&atop>=btop&&atop<=bbot) {
 			ccc();
-			return False;
 		}
-		return True;
 	requestAnimationFrame(check);
 	}requestAnimationFrame(check)
 }
