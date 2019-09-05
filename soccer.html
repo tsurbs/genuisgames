@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="field"></div>
+<style type="text/css">
+	body{
+		position:relative;
+		margin:0px;
+	}
+	#field{
+		position:relative;
+		margin:0px;
+		background-color:green;
+	}
+</style>
+<script type="text/javascript">
+	var height = window.innerHeight
+	var width = window.innerWidth
+	document.getElementById('field').style.height = String(height)+"px"
+	document.getElementById('field').style.width = String(height*1.3)+"px"
+	document.getElementById('field').style.left = String((width-(height*1.3))*.5)+"px"
+</script>
+</body>
+</html>
