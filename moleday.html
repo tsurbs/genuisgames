@@ -4,7 +4,7 @@
 	<title>witch</title>
 </head>
 <body>
-<canvas id="canv" width="500px" height="600px"></canvas>
+<canvas id="canv"></canvas>
 
 <script>
 	var ratio = window.devicePixelRatio || 1;
@@ -12,6 +12,9 @@
 	var height = screen.height * ratio;
 
 	confirm(width+", "+height)
+
+	document.getElementById('canv').style.height = String(height)+"px"
+	document.getElementById('canv').style.width = String(width)+"px"
 
 	var canvas = document.getElementById("canv");
 	var c = canvas.getContext("2d");
