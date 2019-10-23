@@ -5,10 +5,12 @@
 </head>
 <body>
 <canvas id="canv"></canvas>
+<img id="circ" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
 <style>body{margin:0px;}</style>
 <script>
 	var time = 10
 	var score = 0
+	var k=0;
 
 	function countTime(){ 
 	    time = (time-.1).toFixed(2)
@@ -42,7 +44,7 @@
 		c.fillStyle = "#FF781F"
 		c.fillText("Start", width*(10/980), height*(6/718))
 
-		c.moveTo(width*(60/980), height*(13/1436))
+		c.moveTo(width*(60/980), height*(.01))
 		c.lineTo(width*(60/980),0)
 		//c.lineWidth = 7.5
 		c.strokeStyle = "#FF781F"
@@ -56,10 +58,18 @@
 		c.fillStyle = "#FF781F"
 		c.fillText("Time: "+time, width*(170/980), height*(12/1436))
 
-		c.beginPath();
-		c.arc(50, 50, 50, 0, 2 * Math.PI);
-		c.lineWidth = 0
-		c.fill();
+		c.drawImage(document.getElementById('circ'),width*(25/width),height*(30/height),width*(100/width),height*(25/height));
+
+		c.drawImage(document.getElementById('circ'),width*(25/width),height*(70/height),width*(100/width),height*(25/height));
+
+		c.drawImage(document.getElementById('circ'),width*(25/width),height*(110/height),width*(100/width),height*(25/height));
+
+
+		c.drawImage(document.getElementById('circ'),width*(175/width),height*(30/height),width*(100/width),height*(25/height));
+
+		c.drawImage(document.getElementById('circ'),width*(175/width),height*(70/height),width*(100/width),height*(25/height));
+
+		c.drawImage(document.getElementById('circ'),width*(175/width),height*(110/height),width*(100/width),height*(25/height));
 
 		window.requestAnimationFrame(drawCanv)
 	}
