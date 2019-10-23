@@ -5,12 +5,12 @@
 </head>
 <body>
 <canvas id="canv"></canvas>
-<img id="circ1" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
-<img id="circ2" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
-<img id="circ3" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
-<img id="circ4" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
-<img id="circ5" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
-<img id="circ6" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img height="0px" width="0px" id="circ1" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img height="0px" width="0px" id="circ2" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img height="0px" width="0px" id="circ3" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img height="0px" width="0px" id="circ4" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img height="0px" width="0px" id="circ5" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img height="0px" width="0px" id="circ6" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
 <style>body{margin:0px;}</style>
 <script>
 	var time = 10
@@ -18,6 +18,7 @@
 	var k=0;
 	var p=true;
 	var n=0;
+	var actmole=[]
 	function countTime(){ 
 	    time = (time-.1).toFixed(2)
 	    peekaboo()
@@ -91,27 +92,96 @@
         	X = e.touches[0].pageX;
         	Y = e.touches[0].pageY;
         	console.log(X+", "+Y)
-        	if(Y <= height*(133/1436) || X <= width*(176/980)){
+        	if(Y <= height*(200/1436) && X <= width*(176/980)){
         		if(yaynay = "false"){
         			var yaynay = confirm("start")
         			if(yaynay){countbeg = setInterval(countTime, 100);}
         		}
+        	}if(Y <= height*(650/1436) && Y >= height*(336/1436) && X <= width*(400/980) && X >= width*(64/980)){
+        		if(actmole.indexOf(1)){
+        			actmole.splice(actmole.indexOf(1), 1)
+        			n-=1
+        			score+=1
+        			document.getElementById('circ1').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
+        		}
+        	}if(Y <= height*(1194/1436) && Y >= height*(796/1436) && X <= width*(400/980) && X >= width*(64/980)){
+        		if(actmole.indexOf(2)){
+        			actmole.splice(actmole.indexOf(2), 1)
+        			n-=1
+        			score+=1
+        			document.getElementById('circ2').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
+        		}
+        	}if(Y <= height*(1193/1436) && Y >= height*(800/1436) && X <= width*(400/980) && X >= width*(64/980)){
+        		if(actmole.indexOf(3)){
+        			actmole.splice(actmole.indexOf(3), 1)
+        			n-=1
+        			score+=1
+        			document.getElementById('circ3').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
+        		}
+        	}if(Y <= height*(650/1436) && Y >= height*(336/1436) && X <= width*(720/980) && X >= width*(588/980)){
+        		if(actmole.indexOf(4)){
+        			actmole.splice(actmole.indexOf(4), 1)
+        			n-=1
+        			score+=1
+        			document.getElementById('circ4').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
+        		}
+        	}if(Y <= height*(1194/1436) && Y >= height*(796/1436) && X <= width*(720/980) && X >= width*(588/980)){
+        		if(actmole.indexOf(5)){
+        			actmole.splice(actmole.indexOf(5), 1)
+        			n-=1
+        			score+=1
+        			document.getElementById('circ5').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
+        		}
+        	}if(Y <= height*(1278/1436) && Y >= height*(1716/1436) && X <= width*(720/980) && X >= width*(588/980)){
+        		if(actmole.indexOf(6)){
+        			actmole.splice(actmole.indexOf(6), 1)
+        			n-=1
+        			score+=1
+        			document.getElementById('circ6').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
+        		}
         	}
     	}
+	}function shuffle(array) {
+	  var currentIndex = array.length, temporaryValue, randomIndex;
+
+	  // While there remain elements to shuffle...
+	  while (0 !== currentIndex) {
+
+	    // Pick a remaining element...
+	    randomIndex = Math.floor(Math.random() * currentIndex);
+	    currentIndex -= 1;
+
+	    // And swap it with the current element.
+	    temporaryValue = array[currentIndex];
+	    array[currentIndex] = array[randomIndex];
+	    array[randomIndex] = temporaryValue;
+	  }
+
+	  return array;
 	}function peekaboo(){
-		var moles = [0, 0,0, 0, 0, 0]
+		var moles = [0, 0, 0, 0, 0, 0]
 		if(p){
 			p=false
 			var initmole=Math.floor(Math.random()*6)+1
 			document.getElementById("circ"+String(initmole)).src = "https://goldprogrammer.github.io/genuisgames/grumole.png"
 			n=1
 		}
+		if(n==0){
+			var mole;
+			n = Math.floor(Math.random()*9)+1
+			if(n==1||n==1||n==3||n==4){n=1}
+			if(n==5||n==6||n==7){n=2}
+			if(n==8||n==9){n=3}
 
-		n = Math.floor(Math.random()*9)+1
-		if(n==1||n==1||n==3||n==4){n=1}
-		if(n==5||n==6||n==7){n=2}
-		if(n==8||n==9){n=3}
-		
+			for (var i = n - 1; i >= 0; i--) {
+				var array=[1,2,3,4,5,6]
+				shuffle(array)
+				mole=array[5]
+				array.pop()
+				actmole.push(mole)
+				document.getElementById("circ"+String(mole)).src = "https://goldprogrammer.github.io/genuisgames/grumole.png"
+			}
+		}
 	}
 </script>
 
