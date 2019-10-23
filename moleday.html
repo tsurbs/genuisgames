@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>witch</title>
+	<title>Tap-A-Mol</title>
 </head>
 <body>
 <canvas id="canv"></canvas>
@@ -94,47 +94,47 @@
         	Y = e.touches[0].pageY;
         	console.log(X+", "+Y)
         	if(Y <= height*(200/1436) && X <= width*(176/980)){
-        		if(yaynay = "false"){
-        			var yaynay = confirm("start")
+        		var yaynay = confirm("start")
+        		if(yaynay == true){
         			if(yaynay){countbeg = setInterval(countTime, 100);}
         		}
         	}if(Y <= height*(592/1436) && Y >= height*(180/1436) && X <= width*(442/980)){
-        		if(actmole.indexOf(1)){
+        		if(actmole.indexOf(1)==1 || actmole.indexOf(1)==0 || actmole.indexOf(1)==2 || actmole.indexOf(1)==3 || actmole.indexOf(1)==4 || actmole.indexOf(1)==5){
         			actmole.splice(actmole.indexOf(1), 1)
         			n-=1
         			score+=1
         			document.getElementById('circ1').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
         		}
         	}if(Y <= height*(992/1436) && Y >= height*(648/1436) && X <= width*(442/980)){
-        		if(actmole.indexOf(2)){
+        		if(actmole.indexOf(2)==1 || actmole.indexOf(2)==0 || actmole.indexOf(2)==2 || actmole.indexOf(2)==3 || actmole.indexOf(2)==4 || actmole.indexOf(2)==5){
         			actmole.splice(actmole.indexOf(2), 1)
         			n-=1
         			score+=1
         			document.getElementById('circ2').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
         		}
         	}if(Y >= height*(990/1436) && X <= width*(442/980)){
-        		if(actmole.indexOf(3)){
+        		if(actmole.indexOf(3)==1 || actmole.indexOf(3)==0 || actmole.indexOf(3)==2 || actmole.indexOf(3)==3 || actmole.indexOf(3)==4 || actmole.indexOf(3)==5){
         			actmole.splice(actmole.indexOf(3), 1)
         			n-=1
         			score+=1
         			document.getElementById('circ3').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
         		}
         	}if(Y <= height*(582/1436) && Y >= height*(180/1436) && X >= width*(450/980)){
-        		if(actmole.indexOf(4)){
+        		if(actmole.indexOf(4)==1 || actmole.indexOf(4)==0 || actmole.indexOf(4)==2 || actmole.indexOf(4)==3 || actmole.indexOf(4)==4 || actmole.indexOf(4)==5){
         			actmole.splice(actmole.indexOf(4), 1)
         			n-=1
         			score+=1
         			document.getElementById('circ4').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
         		}
-        	}console.log("yay");if(Y <= height*(992/1436) && Y >= height*(648/1436) && X>= width*(450/980)){
-        		if(actmole.indexOf(5)){
+        	}if(Y <= height*(992/1436) && Y >= height*(648/1436) && X>= width*(450/980)){
+        		if(actmole.indexOf(5)==1 || actmole.indexOf(5)==0 || actmole.indexOf(5)==2 || actmole.indexOf(5)==3 || actmole.indexOf(5)==4 || actmole.indexOf(5)==5){
         			actmole.splice(actmole.indexOf(5), 1)
         			n-=1
         			score+=1
         			document.getElementById('circ5').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
         		}
-        	}if(Y >= height*(993/height) && X >= width*(450/980)){
-        		if(actmole.indexOf(6)){
+        	}console.log("yay");if(Y >= height*(993/height) && X >= width*(450/980)){
+        		if(actmole.indexOf(6)==1 || actmole.indexOf(6)==0 || actmole.indexOf(6)==2 || actmole.indexOf(6)==3 || actmole.indexOf(6)==4 || actmole.indexOf(6)==5){
         			actmole.splice(actmole.indexOf(6), 1)
         			n-=1
         			score+=1
@@ -164,6 +164,7 @@
 		if(p){
 			p=false
 			var initmole=Math.floor(Math.random()*6)+1
+			actmole.push(initmole)
 			document.getElementById("circ"+String(initmole)).src = "https://goldprogrammer.github.io/genuisgames/grumole.png"
 			n=1
 		}
