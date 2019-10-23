@@ -5,15 +5,22 @@
 </head>
 <body>
 <canvas id="canv"></canvas>
-<img id="circ" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img id="circ1" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img id="circ2" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img id="circ3" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img id="circ4" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img id="circ5" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img id="circ6" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
 <style>body{margin:0px;}</style>
 <script>
 	var time = 10
 	var score = 0
 	var k=0;
-
+	var p=true;
+	var n=0;
 	function countTime(){ 
 	    time = (time-.1).toFixed(2)
+	    peekaboo()
 	    if(time <= 0){clearInterval(countbeg); alert("You got " + score + "point(s)")}
 	};
 
@@ -58,18 +65,18 @@
 		c.fillStyle = "#FF781F"
 		c.fillText("Time: "+time, width*(170/980), height*(12/1436))
 
-		c.drawImage(document.getElementById('circ'),width*(25/width),height*(30/height),width*(100/width),height*(25/height));
+		c.drawImage(document.getElementById('circ1'),width*(25/width),height*(30/height),width*(100/width),height*(25/height));
 
-		c.drawImage(document.getElementById('circ'),width*(25/width),height*(70/height),width*(100/width),height*(25/height));
+		c.drawImage(document.getElementById('circ2'),width*(25/width),height*(70/height),width*(100/width),height*(25/height));
 
-		c.drawImage(document.getElementById('circ'),width*(25/width),height*(110/height),width*(100/width),height*(25/height));
+		c.drawImage(document.getElementById('circ3'),width*(25/width),height*(110/height),width*(100/width),height*(25/height));
 
 
-		c.drawImage(document.getElementById('circ'),width*(175/width),height*(30/height),width*(100/width),height*(25/height));
+		c.drawImage(document.getElementById('circ4'),width*(175/width),height*(30/height),width*(100/width),height*(25/height));
 
-		c.drawImage(document.getElementById('circ'),width*(175/width),height*(70/height),width*(100/width),height*(25/height));
+		c.drawImage(document.getElementById('circ5'),width*(175/width),height*(70/height),width*(100/width),height*(25/height));
 
-		c.drawImage(document.getElementById('circ'),width*(175/width),height*(110/height),width*(100/width),height*(25/height));
+		c.drawImage(document.getElementById('circ6'),width*(175/width),height*(110/height),width*(100/width),height*(25/height));
 
 		window.requestAnimationFrame(drawCanv)
 	}
@@ -91,6 +98,20 @@
         		}
         	}
     	}
+	}function peekaboo(){
+		var moles = [0, 0,0, 0, 0, 0]
+		if(p){
+			p=false
+			var initmole=Math.floor(Math.random()*6)+1
+			document.getElementById("circ"+String(initmole)).src = "https://goldprogrammer.github.io/genuisgames/grumole.png"
+			n=1
+		}
+
+		n = Math.floor(Math.random()*9)+1
+		if(n==1||n==1||n==3||n==4){n=1}
+		if(n==5||n==6||n==7){n=2}
+		if(n==8||n==9){n=3}
+		
 	}
 </script>
 
