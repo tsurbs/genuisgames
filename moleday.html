@@ -22,6 +22,7 @@
 	function countTime(){ 
 	    time = (time-.1).toFixed(2)
 	    peekaboo()
+	    if(n<0){n=0}
 	    if(time <= 0){clearInterval(countbeg); alert("You got " + score + "point(s)")}
 	};
 
@@ -97,42 +98,42 @@
         			var yaynay = confirm("start")
         			if(yaynay){countbeg = setInterval(countTime, 100);}
         		}
-        	}if(Y <= height*(650/1436) && Y >= height*(336/1436) && X <= width*(400/980) && X >= width*(64/980)){
+        	}if(Y <= height*(592/1436) && Y >= height*(180/1436) && X <= width*(442/980)){
         		if(actmole.indexOf(1)){
         			actmole.splice(actmole.indexOf(1), 1)
         			n-=1
         			score+=1
         			document.getElementById('circ1').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
         		}
-        	}if(Y <= height*(1194/1436) && Y >= height*(796/1436) && X <= width*(400/980) && X >= width*(64/980)){
+        	}if(Y <= height*(992/1436) && Y >= height*(648/1436) && X <= width*(442/980)){
         		if(actmole.indexOf(2)){
         			actmole.splice(actmole.indexOf(2), 1)
         			n-=1
         			score+=1
         			document.getElementById('circ2').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
         		}
-        	}if(Y <= height*(1193/1436) && Y >= height*(800/1436) && X <= width*(400/980) && X >= width*(64/980)){
+        	}if(Y >= height*(990/1436) && X <= width*(442/980)){
         		if(actmole.indexOf(3)){
         			actmole.splice(actmole.indexOf(3), 1)
         			n-=1
         			score+=1
         			document.getElementById('circ3').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
         		}
-        	}if(Y <= height*(650/1436) && Y >= height*(336/1436) && X <= width*(720/980) && X >= width*(588/980)){
+        	}if(Y <= height*(582/1436) && Y >= height*(180/1436) && X >= width*(450/980)){
         		if(actmole.indexOf(4)){
         			actmole.splice(actmole.indexOf(4), 1)
         			n-=1
         			score+=1
         			document.getElementById('circ4').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
         		}
-        	}if(Y <= height*(1194/1436) && Y >= height*(796/1436) && X <= width*(720/980) && X >= width*(588/980)){
+        	}console.log("yay");if(Y <= height*(992/1436) && Y >= height*(648/1436) && X>= width*(450/980)){
         		if(actmole.indexOf(5)){
         			actmole.splice(actmole.indexOf(5), 1)
         			n-=1
         			score+=1
         			document.getElementById('circ5').src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
         		}
-        	}if(Y <= height*(1278/1436) && Y >= height*(1716/1436) && X <= width*(720/980) && X >= width*(588/980)){
+        	}if(Y >= height*(1059/height) && X >= width*(450/980)){
         		if(actmole.indexOf(6)){
         			actmole.splice(actmole.indexOf(6), 1)
         			n-=1
