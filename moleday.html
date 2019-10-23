@@ -176,9 +176,9 @@
 			if(n==5||n==6||n==7){n=2}
 			if(n==8||n==9){n=3}
 
-			for (var i = n; i >= 0; i--) {
+			for (var i = n-1; i >= 0; i--) {
 				shuffle(array)
-				mole=array[array.length]
+				mole=array[array.length-1]
 				array.pop()
 				actmole.push(mole)
 				document.getElementById("circ"+String(mole)).src = "https://goldprogrammer.github.io/genuisgames/grumole.png"
