@@ -22,7 +22,7 @@
 	function countTime(){ 
 	    time = (time-.1).toFixed(2)
 	    peekaboo()
-	    if(n<0){n=0}
+	    if(n<=0){n=0}
 	    if(time <= 0){clearInterval(countbeg); alert("You got " + score + "point(s)")}
 	};
 
@@ -61,7 +61,7 @@
 	
 		c.font = "14px Ubuntu"
 		c.fillStyle = "#FF781F"
-		c.fillText("Points: "+score, width*(65/980), height*(12/1436))
+		c.fillText("Points: "+n, width*(65/980), height*(12/1436))
 	
 		c.font = "14px Ubuntu"
 		c.fillStyle = "#FF781F"
