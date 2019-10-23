@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>witch</title>
+</head>
+<body>
+<canvas id="canv" width="500px" height="600px"></canvas>
+
+<script>
+	var ratio = window.devicePixelRatio || 1;
+	var width = screen.width * ratio;
+	var height = screen.height * ratio;
+
+	confirm(width+", "+height)
+
+	var canvas = document.getElementById("canv");
+	var c = canvas.getContext("2d");
+
+	c.fillStyle = "#000000";
+	c.fillRect(0, 0, 500, 600);
+
+	c.moveTo(0, 50)
+	c.lineTo(500,50)
+	c.lineWidth = 7.5
+	c.strokeStyle = "#FF781F"
+	c.stroke()
+
+	c.font = "30px Ubuntu"
+	c.fillStyle = "#FF781F"
+	c.fillText("Start", 20, 35)
+
+	c.moveTo(115, 50)
+	c.lineTo(115,0)
+	c.lineWidth = 7.5
+	c.strokeStyle = "#FF781F"
+	c.stroke()
+
+	c.font = "30px Ubuntu"
+	c.fillStyle = "#FF781F"
+	c.fillText("Points:", 160, 35)
+
+	c.font = "30px Ubuntu"
+	c.fillStyle = "#FF781F"
+	c.fillText("Lives:", 320, 35)
+</script>
+
+</body>
+</html>
