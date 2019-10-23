@@ -5,12 +5,10 @@
 </head>
 <body>
 <canvas id="canv"></canvas>
-<style>body{margin:0px;</style>
+<style>body{margin:0px;}</style>
 <script>
 	var height = window.innerHeight
 	var width = window.innerWidth
-
-	confirm(width+", "+height)
 
 	//height=1436
 	//width=980
@@ -21,32 +19,32 @@
 	var canvas = document.getElementById("canv");
 	var c = canvas.getContext("2d");
 
+		confirm(width+", "+height)
+
 	c.fillStyle = "#00CCFF";
 	c.fillRect(0, 0, width, height);
 
 	c.moveTo(0, height*.01)
 	c.lineTo(width,height*.01)
-	c.lineWidth = height*.0002
+	c.lineWidth = 2.5
 	c.strokeStyle = "#FF781F"
 	c.stroke()
 
-	c.font = "30px Ubuntu"
+	c.font = "14px Ubuntu"
 	c.fillStyle = "#FF781F"
-	c.fillText("Start", 20, 35)
+	c.fillText("Start", width*(10/980), height*(6/718))
 
-	c.moveTo(115, 50)
-	c.lineTo(115,0)
-	c.lineWidth = 7.5
+	c.moveTo(width*(60/980), height*(13/1436))
+	c.lineTo(width*(60/980),0)
+	//c.lineWidth = 7.5
 	c.strokeStyle = "#FF781F"
 	c.stroke()
 
-	c.font = "30px Ubuntu"
+	c.font = "14px Ubuntu"
 	c.fillStyle = "#FF781F"
-	c.fillText("Points:", 160, 35)
+	c.fillText("Points:", width*(65/980), height*(12/1436))
 
-	c.font = "30px Ubuntu"
-	c.fillStyle = "#FF781F"
-	c.fillText("Lives:", 320, 35)
+
 </script>
 
 </body>
