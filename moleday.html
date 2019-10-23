@@ -57,14 +57,14 @@
 
 	function touchHandler(e) {
     	if(e.touches) {
-        	X = e.touches[0].pageX - canvas.offsetLeft - playerWidth / 2;
-        	Y = e.touches[0].pageY - canvas.offsetTop - playerHeight / 2;
+        	X = e.touches[0].pageX - canvas.offsetLeft;
+        	Y = e.touches[0].pageY - canvas.offsetTop;
+        	console.log(X+", "+Y)
         	if(Y <= height*(13/1436) || X <= width*(60/980)){
         		confirm("start")
         	}
-        	e.preventDefault();
     	}
-	}if()
+	}
 </script>
 
 </body>
