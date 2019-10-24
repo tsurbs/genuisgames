@@ -2,6 +2,17 @@
 <html>
 <head>
 	<title>Tap-A-Mol</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150841251-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150841251-1');
+</script>
+
+<link rel='icon' href='https://goldprogrammer.github.io/genuisgames/grumole.png' type='image/x-icon'/ >
 </head>
 <body>
 <canvas id="canv"></canvas>
@@ -20,6 +31,9 @@
 	var n=0;
 	var actmole=[]
 	function countTime(){ 
+	    for(i=6; i>=1; i--;){
+		document.getElementById("circ"+String(i)).src = "https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
+	    }score=0
 	    time = (time-.1).toFixed(2)
 	    peekaboo()
 	    if(n<=0){n=0}
