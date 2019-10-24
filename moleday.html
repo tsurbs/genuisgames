@@ -24,6 +24,7 @@
 <img height="0px" width="0px" id="circ4" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
 <img height="0px" width="0px" id="circ5" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
 <img height="0px" width="0px" id="circ6" src="https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png">
+<img height="0px" width="0px" id="hammer" src="https://studio.code.org/media?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F5%2F9%2F2%2F1%2F119498479391699263wooden_mallot_benji_park_.svg.hi.png">
 <style>body{margin:0px;}html, body {
   overflow-y: hidden;
 }
@@ -59,13 +60,14 @@ body {
 	
 	//height=1436
 	//width=980
-	var countbeg
+	var countbeg;
+
+		var canvas = document.getElementById("canv");
+		var c = canvas.getContext("2d");
+
 	function drawCanv(){
 		document.getElementById('canv').style.height = String(height)+"px"
 		document.getElementById('canv').style.width = String(width)+"px"
-	
-		var canvas = document.getElementById("canv");
-		var c = canvas.getContext("2d");
 	
 		c.fillStyle = "#00CCFF";
 		c.fillRect(0, 0, width, height);
@@ -107,6 +109,7 @@ body {
 
 		c.drawImage(document.getElementById('circ6'),width*(175/width),height*(110/height),width*(100/width),height*(25/height));
 
+		c.drawImage(document.getElementById('hammer'),X-((height*(25/height)*.5),Y-((height*(25/height)*.5),height*(25/height),height*(25/height));
 		window.requestAnimationFrame(drawCanv)
 	}
 
@@ -120,6 +123,7 @@ body {
         	X = e.touches[0].pageX;
         	Y = e.touches[0].pageY;
         	console.log(X+", "+Y)
+
         	if(Y <= height*(200/1436) && X <= width*(176/980)){
         		var yaynay = confirm("start")
         		if(yaynay == true){
