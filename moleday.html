@@ -111,7 +111,6 @@ body {
 
 		c.drawImage(document.getElementById('circ6'),width*(175/width),height*(110/height),width*(100/width),height*(25/height));
 
-		c.drawImage(document.getElementById('hammer'),X-((height*(25/height))*.5),Y-((height*(25/height))*.5),height*(25/height),height*(25/height));
 		window.requestAnimationFrame(drawCanv)
 	}
 
@@ -125,7 +124,7 @@ body {
         	X = e.touches[0].pageX;
         	Y = e.touches[0].pageY;
         	console.log(X+", "+Y)
-
+        	c.drawImage(document.getElementById('hammer'),X-((height*(25/1436))*.5),Y-((height*(25/1436))*.5),height*(25/1436),height*(25/1436));
         	if(Y <= height*(200/1436) && X <= width*(176/980)){
         		var yaynay = confirm("start")
         		if(yaynay == true){
