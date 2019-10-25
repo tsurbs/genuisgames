@@ -10,7 +10,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-150841251-1');
 </script>
 
@@ -43,39 +42,22 @@ body {
 	var X;
 	var Y;
 	function countTime(){ 
-		if(l){l=false
-	    for(i=6; i>=1; i--){
-		document.getElementById("circ"+String(i)).src = "https://saurabh-sharma.com/images/brown-cliparts-png-circle-2.png"
-	    }
-		     	var time = 10
-	var score = 0
-	var k=0;
-	var p=true;
-	var n=0;
-	var actmole=[]
-	var X;
-	var Y;
-		     }
+		if(l){location.reload()}
 	    time = (time-.1).toFixed(2)
 	    peekaboo()
 	    if(n<=0){n=0}
 	    if(time <= 0){clearInterval(countbeg); actmole=[]; alert("You got " + score + "point(s)");l=true}
 	};
-
-
 	var height = window.innerHeight
 	var width = window.innerWidth
-
 	document.getElementById('bod').style.height=String(height)+"px"
 	document.getElementById('bod').style.width=String(width)+"px"
 	
 	//height=1436
 	//width=980
 	var countbeg;
-
 		var canvas = document.getElementById("canv");
 		var c = canvas.getContext("2d");
-
 	function drawCanv(){
 		document.getElementById('canv').style.height = String(height)+"px"
 		document.getElementById('canv').style.width = String(width)+"px"
@@ -92,7 +74,6 @@ body {
 		c.font = "14px Ubuntu"
 		c.fillStyle = "#FF781F"
 		c.fillText("Start", width*(10/980), height*(6/718))
-
 		c.moveTo(width*(60/980), height*(.01))
 		c.lineTo(width*(60/980),0)
 		//c.lineWidth = 7.5
@@ -106,39 +87,25 @@ body {
 		c.font = "14px Ubuntu"
 		c.fillStyle = "#FF781F"
 		c.fillText("Time: "+time, width*(170/980), height*(12/1436))
-
 		c.drawImage(document.getElementById('circ1'),width*(25/width),height*(30/height),width*(100/width),height*(25/height));
-
 		c.drawImage(document.getElementById('circ2'),width*(25/width),height*(70/height),width*(100/width),height*(25/height));
-
 		c.drawImage(document.getElementById('circ3'),width*(25/width),height*(110/height),width*(100/width),height*(25/height));
-
-
 		c.drawImage(document.getElementById('circ4'),width*(175/width),height*(30/height),width*(100/width),height*(25/height));
-
 		c.drawImage(document.getElementById('circ5'),width*(175/width),height*(70/height),width*(100/width),height*(25/height));
-
 		c.drawImage(document.getElementById('circ6'),width*(175/width),height*(110/height),width*(100/width),height*(25/height));
-
 	  	console.log((X-(height*(25/1436))*.5)+", "+(Y-(height*(25/1436)*.5)))
         c.drawImage(document.getElementById('hammer'),X*(300/980),Y*(150/1436),height*(25/1436),height*(25/1436));
-
 		window.requestAnimationFrame(drawCanv)
 	}
-
 	window.requestAnimationFrame(drawCanv)
-
 	document.addEventListener("touchstart", touchHandler);
 	document.addEventListener("touchmove", touchHandler);
-
 	function touchHandler(e) {
     	if(e.touches) {
         	X = e.touches[0].pageX;
         	Y = e.touches[0].pageY;
-
         	X=X
         	Y=Y
-
         	if(Y <= height*(200/1436) && X <= width*(176/980)){
         		var yaynay = confirm("start")
         		if(yaynay == true){
@@ -190,20 +157,16 @@ body {
     	}
 	}function shuffle(array) {
 	  var currentIndex = array.length, temporaryValue, randomIndex;
-
 	  // While there remain elements to shuffle...
 	  while (0 !== currentIndex) {
-
 	    // Pick a remaining element...
 	    randomIndex = Math.floor(Math.random() * currentIndex);
 	    currentIndex -= 1;
-
 	    // And swap it with the current element.
 	    temporaryValue = array[currentIndex];
 	    array[currentIndex] = array[randomIndex];
 	    array[randomIndex] = temporaryValue;
 	  }
-
 	  return array;
 	}function peekaboo(){
 		var moles = [0, 0, 0, 0, 0, 0]
@@ -221,7 +184,6 @@ body {
 			if(n==1||n==1||n==3||n==4){n=1}
 			if(n==5||n==6||n==7){n=2}
 			if(n==8||n==9){n=3}
-
 			for (var i = n-1; i >= 0; i--) {
 				shuffle(array)
 				mole=array[array.length-1]
