@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>canvaspixelart</title>
+</head>
+<body>
+<canvas id="ctx" width="500" height="500" style="border:1px solid #000000">
+<script type="text/javascript">
+	var x;
+	var y;
+	document.addEventListener("touchstart", touchHandler);
+	document.addEventListener("touchmove", touchHandler);
+	function touchHandler(e) {
+    	if(e.touches) {
+        	X = e.touches[0].pageX;
+        	Y = e.touches[0].pageY;
+        	x=X
+        	y=Y
+        	c.clearRect(0,0,500,500);
+        	c.fillRect(x,y,5, 5)
+        }
+    }
+    var canvas = document.getElementById("ctx");
+	var c = canvas.getContext("2d");
+	function drawcursor(){
+		c.fillRect(x,y,5, 5)
+		//c.clearRect(0,0,500,500);
+		console.log(x+","+y)
+		requestAnimationFrame(drawcursor)
+	}requestAnimationFrame(drawcursor)
+</script>
+</body>
+</html>
