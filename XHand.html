@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id = "top"></div>
+	<canvas id= "sandbox" ></canvas>
+	<style type="text/css">
+		body{
+			display:flex;
+			margin:0;
+		}#sandbox{
+			background: red;
+			order:1;
+			flex-grow:1;		}
+	</style>
+	<script type="text/javascript">
+		canvas = document.getElementById('sandbox');
+		ctx = canvas.getContext('2d');
+
+		document.addEventListener("touchstart", e=> console.log(e.touches[0].clientX, e.touches[0].clientY, e.touches[0].radiusX, e.touches[0].radiusY))
+		document.addEventListener("touchmove", e => drawPtrLck(e))
+
+		//document.exitPointerLock = document.exitPointerLock ||document.mozExitPointerLock;
+
+		canvas.height = window.innerHeight
+		canvas.width = window.innerWidth
+
+		fst = true
+
+		function drawPtrLck(e){
+			 console.log(e.touches[0].clientX, e.touches[0].clientY)
+			
+			if(fst){
+				x = e.offsetX
+				y = e.offsetY
+				fst = false
+			}
+
+			x += e.movementX
+			y += e.movementY
+
+			
+			ctx.fillStyle = "blue";
+			ctx.beginPath();
+			ctx.ellipse(e.touches[0].clientX, e.touches[0].clientY, e.touches[0].radiusX, e.touches[0].radiusY, 0, 0, 2*Math.PI);
+			ctx.stroke();
+		}
+
+		//setInterval(prompt("exit"), 5000)
+	</script>
+</body>
+</html>
