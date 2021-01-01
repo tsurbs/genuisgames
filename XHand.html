@@ -27,27 +27,21 @@
 		canvas.height = window.innerHeight
 		canvas.width = window.innerWidth
 
-		fst = true
-
 		function drawPtrLck(e){
 			 console.log(e.touches[0].clientX, e.touches[0].clientY)
 			
-			if(fst){
-				x = e.offsetX
-				y = e.offsetY
-				fst = false
-			}
-
-			x += e.movementX
-			y += e.movementY
-
-			
 			ctx.fillStyle = "blue";
 			ctx.beginPath();
-			ctx.ellipse(e.touches[0].clientX, e.touches[0].clientY, e.touches[0].radiusX, e.touches[0].radiusY, 0, 0, 2*Math.PI);
+			ctx.ellipse(e.touches[0].clientX, e.touches[0].clientY, e.touches[0].radiusX*4, e.touches[0].radiusY*4, 0, 0, 2*Math.PI);
 			ctx.stroke();
+		
+			if(e.touches.length>1){
+				ctx.fillStyle = "green";
+				ctx.beginPath();
+				ctx.ellipse(e.touches[1].clientX, e.touches[1].clientY, e.touches[1].radiusX*4, e.touches[1].radiusY*4, 0, 0, 2*Math.PI);
+				ctx.stroke();
+			}
 		}
-
 		//setInterval(prompt("exit"), 5000)
 	</script>
 </body>
