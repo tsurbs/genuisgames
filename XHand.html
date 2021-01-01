@@ -29,8 +29,14 @@
 		canvas = document.getElementById('sandbox');
 		ctx = canvas.getContext('2d');
 
-		document.addEventListener("touchstart", e=> console.log(e.touches[0].clientX, e.touches[0].clientY, e.touches[0].radiusX, e.touches[0].radiusY))
-		document.addEventListener("touchmove", e => drawPtrLck(e))
+		fingerVals = []
+		touching = false;
+
+		let x, y = 0;
+
+		document.addEventListener("touchstart", e => {touching = true})
+		document.addEventListener("touchmove", e => onTouch(e))
+		document.addEventListener("touchstop", e => {touching = false})
 
 		//document.exitPointerLock = document.exitPointerLock ||document.mozExitPointerLock;
 
@@ -39,20 +45,20 @@
 
 		ctx.fillStyle = "blue";
 
-		function drawPtrLck(e){
-			 console.log(e.touches[0].clientX, e.touches[0].clientY)
-			
-			ctx.strokeStyle = "blue";
-			ctx.beginPath();
-			ctx.ellipse(e.touches[0].clientX, e.touches[0].clientY, e.touches[0].radiusX*4, e.touches[0].radiusY*4, 0, 0, 2*Math.PI);
-			ctx.stroke();
-		
-			if(e.touches.length>1){
-				ctx.strokeStyle = "green";
+		function onTouch(e){
+			fingerVals.push(e)
+
+			console.log(x,y,e.touches[0].radiusX,e.touches[0].clientY)
+
+			if(fingerVals.length > 1){
+				ctx.strokeStyle = "blue";
 				ctx.beginPath();
-				ctx.ellipse(e.touches[1].clientX, e.touches[1].clientY, e.touches[1].radiusX*4, e.touches[1].radiusY*4, 0, 0, 2*Math.PI);
-				ctx.stroke();
+				ctx.bezierCurveTo(x, y, (x+e.touches[0].clientX)/2+(e.touches[0].radiusX*Math.pow(-1,fingerVals.length)), (y+e.touches[0].clientY)/2+(e.touches[0].radiusY*Math.pow(-1,fingerVals.length)), e.touches[0].clientX, e.touches[0].clientY);
+				ctx.fill();
 			}
+
+			x = e.touches[0].clientX;
+			y = e.touches[0].clientY;
 		}
 		//setInterval(prompt("exit"), 5000)
 	</script>
