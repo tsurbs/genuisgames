@@ -49,6 +49,7 @@
 			fingerVals.push(e)
 
 			console.log(e.touches[0])
+			top.innerHTML = e.touches[0].radiusX
 
 			if(fingerVals.length > 1){
 				ctx.strokeStyle = "blue";
