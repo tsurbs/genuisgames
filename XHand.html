@@ -6,8 +6,10 @@
 	<title></title>
 </head>
 <body>
-	<div id = "top"></div>
-	<canvas id= "sandbox" ></canvas>
+	
+	<div id = "display"></div>
+	<canvas id= "sandbox" >test</canvas>
+	<div id = "top">test</div>
 	<style type="text/css">
 		html, body {
   overflow-y: hidden;
@@ -23,6 +25,8 @@
 			position:fixed;
 			flex-grow:1;		
 			overflow: hidden;
+		}#top{
+			font-size:20px;
 		}
 	</style>
 	<script type="text/javascript">
@@ -46,10 +50,13 @@
 		ctx.fillStyle = "blue";
 
 		function onTouch(e){
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			ctx.font = "30px Arial";
+			ctx.fillText(e.touches[0].radiusX, 10, 50);
 			fingerVals.push(e)
 
 			console.log(e.touches[0])
-			top.innerHTML = e.touches[0].radiusX
+			document.getElementById("top").innerHTML = e.touches[0].radiusX
 
 			if(fingerVals.length > 1){
 				ctx.strokeStyle = "blue";
