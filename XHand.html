@@ -48,12 +48,12 @@
 		function onTouch(e){
 			fingerVals.push(e)
 
-			console.log(x,y,e.touches[0].radiusX,e.touches[0].clientY)
+			console.log(e.touches[0])
 
 			if(fingerVals.length > 1){
 				ctx.strokeStyle = "blue";
 				ctx.beginPath();
-				ctx.bezierCurveTo(x, y, (x+e.touches[0].clientX)/2+(e.touches[0].radiusX*5*Math.pow(-1,fingerVals.length)), (y+e.touches[0].clientY)/2+(e.touches[0].radiusY*5*Math.pow(-1,fingerVals.length)), e.touches[0].clientX, e.touches[0].clientY);
+				ctx.ellipse(x,y,e.touches[0].radiusX, e.touches[0].radiusY, e.touches[0].rotationAngle, 0, Math.PI*2)
 				ctx.fill();
 			}
 
