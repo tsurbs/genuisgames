@@ -59,6 +59,7 @@
 		x_img.src = "X.png"
 
 		function onTouch(e){
+			manager()
 			console.log(currX, currY)
 			if(e.touches[0].clientX>currX && e.touches[0].clientX<currX+window.innerHeight*.1 && e.touches[0].clientY>currY && e.touches[0].clientY<currY+window.innerHeight*.1){
 				ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -96,7 +97,7 @@
 			}else if(swiped%2 == 1){
 				genX(swiped)
 			}
-		}manager()
+		}
 		//setInterval(prompt("exit"), 5000)
 	</script>
 </body>
