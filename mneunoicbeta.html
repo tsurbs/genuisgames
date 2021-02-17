@@ -1,0 +1,261 @@
+<html>
+<title>acronym beta</title>
+</html>
+<script>
+
+var letterMap1 = {"a": ["amber", "antagonizing"],
+				 "b": ["beatboxing"],
+				 "c":["cracked","crooked"],
+				 "d":["derrogatory"],
+				 "e":["excited","elated","extreme"],
+				 "f":["five","figurative"],
+				 "g":["gravely","growling"],
+				 "h":["hacking", "haggling"],
+				 "i":["identifying", "idle"],
+				 "j":["joking", "jailing"],
+				 "k":["keening","kissing"],
+				 "l":["labeling","laughing"],
+				 "m":["magnetizing","maddening"],
+				 "n":[" nagging","nursing"],
+				 "o":["occupying","obligating"],
+				 "p":["paraphrasing","patronizing"],
+				 "q":["quacking","questioning"],
+				 "r":["repeating","ramming"],
+				 "s":["sacrificing","savoring"],
+				 "t":["tampering","talking"],
+				 "u":["undermining","unsettling"],
+				 "v":["vacationing", "vaccinating"],
+				 "w":["wriggling","wading"],
+				 "x":["xenogeneic","xenophobic"],
+				 "y":["yachting","yielding"],
+				 "z":["zapping","zig-zagging"],
+};
+var letterMap2 = {"a": ["algorithims", "apples"],
+				 "b": ["baboons"],
+				 "c":["cameras","cats"],
+				 "d":["dogs", "dingos"],
+				 "e":["ears","eskmos","emoji"],
+				 "f":["feathers","fiberopticts"],
+				 "g":["gods","grasses"],
+				 "h":["hiccups", "his"],
+				 "i":["images", "idealists"],
+				 "j":["jams", "jailers"],
+				 "k":["knees","kings"],
+				 "l":["lanes","lambs"],
+				 "m":["moms","midgets"],
+				 "n":[" nuclei","nurses"],
+				 "o":["oxen","objects"],
+				 "p":["peepholes","peeps"],
+				 "q":["quacks","quadriceps"],
+				 "r":["reams","roofs","rhinoceros"],
+				 "s":["samuari","seas"],
+				 "t":["ticks","teakettles"],
+				 "u":["underwear","ugandans"],
+				 "v":["vaccums", "vaccines"],
+				 "w":["worms","wigs"],
+				 "x":["x-rays","xylems"],
+				 "y":["yachts","yacks"],
+				 "z":["zigguarats","zoos"],
+};
+
+var letterMap3 = {"a": ["abandoned", "abbreviated"],
+				 "b": [" babbled"],
+				 "c":["clicked","calibrated"],
+				 "d":["dinged", "digged"],
+				 "e":["ebbed","earned","eclipsed"],
+				 "f":[" fabricated","fainted"],
+				 "g":["gagged","gained"],
+				 "h":["hallowed", "hammered"],
+				 "i":["illuminated", "ignited"],
+				 "j":["jammed", "jailed"],
+				 "k":["kneeled","knocked"],
+				 "l":["laminated","labeled"],
+				 "m":["missed","mined"],
+				 "n":["nuked","nursed"],
+				 "o":["obeyed","objected"],
+				 "p":["pachuted","parented"],
+				 "q":["quacked","quadroupled"],
+				 "r":["ranked","randomized","rigged","revolutionized"],
+				 "s":["sawed","saddened"],
+				 "t":["tickled","tinkered"],
+				 "u":["undermined","undid"],
+				 "v":["vaccumed", "vaccinated"],
+				 "w":["wiggled","wakened"],
+				 "x":["x-rayed"],
+				 "y":["yammered","yacked"],
+				 "z":["zipped","zoomed"],
+};
+var letterMap4 = {"a": ["addling","adoring"],
+				 "b": ["booming"],
+				 "c":["caring","camping"],
+				 "d":["doing", "digging"],
+				 "e":["earling","echoing","eluding"],
+				 "f":["fabricating","filming"],
+				 "g":["ganging","gwaking"],
+				 "h":["halting", "heeding"],
+				 "i":["itching", "imbuing"],
+				 "j":["jamming", "jailing"],
+				 "k":["kneeling","kinighting","kything"],
+				 "l":["laminating","leaking"],
+				 "m":["making","manning"],
+				 "n":["nuking","nursing"],
+				 "o":["ongoing","opening"],
+				 "p":["paraphrasing","parting"],
+				 "q":["quacking","quaking"],
+				 "r":["ramping","ranging","raging"],
+				 "s":["swimming","singing"],
+				 "t":["tanking","tanning"],
+				 "u":["undoing","upgoing"],
+				 "v":["vaccuming", "vaccinating"],
+				 "w":["worming","wagging"],
+				 "x":["x-raying","x-ing"],
+				 "y":["yelping","yacking"],
+				 "z":["zipping","zonking"],
+};
+
+confirm('do you have your letters?')
+var letters=prompt("Please type your letters into the box below.  Please type them as all one word, no spaces or hyphens.")
+var letnum=letters.length 
+if (letnum===0) {
+	confirm('do you have your letters?')
+var letters=prompt("Please type your letters into the box below.  Please type them as all one word, no spaces or hyphens.")
+var letnum=letters.length} 
+var first=0
+var second=1
+
+for (var i = letters.length - 1; i >= 0; i--) {
+
+	document.write(letters.substring(first,second))
+	if (i != 0)
+		document.write("-");
+	second++
+	first++
+};
+
+for (var j = 0; j <= 1; j++) {
+	var wordList = letterMap1[letters.charAt(j)]
+	var index = Math.floor(Math.random() * wordList.length)
+	var randWord = wordList[index];
+	letterMap1[letters.charAt(j)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWord+" <br>")
+};
+var x=2
+	var wordListone = letterMap2[letters.charAt(x)]
+	var index = Math.floor(Math.random() * wordListone.length)
+	var randWordone = wordListone[index];
+	letterMap2[letters.charAt(x)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWordone+" <br>");
+var y=3
+var wordListtwo = letterMap3[letters.charAt(y)]
+var index = Math.floor(Math.random() * wordListtwo.length)
+	var randWordtwo = wordListtwo[index];
+	letterMap3[letters.charAt(y)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWordtwo);
+	
+var f=4
+var wordListthree = letterMap4[letters.charAt(f)]
+var index = Math.floor(Math.random() * wordListthree.length)
+	var randWordthree = wordListthree[index];
+	letterMap4[letters.charAt(f)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWordthree)
+if (letters.length===5) {
+		document.write("s <br>")
+		confirm("hello")
+	} else{
+		document.write("<br>")
+		confirm("bye")
+	}
+var q=5
+	var wordListfour = letterMap2[letters.charAt(q)]
+	var index = Math.floor(Math.random() * wordListfour.length)
+	var randWordfour = wordListfour[index];
+	letterMap2[letters.charAt(q)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWordfour+" <br>");
+if (letters.length===7) {
+	var w=6
+	var wordListfive = letterMap2[letters.charAt(w)]
+	var index = Math.floor(Math.random() * wordListfive.length)
+	var randWordfive = wordListfive[index];
+	letterMap1[letters.charAt(w)].splice(index, 1);
+	document.write("<br> with(not included in final device.<br>")
+	document.write(randWordfive+" <br>");
+} else if(letters.length===8){
+	var e=6
+		var wordListsix = letterMap1[letters.charAt(e)]
+		var index = Math.floor(Math.random() * wordListsix.length)
+	var randWordsix = wordListsix[index];
+	letterMap1[letters.charAt(e)].splice(index, 1);
+	document.write("<br> with(not included in final device.)<br>")
+	document.write("<br>")
+	document.write(randWordsix+" <br>")
+
+	var w=7
+	var wordListfive = letterMap2[letters.charAt(w)]
+	var index = Math.floor(Math.random() * wordListfive.length)
+	var randWordfive = wordListfive[index];
+	letterMap2[letters.charAt(w)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWordfive+" <br>");
+}else if (letters.length===9){
+		var r=6
+	var wordListseven = letterMap1[letters.charAt(r)]
+	var index = Math.floor(Math.random() * wordListseven.length)
+	var randWordseven = wordListseven[index];
+	letterMap1[letters.charAt(r)].splice(index, 1);
+	document.write("<br> with(not included in final device.)<br>")
+	document.write("<br>")
+	document.write(randWordseven+" <br>")
+	var e=7
+	var wordListsix = letterMap1[letters.charAt(e)]
+	var index = Math.floor(Math.random() * wordListsix.length)
+	var randWordsix = wordListsix[index];
+	letterMap1[letters.charAt(e)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWordsix+" <br>")
+
+	var w=8
+	var wordListfive = letterMap2[letters.charAt(w)]
+	var index = Math.floor(Math.random() * wordListfive.length)
+	var randWordfive = wordListfive[index];
+	letterMap2[letters.charAt(w)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWordfive+" <br>")
+}else if(letters.length===10){
+			var r=6
+	var wordListseven = letterMap1[letters.charAt(r)]
+	var index = Math.floor(Math.random() * wordListseven.length)
+	var randWordseven = wordListseven[index];
+	letterMap1[letters.charAt(r)].splice(index, 1);
+	document.write("<br> with(not included in final device.)<br>")
+	document.write("<br>")
+	document.write(randWordseven+" <br>")
+	var e=7
+	var wordListsix = letterMap1[letters.charAt(e)]
+	var index = Math.floor(Math.random() * wordListsix.length)
+	var randWordsix = wordListsix[index];
+	letterMap1[letters.charAt(e)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWordsix+" <br>")
+
+	var w=8
+	var wordListfive = letterMap2[letters.charAt(w)]
+	var index = Math.floor(Math.random() * wordListfive.length)
+	var randWordfive = wordListfive[index];
+	letterMap2[letters.charAt(w)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWordfive+" <br>")
+
+		var t=9
+	var wordListeight = letterMap1[letters.charAt(t)]
+	var index = Math.floor(Math.random() * wordListeight.length)
+	var randWordeight = wordListeight[index];
+	letterMap1[letters.charAt(t)].splice(index, 1);
+	document.write("<br>")
+	document.write(randWordfive+" <br>")
+}
+</script>
