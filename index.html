@@ -124,12 +124,26 @@ function chase1 () {var ya = (onel-twol) / (50/(sec*0.25));
 requestAnimationFrame(chase1)
 }requestAnimationFrame(chase1)
 
-function blucol1 () {
+/*function blucol1 () {
 	if(onet-10<=twot&&oneb+10>=twob&&onel-10<=twor&&oner+10>=twol){
 	document.write("<h1 style=\"background-color:"+color.value+"; color:green;font-size: 10em; font-family:arial, helvetica, sans-serif; height:1000px; length:1000\">You got "+sec +" points !<\/body>");
 	      setTimeout(function(){ location.reload() }, 3000);}console.log(oneb)
 requestAnimationFrame(blucol1)
 }requestAnimationFrame(blucol1)
+*/
+function collide(){
+    pMidy = parseFloat(document.getElementById("p").style.top)+10
+    pMidx = parseFloat(document.getElementById("p").style.left)+10
+    eMidy = parseFloat(document.getElementById("e").style.top)+15
+    eMidx = parseFloat(document.getElementById("e").style.left)+15
+console.log(Math.sqrt((pMidx-eMidx)*(pMidx-eMidx)+(pMidy-eMidy)*(pMidy-eMidy)))
+    if(Math.sqrt((pMidx-eMidx)*(pMidx-eMidx)+(pMidy-eMidy)*(pMidy-eMidy))<25){
+        {
+	document.write("<h1 style=\"background-color:"+color.value+"; color:green;font-size: 10em; font-family:arial, helvetica, sans-serif; height:1000px; length:1000\">You got "+sec +" points !<\/body>");
+	      setTimeout(function(){ location.reload() }, 3000);}
+    }
+    requestAnimationFrame(collide)
+}requestAnimationFrame(collide)
 };
 </script>
 </body>
